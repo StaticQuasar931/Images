@@ -4,11 +4,13 @@
   <meta charset="UTF-8" />
   <title>StaticQuasar931 Images Index</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/faviconimagesimage.png">
-  <link rel="shortcut icon" type="image/png" href="https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/
-faviconimageoriginalimagesimagecopy.png">
-  <style>
 
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/faviconimagesimage.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/faviconimageoriginalimagesimagecopy.png">
+  <link rel="shortcut icon" type="image/png" href="https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/faviconimageoriginalimagesimagecopy.png">
+
+  <style>
     :root {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: #0b0c10;
@@ -19,12 +21,12 @@ faviconimageoriginalimagesimagecopy.png">
       padding: 0;
     }
     header {
-      padding: 1rem 1.5rem;
+      padding: 1rem 1.5rem 0.5rem;
       background: #111827;
       border-bottom: 1px solid #1f2937;
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 20;
     }
     header h1 {
       margin: 0 0 0.25rem 0;
@@ -39,6 +41,60 @@ faviconimageoriginalimagesimagecopy.png">
       font-size: 0.8rem;
       color: #9ca3af;
     }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding: 0.5rem 1.5rem 0.75rem;
+      background: #020617;
+      border-bottom: 1px solid #1f2937;
+      position: sticky;
+      top: 4.3rem;
+      z-index: 15;
+    }
+    .controls-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+      align-items: center;
+    }
+    .controls label {
+      font-size: 0.78rem;
+      color: #9ca3af;
+      white-space: nowrap;
+    }
+    .controls input[type="text"] {
+      background: #020617;
+      border-radius: 999px;
+      border: 1px solid #374151;
+      padding: 0.25rem 0.55rem;
+      font-size: 0.78rem;
+      color: #e5e7eb;
+      min-width: 110px;
+    }
+    .controls input[type="text"]::placeholder {
+      color: #6b7280;
+    }
+    .controls input[type="checkbox"] {
+      accent-color: #38bdf8;
+    }
+    .controls-button {
+      background: #1d4ed8;
+      border-radius: 999px;
+      border: 1px solid #3b82f6;
+      font-size: 0.78rem;
+      padding: 0.25rem 0.7rem;
+      color: #e5e7eb;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    .controls-button:hover {
+      background: #2563eb;
+    }
+
     main {
       padding: 1rem 1.5rem 2.5rem;
     }
@@ -64,6 +120,10 @@ faviconimageoriginalimagesimagecopy.png">
       box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
       border-color: #38bdf8;
     }
+    .card.pinned {
+      border-color: #facc15;
+      box-shadow: 0 0 0 1px #facc15;
+    }
     .thumb-wrap {
       background: #020617;
       display: flex;
@@ -82,12 +142,14 @@ faviconimageoriginalimagesimagecopy.png">
     .card-body {
       padding: 0.6rem 0.8rem 0.75rem;
       font-size: 0.82rem;
+      position: relative;
     }
     .filename {
       font-weight: 600;
       word-break: break-all;
       margin-bottom: 0.1rem;
       color: #e5e7eb;
+      padding-right: 1.5rem;
     }
     .date-line {
       font-size: 0.75rem;
@@ -144,6 +206,33 @@ faviconimageoriginalimagesimagecopy.png">
       background: rgba(22, 163, 74, 0.95);
       border-color: rgba(52, 211, 153, 0.9);
     }
+
+    .pin-button {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      border: 1px solid #4b5563;
+      background: rgba(15, 23, 42, 0.95);
+      color: #9ca3af;
+      font-size: 0.78rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 0;
+    }
+    .pin-button.pinned {
+      border-color: #facc15;
+      background: #78350f;
+      color: #fef3c7;
+    }
+    .pin-button span {
+      transform: translateY(-0.5px);
+    }
+
     .toast {
       position: fixed;
       bottom: 1.25rem;
@@ -171,9 +260,46 @@ faviconimageoriginalimagesimagecopy.png">
     .toast span.icon {
       font-size: 1rem;
     }
+
+    .zoom-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.9);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 60;
+    }
+    .zoom-overlay.show {
+      display: flex;
+    }
+    .zoom-image {
+      max-width: 95vw;
+      max-height: 95vh;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9);
+      border-radius: 0.5rem;
+      background: #020617;
+    }
+    .zoom-help {
+      position: fixed;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.8rem;
+      color: #d1d5db;
+      background: rgba(15, 23, 42, 0.8);
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid #4b5563;
+    }
+
     @media (max-width: 640px) {
       header {
-        padding: 0.75rem 1rem;
+        padding: 0.75rem 1rem 0.4rem;
+      }
+      .controls {
+        padding: 0.4rem 1rem 0.6rem;
+        top: 3.9rem;
       }
       main {
         padding: 0.75rem 1rem 2.25rem;
@@ -186,11 +312,33 @@ faviconimageoriginalimagesimagecopy.png">
   <h1>StaticQuasar931 Image Index</h1>
   <p>Click any image card to copy its jsDelivr URL to your clipboard.</p>
   <p class="hint">
-    Tip: Use <strong>Ctrl+F</strong> and search tags like
+    Tip: Use <strong>Ctrl+F</strong> or the filters below. Search tags like
     <code>seo</code>, <code>icon</code>, <code>logo</code>, <code>game</code>, <code>minecraft</code>, <code>retro bowl</code>,
     or date strings like <code>2025-11-16</code>, <code>2025-11-23</code>, <code>2025-11-30</code>, <code>2025-12-07</code>.
   </p>
 </header>
+
+<div class="controls">
+  <div class="controls-group">
+    <label for="filter-include">Include:</label>
+    <input id="filter-include" type="text" placeholder="tags, names, dates">
+  </div>
+  <div class="controls-group">
+    <label for="filter-exclude">Exclude:</label>
+    <input id="filter-exclude" type="text" placeholder="things to hide">
+  </div>
+  <div class="controls-group">
+    <label for="filter-pinned">
+      <input id="filter-pinned" type="checkbox">
+      Pinned only
+    </label>
+  </div>
+  <div class="controls-group">
+    <button type="button" id="reset-filters" class="controls-button">
+      Reset filters
+    </button>
+  </div>
+</div>
 
 <main>
   <section class="gallery" id="gallery"></section>
@@ -201,11 +349,12 @@ faviconimageoriginalimagesimagecopy.png">
   <span id="toast-text">Copied to clipboard</span>
 </div>
 
-<script>
-  // Base date used to convert "3 weeks ago" etc:
-  // This page assumes "now" was 2025-12-07 when the GitHub list was copied.
-  // Dates are approximate but absolute so you can search them directly.
+<div id="zoom-overlay" class="zoom-overlay">
+  <img id="zoom-image" class="zoom-image" src="" alt="Zoomed image">
+  <div class="zoom-help">Right click or press Esc to close</div>
+</div>
 
+<script>
   // Leave or reload warning
   window.onbeforeunload = function () {
     return "Are you sure you want to leave this image index page?";
@@ -222,330 +371,96 @@ faviconimageoriginalimagesimagecopy.png">
 
   // All images, with approximate absolute dates
   const images = [
-    {
-      file: "1v1.lol_Favicon_zv2lxo.jpg",
-      label: "1v1.lol Favicon",
-      type: "icon",
-      date: DATE_3_WEEKS, // 3 weeks ago
-      tags: ["icon", "favicon", "1v1.lol", "game", "seo"]
-    },
-    {
-      file: "1v1_Lol_StaticQuasar931_xrplna.png",
-      label: "1v1.lol Logo",
-      type: "logo",
-      date: DATE_3_WEEKS,
-      tags: ["logo", "1v1.lol", "thumbnail", "game", "cover"]
-    },
-    {
-      file: "3-slices_StaticQuasar931.jpg",
-      label: "3 Slices Thumbnail",
-      type: "game",
-      date: DATE_LAST_MON,
-      tags: ["game", "3 slices", "thumbnail", "cover"]
-    },
-    {
-      file: "Clash_Royale_StaticQuasar931_ixwb97.png",
-      label: "Clash Royale Thumbnail",
-      type: "game",
-      date: DATE_TODAY, // 9 hours ago
-      tags: ["game", "clash royale", "thumbnail", "mobile"]
-    },
-    {
-      file: "Crossy_road_StaticQuasar931.webp",
-      label: "Crossy Road Thumbnail",
-      type: "game",
-      date: DATE_LAST_MON,
-      tags: ["game", "crossy road", "thumbnail", "arcade"]
-    },
-    {
-      file: "Drift_Hunters_StaticQuasar931.avif",
-      label: "Drift Hunters Thumbnail",
-      type: "game",
-      date: DATE_LAST_MON,
-      tags: ["game", "drift hunters", "racing", "thumbnail"]
-    },
-    {
-      file: "Escape_Road_1_StaticQuasar931_CDN.png",
-      label: "Escape Road 1 Game Art",
-      type: "game",
-      date: DATE_LAST_MON,
-      tags: ["game", "escape road", "fake gta", "thumbnail"]
-    },
-    {
-      file: "Follow-us--IG",
-      label: "Follow Us Instagram Icon",
-      type: "seo",
-      date: DATE_LAST_MON,
-      tags: ["seo", "icon", "instagram", "social", "visual-seo", "static brand"]
-    },
-    {
-      file: "GTA_Mods_StaticQuasar931_vua0h4.png",
-      label: "GTA Mods Thumbnail",
-      type: "game",
-      date: DATE_LAST_MON,
-      tags: ["game", "gta", "mods", "thumbnail"]
-    },
-    {
-      file: "Google-logo-transparent-G.png",
-      label: "Google G Logo",
-      type: "seo",
-      date: DATE_2_WEEKS,
-      tags: ["seo", "icon", "google", "logo", "search", "ui"]
-    },
-    {
-      file: "GoogleForm.png",
-      label: "Google Form Icon",
-      type: "seo",
-      date: DATE_LAST_MON,
-      tags: ["seo", "icon", "google form", "social", "visual-seo", "feedback"]
-    },
-    {
-      file: "Java_Edition_1.12.2.webp",
-      label: "Minecraft Java 1.12.2",
-      type: "game",
-      date: DATE_3_WEEKS,
-      tags: ["minecraft", "java 1.12.2", "game", "version-art"]
-    },
-    {
-      file: "Join_Our_DC_StaticQuassar931_lcplrf.png",
-      label: "Join Our Discord Icon",
-      type: "seo",
-      date: DATE_LAST_MON,
-      tags: ["seo", "icon", "discord", "social", "visual-seo", "static brand"]
-    },
-    {
-      file: "MV5BNGIyZDE4OTYtNjBhOS00NzFkLTkyYWMtYzAzNWUxZThmMDBlXkEyXkFqcGc@._V1_.jpg",
-      label: "Movie Poster Style Art",
-      type: "art",
-      date: DATE_2_WEEKS,
-      tags: ["art", "poster", "movie-style", "thumbnail"]
-    },
-    {
-      file: "RaftBeta.png",
-      label: "Raft Beta Thumbnail",
-      type: "game",
-      date: DATE_2_WEEKS,
-      tags: ["game", "raft", "survival", "thumbnail"]
-    },
-    {
-      file: "Retro_Bowl_StaticQuasar931_t2epwp.jpg",
-      label: "Retro Bowl Static Thumbnail",
-      type: "game",
-      date: DATE_2_WEEKS,
-      tags: ["game", "retro bowl", "football", "thumbnail"]
-    },
-    {
-      file: "Retrobowl_football.webp",
-      label: "Retro Bowl Football Art",
-      type: "game",
-      date: DATE_LAST_MON,
-      tags: ["game", "retro bowl", "football", "art"]
-    },
-    {
-      file: "Screenshot_2025-11-24_162537-removebg-preview.png",
-      label: "Screenshot 162537 Transparent",
-      type: "ui",
-      date: DATE_2_WEEKS,
-      tags: ["ui", "screenshot", "transparent", "asset"]
-    },
-    {
-      file: "Screenshot_2025-11-24_172246-removebg-preview.png",
-      label: "Screenshot 172246 Transparent",
-      type: "ui",
-      date: DATE_2_WEEKS,
-      tags: ["ui", "screenshot", "transparent", "asset"]
-    },
-    {
-      file: "StaticQuasar931_Banner_Media_Google_Sites_Neon_ChatGPT_Image.png",
-      label: "StaticQuasar931 Neon Banner",
-      type: "seo",
-      date: DATE_LAST_MON,
-      tags: ["seo", "banner", "header", "static brand", "google sites", "visual-seo"]
-    },
-    {
-      file: "Stickman_Hook.webp",
-      label: "Stickman Hook Thumbnail",
-      type: "game",
-      date: DATE_2_WEEKS,
-      tags: ["game", "stickman hook", "arcade", "thumbnail"]
-    },
-    {
-      file: "Stumble_Guys_StaticQuasar931.png",
-      label: "Stumble Guys Thumbnail",
-      type: "game",
-      date: DATE_2_WEEKS,
-      tags: ["game", "stumble guys", "battle royale", "thumbnail"]
-    },
-    {
-      file: "The_Binding_Of_Isaac_Wrath_of_The_Lamb_StaticQuasar931_g0u5vx.jpg",
-      label: "Binding of Isaac Wrath of the Lamb",
-      type: "game",
-      date: DATE_TODAY, // 9 hours ago
-      tags: ["game", "binding of isaac", "wrath of the lamb", "thumbnail"]
-    },
-    {
-      file: "We_Become_What_We_Behold_WBWWB_StaticQuasar931.png",
-      label: "We Become What We Behold",
-      type: "game",
-      date: DATE_3_WEEKS,
-      tags: ["game", "wbwwb", "we become what we behold", "thumbnail"]
-    },
-    {
-      file: "WithhelpbyIsaac.png",
-      label: "With help by Isaac Badge",
-      type: "credit",
-      date: DATE_LAST_WEEK,
-      tags: ["credit", "badge", "support", "helper", "overlay"]
-    },
-    {
-      file: "basketbros-io.jpg",
-      label: "BasketBros io",
-      type: "game",
-      date: DATE_2_WEEKS,
-      tags: ["game", "basketbros", "basketball", "thumbnail"]
-    },
-    {
-      file: "bloodmoney-online.png",
-      label: "Bloodmoney Online",
-      type: "game",
-      date: DATE_LAST_WEEK,
-      tags: ["game", "bloodmoney", "online", "thumbnail"]
-    },
-    {
-      file: "capsule_616x353.jpg",
-      label: "Capsule 616x353",
-      type: "art",
-      date: DATE_2_WEEKS,
-      tags: ["game", "capsule", "banner", "steam-style"]
-    },
-    {
-      file: "clash-of-vikings_StaticQuasar931.webp",
-      label: "Clash of Vikings",
-      type: "game",
-      date: DATE_LAST_MON,
-      tags: ["game", "clash of vikings", "strategy", "thumbnail"]
-    },
-    {
-      file: "cubes-2048-io.avif",
-      label: "Cubes 2048 io",
-      type: "game",
-      date: DATE_LAST_WEEK,
-      tags: ["game", "2048", "cubes", "io", "puzzle"]
-    },
-    {
-      file: "document-autosave.svg",
-      label: "Document Autosave Icon",
-      type: "icon",
-      date: DATE_2_WEEKS,
-      tags: ["icon", "ui", "document", "autosave", "button", "seo-ui"]
-    },
-    {
-      file: "icon.png",
-      label: "StaticQuasar931 Main Icon",
-      type: "logo",
-      date: DATE_LAST_MON,
-      tags: ["logo", "icon", "static brand", "favicon", "seo"]
-    },
-    {
-      file: "loadishlogo-removebg-preview.png",
-      label: "Loadish Logo Transparent",
-      type: "logo",
-      date: DATE_2_WEEKS,
-      tags: ["logo", "loadish", "transparent", "brand"]
-    },
-    {
-      file: "loadishlogo.jpg",
-      label: "Loadish Logo",
-      type: "logo",
-      date: DATE_2_WEEKS,
-      tags: ["logo", "loadish", "brand"]
-    },
-    {
-      file: "minecraft-1639513933156.jpg",
-      label: "Minecraft Generic Art",
-      type: "game",
-      date: DATE_3_WEEKS,
-      tags: ["game", "minecraft", "thumbnail", "cover"]
-    },
-    {
-      file: "nuts-puzzle-sort-by-color.png",
-      label: "Nuts Puzzle Sort by Color",
-      type: "game",
-      date: DATE_3_WEEKS,
-      tags: ["game", "puzzle", "sort by color", "thumbnail"]
-    },
-    {
-      file: "ragdoll-archers_StaticQuasar931.png",
-      label: "Ragdoll Archers",
-      type: "game",
-      date: DATE_LAST_MON,
-      tags: ["game", "ragdoll archers", "archery", "thumbnail"]
-    },
-    {
-      file: "savelogo-removebg-preview.png",
-      label: "Save Logo Transparent",
-      type: "icon",
-      date: DATE_2_WEEKS,
-      tags: ["icon", "save", "ui", "button", "transparent"]
-    },
-    {
-      file: "savelogo.jpg",
-      label: "Save Logo",
-      type: "icon",
-      date: DATE_2_WEEKS,
-      tags: ["icon", "save", "ui", "button"]
-    },
-    {
-      file: "signout_logout-removebg-preview.png",
-      label: "Signout Logout Transparent",
-      type: "icon",
-      date: DATE_2_WEEKS,
-      tags: ["icon", "logout", "ui", "button", "transparent"]
-    },
-    {
-      file: "signout_logout.png",
-      label: "Signout Logout Icon",
-      type: "icon",
-      date: DATE_2_WEEKS,
-      tags: ["icon", "logout", "ui", "button"]
-    },
-    {
-      file: "slope_Staticquasar931_stable_agqxto.png",
-      label: "Slope StaticQuasar931 Stable",
-      type: "game",
-      date: DATE_3_WEEKS,
-      tags: ["game", "slope", "unblocked", "thumbnail"]
-    },
-    {
-      file: "staticquasar931qrcodehomepage.png",
-      label: "StaticQuasar931 Homepage QR Code",
-      type: "seo",
-      date: DATE_LAST_WEEK,
-      tags: ["seo", "qr code", "static brand", "homepage", "visual-seo"]
-    },
-    {
-      file: "survival-race-banner_Area_king_StaticQuasar931.png",
-      label: "Survival Race Banner",
-      type: "game",
-      date: DATE_LAST_MON,
-      tags: ["game", "survival race", "banner", "thumbnail"]
-    },
-    {
-      file: "the-baby-in-yellow-pc-game-steam-cover.jpg",
-      label: "The Baby in Yellow Steam Cover",
-      type: "game",
-      date: DATE_3_WEEKS,
-      tags: ["game", "the baby in yellow", "steam cover", "horror"]
-    }
+    { file: "1v1.lol_Favicon_zv2lxo.jpg", label: "1v1.lol Favicon", type: "icon", date: DATE_3_WEEKS, tags: ["icon", "favicon", "1v1.lol", "game", "seo"] },
+    { file: "1v1_Lol_StaticQuasar931_xrplna.png", label: "1v1.lol Logo", type: "logo", date: DATE_3_WEEKS, tags: ["logo", "1v1.lol", "thumbnail", "game", "cover"] },
+    { file: "3-slices_StaticQuasar931.jpg", label: "3 Slices Thumbnail", type: "game", date: DATE_LAST_MON, tags: ["game", "3 slices", "thumbnail", "cover"] },
+    { file: "Clash_Royale_StaticQuasar931_ixwb97.png", label: "Clash Royale Thumbnail", type: "game", date: DATE_TODAY, tags: ["game", "clash royale", "thumbnail", "mobile"] },
+    { file: "Crossy_road_StaticQuasar931.webp", label: "Crossy Road Thumbnail", type: "game", date: DATE_LAST_MON, tags: ["game", "crossy road", "thumbnail", "arcade"] },
+    { file: "Drift_Hunters_StaticQuasar931.avif", label: "Drift Hunters Thumbnail", type: "game", date: DATE_LAST_MON, tags: ["game", "drift hunters", "racing", "thumbnail"] },
+    { file: "Escape_Road_1_StaticQuasar931_CDN.png", label: "Escape Road 1 Game Art", type: "game", date: DATE_LAST_MON, tags: ["game", "escape road", "fake gta", "thumbnail"] },
+    { file: "Follow-us--IG", label: "Follow Us Instagram Icon", type: "seo", date: DATE_LAST_MON, tags: ["seo", "icon", "instagram", "social", "visual-seo", "static brand"] },
+    { file: "GTA_Mods_StaticQuasar931_vua0h4.png", label: "GTA Mods Thumbnail", type: "game", date: DATE_LAST_MON, tags: ["game", "gta", "mods", "thumbnail"] },
+    { file: "Google-logo-transparent-G.png", label: "Google G Logo", type: "seo", date: DATE_2_WEEKS, tags: ["seo", "icon", "google", "logo", "search", "ui"] },
+    { file: "GoogleForm.png", label: "Google Form Icon", type: "seo", date: DATE_LAST_MON, tags: ["seo", "icon", "google form", "social", "visual-seo", "feedback"] },
+    { file: "Java_Edition_1.12.2.webp", label: "Minecraft Java 1.12.2", type: "game", date: DATE_3_WEEKS, tags: ["minecraft", "java 1.12.2", "game", "version-art"] },
+    { file: "Join_Our_DC_StaticQuassar931_lcplrf.png", label: "Join Our Discord Icon", type: "seo", date: DATE_LAST_MON, tags: ["seo", "icon", "discord", "social", "visual-seo", "static brand"] },
+    { file: "MV5BNGIyZDE4OTYtNjBhOS00NzFkLTkyYWMtYzAzNWUxZThmMDBlXkEyXkFqcGc@._V1_.jpg", label: "Movie Poster Style Art", type: "art", date: DATE_2_WEEKS, tags: ["art", "poster", "movie-style", "thumbnail"] },
+    { file: "RaftBeta.png", label: "Raft Beta Thumbnail", type: "game", date: DATE_2_WEEKS, tags: ["game", "raft", "survival", "thumbnail"] },
+    { file: "Retro_Bowl_StaticQuasar931_t2epwp.jpg", label: "Retro Bowl Static Thumbnail", type: "game", date: DATE_2_WEEKS, tags: ["game", "retro bowl", "football", "thumbnail"] },
+    { file: "Retrobowl_football.webp", label: "Retro Bowl Football Art", type: "game", date: DATE_LAST_MON, tags: ["game", "retro bowl", "football", "art"] },
+    { file: "Screenshot_2025-11-24_162537-removebg-preview.png", label: "Screenshot 162537 Transparent", type: "ui", date: DATE_2_WEEKS, tags: ["ui", "screenshot", "transparent", "asset"] },
+    { file: "Screenshot_2025-11-24_172246-removebg-preview.png", label: "Screenshot 172246 Transparent", type: "ui", date: DATE_2_WEEKS, tags: ["ui", "screenshot", "transparent", "asset"] },
+    { file: "StaticQuasar931_Banner_Media_Google_Sites_Neon_ChatGPT_Image.png", label: "StaticQuasar931 Neon Banner", type: "seo", date: DATE_LAST_MON, tags: ["seo", "banner", "header", "static brand", "google sites", "visual-seo"] },
+    { file: "Stickman_Hook.webp", label: "Stickman Hook Thumbnail", type: "game", date: DATE_2_WEEKS, tags: ["game", "stickman hook", "arcade", "thumbnail"] },
+    { file: "Stumble_Guys_StaticQuasar931.png", label: "Stumble Guys Thumbnail", type: "game", date: DATE_2_WEEKS, tags: ["game", "stumble guys", "battle royale", "thumbnail"] },
+    { file: "The_Binding_Of_Isaac_Wrath_of_The_Lamb_StaticQuasar931_g0u5vx.jpg", label: "Binding of Isaac Wrath of the Lamb", type: "game", date: DATE_TODAY, tags: ["game", "binding of isaac", "wrath of the lamb", "thumbnail"] },
+    { file: "We_Become_What_We_Behold_WBWWB_StaticQuasar931.png", label: "We Become What We Behold", type: "game", date: DATE_3_WEEKS, tags: ["game", "wbwwb", "we become what we behold", "thumbnail"] },
+    { file: "WithhelpbyIsaac.png", label: "With help by Isaac Badge", type: "credit", date: DATE_LAST_WEEK, tags: ["credit", "badge", "support", "helper", "overlay"] },
+    { file: "basketbros-io.jpg", label: "BasketBros io", type: "game", date: DATE_2_WEEKS, tags: ["game", "basketbros", "basketball", "thumbnail"] },
+    { file: "bloodmoney-online.png", label: "Bloodmoney Online", type: "game", date: DATE_LAST_WEEK, tags: ["game", "bloodmoney", "online", "thumbnail"] },
+    { file: "capsule_616x353.jpg", label: "Capsule 616x353", type: "art", date: DATE_2_WEEKS, tags: ["game", "capsule", "banner", "steam-style"] },
+    { file: "clash-of-vikings_StaticQuasar931.webp", label: "Clash of Vikings", type: "game", date: DATE_LAST_MON, tags: ["game", "clash of vikings", "strategy", "thumbnail"] },
+    { file: "cubes-2048-io.avif", label: "Cubes 2048 io", type: "game", date: DATE_LAST_WEEK, tags: ["game", "2048", "cubes", "io", "puzzle"] },
+    { file: "document-autosave.svg", label: "Document Autosave Icon", type: "icon", date: DATE_2_WEEKS, tags: ["icon", "ui", "document", "autosave", "button", "seo-ui"] },
+    { file: "icon.png", label: "StaticQuasar931 Main Icon", type: "logo", date: DATE_LAST_MON, tags: ["logo", "icon", "static brand", "favicon", "seo"] },
+    { file: "loadishlogo-removebg-preview.png", label: "Loadish Logo Transparent", type: "logo", date: DATE_2_WEEKS, tags: ["logo", "loadish", "transparent", "brand"] },
+    { file: "loadishlogo.jpg", label: "Loadish Logo", type: "logo", date: DATE_2_WEEKS, tags: ["logo", "loadish", "brand"] },
+    { file: "minecraft-1639513933156.jpg", label: "Minecraft Generic Art", type: "game", date: DATE_3_WEEKS, tags: ["game", "minecraft", "thumbnail", "cover"] },
+    { file: "nuts-puzzle-sort-by-color.png", label: "Nuts Puzzle Sort by Color", type: "game", date: DATE_3_WEEKS, tags: ["game", "puzzle", "sort by color", "thumbnail"] },
+    { file: "ragdoll-archers_StaticQuasar931.png", label: "Ragdoll Archers", type: "game", date: DATE_LAST_MON, tags: ["game", "ragdoll archers", "archery", "thumbnail"] },
+    { file: "savelogo-removebg-preview.png", label: "Save Logo Transparent", type: "icon", date: DATE_2_WEEKS, tags: ["icon", "save", "ui", "button", "transparent"] },
+    { file: "savelogo.jpg", label: "Save Logo", type: "icon", date: DATE_2_WEEKS, tags: ["icon", "save", "ui", "button"] },
+    { file: "signout_logout-removebg-preview.png", label: "Signout Logout Transparent", type: "icon", date: DATE_2_WEEKS, tags: ["icon", "logout", "ui", "button", "transparent"] },
+    { file: "signout_logout.png", label: "Signout Logout Icon", type: "icon", date: DATE_2_WEEKS, tags: ["icon", "logout", "ui", "button"] },
+    { file: "slope_Staticquasar931_stable_agqxto.png", label: "Slope StaticQuasar931 Stable", type: "game", date: DATE_3_WEEKS, tags: ["game", "slope", "unblocked", "thumbnail"] },
+    { file: "staticquasar931qrcodehomepage.png", label: "StaticQuasar931 Homepage QR Code", type: "seo", date: DATE_LAST_WEEK, tags: ["seo", "qr code", "static brand", "homepage", "visual-seo"] },
+    { file: "survival-race-banner_Area_king_StaticQuasar931.png", label: "Survival Race Banner", type: "game", date: DATE_LAST_MON, tags: ["game", "survival race", "banner", "thumbnail"] },
+    { file: "the-baby-in-yellow-pc-game-steam-cover.jpg", label: "The Baby in Yellow Steam Cover", type: "game", date: DATE_3_WEEKS, tags: ["game", "the baby in yellow", "steam cover", "horror"] }
   ];
 
-  function createTagChips(tags) {
-    return tags.map(function (tag) {
-      const span = document.createElement("span");
-      span.className = "tag-chip";
-      span.textContent = tag;
-      return span;
-    });
+  const galleryEl = document.getElementById("gallery");
+  const toastEl = document.getElementById("toast");
+  const toastTextEl = document.getElementById("toast-text");
+
+  const zoomOverlay = document.getElementById("zoom-overlay");
+  const zoomImage = document.getElementById("zoom-image");
+
+  const includeInput = document.getElementById("filter-include");
+  const excludeInput = document.getElementById("filter-exclude");
+  const pinnedOnlyCheckbox = document.getElementById("filter-pinned");
+  const resetFiltersButton = document.getElementById("reset-filters");
+
+  const PINNED_KEY = "sq_image_index_pinned";
+  let pinnedSet = new Set();
+
+  function loadPinned() {
+    try {
+      const data = localStorage.getItem(PINNED_KEY);
+      if (data) {
+        const arr = JSON.parse(data);
+        if (Array.isArray(arr)) {
+          pinnedSet = new Set(arr);
+        }
+      }
+    } catch (e) {
+      pinnedSet = new Set();
+    }
+  }
+
+  function savePinned() {
+    try {
+      localStorage.setItem(PINNED_KEY, JSON.stringify(Array.from(pinnedSet)));
+    } catch (e) {
+      // ignore
+    }
+  }
+
+  function showToast(message) {
+    toastTextEl.textContent = message;
+    toastEl.classList.add("show");
+    setTimeout(function () {
+      toastEl.classList.remove("show");
+    }, 1600);
   }
 
   function getBadgeType(type) {
@@ -559,39 +474,104 @@ faviconimageoriginalimagesimagecopy.png">
     return (type || "asset").toUpperCase();
   }
 
-  function showToast(message) {
-    const toast = document.getElementById("toast");
-    const text = document.getElementById("toast-text");
-    text.textContent = message;
-    toast.classList.add("show");
-    setTimeout(function () {
-      toast.classList.remove("show");
-    }, 1600);
+  function createTagChips(tags) {
+    return tags.map(function (tag) {
+      const span = document.createElement("span");
+      span.className = "tag-chip";
+      span.textContent = tag;
+      return span;
+    });
+  }
+
+  function openZoom(src, alt) {
+    zoomImage.src = src;
+    zoomImage.alt = alt || "";
+    zoomOverlay.classList.add("show");
+  }
+
+  function closeZoom() {
+    zoomOverlay.classList.remove("show");
+    zoomImage.src = "";
+  }
+
+  function passesFilters(img) {
+    const includeValue = includeInput.value.toLowerCase().trim();
+    const excludeValue = excludeInput.value.toLowerCase().trim();
+    const includeTerms = includeValue ? includeValue.split(/\s+/).filter(Boolean) : [];
+    const excludeTerms = excludeValue ? excludeValue.split(/\s+/).filter(Boolean) : [];
+
+    const text = (img.label + " " + img.file + " " + img.tags.join(" ") + " " + img.date).toLowerCase();
+
+    for (const t of includeTerms) {
+      if (!text.includes(t)) return false;
+    }
+    for (const t of excludeTerms) {
+      if (text.includes(t)) return false;
+    }
+
+    if (pinnedOnlyCheckbox.checked && !pinnedSet.has(img.file)) {
+      return false;
+    }
+
+    return true;
   }
 
   function renderGallery() {
-    const container = document.getElementById("gallery");
-    container.innerHTML = "";
+    galleryEl.innerHTML = "";
 
-    images.forEach(function (img) {
+    const sorted = images.slice().sort(function (a, b) {
+      const aPinned = pinnedSet.has(a.file);
+      const bPinned = pinnedSet.has(b.file);
+      if (aPinned && !bPinned) return -1;
+      if (!aPinned && bPinned) return 1;
+      const aDate = new Date(a.date);
+      const bDate = new Date(b.date);
+      return bDate - aDate; // newest first
+    });
+
+    sorted.forEach(function (img) {
+      if (!passesFilters(img)) return;
+
       const cdnUrl = baseCdn + encodeURIComponent(img.file);
 
       const card = document.createElement("article");
       card.className = "card";
+      if (pinnedSet.has(img.file)) {
+        card.classList.add("pinned");
+      }
       card.setAttribute("data-tags", img.tags.join(" ").toLowerCase());
       card.setAttribute("data-date", img.date);
+      card.setAttribute("data-file", img.file);
 
       const badge = document.createElement("div");
       badge.className = "badge-type " + (img.type || "");
       badge.textContent = getBadgeType(img.type || "asset");
       card.appendChild(badge);
 
+      const pinBtn = document.createElement("button");
+      pinBtn.type = "button";
+      pinBtn.className = "pin-button" + (pinnedSet.has(img.file) ? " pinned" : "");
+      const starSpan = document.createElement("span");
+      starSpan.textContent = "★";
+      pinBtn.appendChild(starSpan);
+      pinBtn.addEventListener("click", function (event) {
+        event.stopPropagation();
+        if (pinnedSet.has(img.file)) {
+          pinnedSet.delete(img.file);
+        } else {
+          pinnedSet.add(img.file);
+        }
+        savePinned();
+        renderGallery();
+      });
+      card.appendChild(pinBtn);
+
       const thumbWrap = document.createElement("div");
       thumbWrap.className = "thumb-wrap";
-      const image = document.createElement("img");
-      image.src = cdnUrl;
-      image.alt = img.label + " (" + img.file + ")";
-      thumbWrap.appendChild(image);
+      const imageEl = document.createElement("img");
+      imageEl.src = cdnUrl;
+      imageEl.alt = img.label + " (" + img.file + ")";
+      thumbWrap.appendChild(imageEl);
 
       const body = document.createElement("div");
       body.className = "card-body";
@@ -619,7 +599,7 @@ faviconimageoriginalimagesimagecopy.png">
 
       const copyHint = document.createElement("div");
       copyHint.className = "copy-hint";
-      copyHint.textContent = "Click card to copy jsDelivr URL";
+      copyHint.textContent = "Left click to copy jsDelivr URL. Right click to zoom.";
 
       body.appendChild(filename);
       body.appendChild(dateLine);
@@ -630,6 +610,7 @@ faviconimageoriginalimagesimagecopy.png">
       card.appendChild(thumbWrap);
       card.appendChild(body);
 
+      // Left click: copy URL
       card.addEventListener("click", function () {
         if (navigator.clipboard && navigator.clipboard.writeText) {
           navigator.clipboard.writeText(cdnUrl)
@@ -654,10 +635,44 @@ faviconimageoriginalimagesimagecopy.png">
         }
       });
 
-      container.appendChild(card);
+      // Right click: zoom
+      card.addEventListener("contextmenu", function (event) {
+        event.preventDefault();
+        openZoom(cdnUrl, img.label);
+      });
+
+      galleryEl.appendChild(card);
     });
   }
 
+  zoomOverlay.addEventListener("click", function (event) {
+    if (event.target === zoomOverlay) {
+      closeZoom();
+    }
+  });
+
+  zoomOverlay.addEventListener("contextmenu", function (event) {
+    event.preventDefault();
+    closeZoom();
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && zoomOverlay.classList.contains("show")) {
+      closeZoom();
+    }
+  });
+
+  includeInput.addEventListener("input", renderGallery);
+  excludeInput.addEventListener("input", renderGallery);
+  pinnedOnlyCheckbox.addEventListener("change", renderGallery);
+  resetFiltersButton.addEventListener("click", function () {
+    includeInput.value = "";
+    excludeInput.value = "";
+    pinnedOnlyCheckbox.checked = false;
+    renderGallery();
+  });
+
+  loadPinned();
   renderGallery();
 </script>
 </body>
