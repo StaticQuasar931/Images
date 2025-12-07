@@ -1,1218 +1,1755 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <title>StaticQuasar931 Images Index</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/faviconimagesimage.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/faviconimageoriginalimagesimagecopy.png">
-  <link rel="shortcut icon" type="image/png" href="https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/faviconimageoriginalimagesimagecopy.png">
-
-  <style>
-    :root {
-      --bg: #0b0c10;
-      --text: #e6f1ff;
-      --muted: #9ca3af;
-      --card-bg: #020617;
-      --border: #1f2937;
-      --accent: #1d4ed8;
-      --accent-hover: #2563eb;
-      --tag-bg: rgba(15, 23, 42, 0.8);
-      --thumb-bg: #020617;
-      --toast-bg: rgba(22, 163, 74, 0.96);
-      --toast-text: #ecfdf5;
-      --panel-bg: #020617;
-      --panel-border: #1f2937;
-    }
-
-    [data-theme="light"] {
-      --bg: #f9fafb;
-      --text: #111827;
-      --muted: #4b5563;
-      --card-bg: #ffffff;
-      --border: #e5e7eb;
-      --accent: #2563eb;
-      --accent-hover: #1d4ed8;
-      --tag-bg: #e5e7eb;
-      --thumb-bg: #f3f4f6;
-      --toast-bg: #16a34a;
-      --toast-text: #f9fafb;
-      --panel-bg: #ffffff;
-      --panel-border: #e5e7eb;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-    }
-
-    .top-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0.5rem 1.5rem;
-      border-bottom: 1px solid var(--border);
-      background: var(--card-bg);
-    }
-
-    .top-title {
-      font-size: 0.9rem;
-      font-weight: 600;
-      opacity: 0.9;
-    }
-
-    .controls {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      padding: 0.5rem 1.5rem 0.75rem;
-      background: var(--bg);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .controls-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.25rem;
-      align-items: center;
-    }
-
-    .controls label {
-      font-size: 0.78rem;
-      color: var(--muted);
-      white-space: nowrap;
-    }
-
-    .controls input[type="text"] {
-      background: var(--card-bg);
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      padding: 0.25rem 0.55rem;
-      font-size: 0.78rem;
-      color: var(--text);
-      min-width: 110px;
-    }
-
-    .controls input[type="text"]::placeholder {
-      color: var(--muted);
-    }
-
-    .controls input[type="checkbox"] {
-      accent-color: var(--accent);
-    }
-
-    .controls-button {
-      background: var(--accent);
-      border-radius: 999px;
-      border: 1px solid var(--accent-hover);
-      font-size: 0.78rem;
-      padding: 0.25rem 0.7rem;
-      color: #e5e7eb;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.25rem;
-      white-space: nowrap;
-    }
-
-    .controls-button:hover {
-      background: var(--accent-hover);
-    }
-
-    .controls-button.secondary {
-      background: transparent;
-      border-color: var(--border);
-      color: var(--muted);
-    }
-
-    .controls-button.secondary:hover {
-      background: var(--card-bg);
-      color: var(--text);
-    }
-
-    .preset-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.25rem;
-    }
-
-    .preset-button {
-      background: transparent;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      font-size: 0.72rem;
-      padding: 0.15rem 0.6rem;
-      color: var(--muted);
-      cursor: pointer;
-    }
-
-    .preset-button:hover {
-      background: var(--card-bg);
-      color: var(--text);
-    }
-
-    main {
-      padding: 0.75rem 1.5rem 2.5rem;
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(220px, 1fr);
-      gap: 1rem;
-    }
-
-    .gallery-wrapper {
-      min-width: 0;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 1rem;
-      align-items: flex-start;
-    }
-
-    .card {
-      background: var(--card-bg);
-      border-radius: 0.75rem;
-      border: 1px solid var(--border);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      cursor: pointer;
-      transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
-      position: relative;
-    }
-
-    .card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
-      border-color: #38bdf8;
-    }
-
-    .card.pinned {
-      border-color: #facc15;
-      box-shadow: 0 0 0 1px #facc15;
-    }
-
-    .card.selected {
-      box-shadow: 0 0 0 2px #10b981;
-    }
-
-    .thumb-wrap {
-      background: var(--thumb-bg);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.5rem;
-      min-height: 120px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .thumb-wrap img {
-      max-width: 100%;
-      max-height: 140px;
-      object-fit: contain;
-      image-rendering: auto;
-    }
-
-    .card-body {
-      padding: 0.6rem 0.8rem 0.75rem;
-      font-size: 0.82rem;
-      position: relative;
-    }
-
-    .filename {
-      font-weight: 600;
-      word-break: break-all;
-      margin-bottom: 0.1rem;
-      color: var(--text);
-      padding-right: 1.5rem;
-    }
-
-    .date-line {
-      font-size: 0.75rem;
-      color: var(--muted);
-      margin-bottom: 0.25rem;
-    }
-
-    .tags {
-      font-size: 0.72rem;
-      color: var(--muted);
-      line-height: 1.3;
-    }
-
-    .tag-chip {
-      display: inline-block;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      padding: 1px 6px;
-      margin: 0 4px 4px 0;
-      background: var(--tag-bg);
-      color: var(--text);
-    }
-
-    .copy-hint {
-      margin-top: 0.25rem;
-      font-size: 0.68rem;
-      color: var(--muted);
-    }
-
-    .badge-type {
-      position: absolute;
-      top: 6px;
-      right: 6px;
-      font-size: 0.65rem;
-      padding: 2px 6px;
-      border-radius: 999px;
-      background: rgba(15, 118, 110, 0.9);
-      color: #e5fdf8;
-      border: 1px solid rgba(34, 211, 238, 0.7);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .badge-type.seo {
-      background: rgba(30, 64, 175, 0.95);
-      border-color: rgba(59, 130, 246, 0.9);
-    }
-
-    .badge-type.logo {
-      background: rgba(120, 53, 220, 0.95);
-      border-color: rgba(167, 139, 250, 0.9);
-    }
-
-    .badge-type.game {
-      background: rgba(22, 163, 74, 0.95);
-      border-color: rgba(52, 211, 153, 0.9);
-    }
-
-    .pin-button {
-      position: absolute;
-      top: 4px;
-      left: 4px;
-      width: 22px;
-      height: 22px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: var(--card-bg);
-      color: var(--muted);
-      font-size: 0.78rem;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      padding: 0;
-    }
-
-    .pin-button.pinned {
-      border-color: #facc15;
-      background: #78350f;
-      color: #fef3c7;
-    }
-
-    .pin-button span {
-      transform: translateY(-0.5px);
-    }
-
-    .toast {
-      position: fixed;
-      bottom: 1.25rem;
-      left: 50%;
-      transform: translateX(-50%) translateY(40px);
-      padding: 0.6rem 1rem;
-      border-radius: 999px;
-      background: var(--toast-bg);
-      color: var(--toast-text);
-      font-size: 0.85rem;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.16s ease, transform 0.16s ease;
-      z-index: 80;
-    }
-
-    .toast.show {
-      opacity: 1;
-      transform: translateX(-50%) translateY(0);
-      pointer-events: auto;
-    }
-
-    .toast span.icon {
-      font-size: 1rem;
-    }
-
-    .zoom-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.9);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 70;
-      flex-direction: column;
-      padding: 1.5rem 1rem 2.5rem;
-      gap: 0.75rem;
-    }
-
-    .zoom-overlay.show {
-      display: flex;
-    }
-
-    .zoom-frame {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.75rem;
-      width: 100%;
-    }
-
-    .zoom-image {
-      max-width: 90vw;
-      max-height: 80vh;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9);
-      border-radius: 0.5rem;
-      background: #020617;
-      cursor: pointer;
-    }
-
-    .zoom-nav {
-      width: 38px;
-      height: 38px;
-      border-radius: 999px;
-      border: 1px solid #4b5563;
-      background: rgba(15, 23, 42, 0.7);
-      color: #e5e7eb;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.35rem;
-      cursor: pointer;
-      flex-shrink: 0;
-    }
-
-    .zoom-nav:hover {
-      background: rgba(31, 41, 55, 0.95);
-    }
-
-    .zoom-meta-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 0.75rem;
-      max-width: 900px;
-      width: 100%;
-      font-size: 0.8rem;
-      color: #d1d5db;
-    }
-
-    .zoom-text {
-      min-width: 0;
-    }
-
-    #zoom-label {
-      font-weight: 600;
-      margin-bottom: 0.1rem;
-      word-break: break-all;
-    }
-
-    #zoom-url {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      font-size: 0.72rem;
-      opacity: 0.9;
-      word-break: break-all;
-    }
-
-    .zoom-buttons {
-      display: flex;
-      gap: 0.4rem;
-      flex-shrink: 0;
-    }
-
-    .zoom-copy-btn {
-      background: var(--accent);
-      border: 1px solid var(--accent-hover);
-      border-radius: 999px;
-      font-size: 0.75rem;
-      padding: 0.25rem 0.7rem;
-      color: #e5e7eb;
-      cursor: pointer;
-    }
-
-    .zoom-copy-btn:hover {
-      background: var(--accent-hover);
-    }
-
-    .zoom-help {
-      font-size: 0.75rem;
-      color: #d1d5db;
-      background: rgba(15, 23, 42, 0.8);
-      padding: 0.35rem 0.7rem;
-      border-radius: 999px;
-      border: 1px solid #4b5563;
-      margin-top: 0.2rem;
-    }
-
-    .history-panel {
-      background: var(--panel-bg);
-      border-radius: 0.75rem;
-      border: 1px solid var(--panel-border);
-      padding: 0.5rem 0.6rem 0.55rem;
-      font-size: 0.78rem;
-      max-height: 460px;
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
-    }
-
-    .history-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.5rem;
-      margin-bottom: 0.1rem;
-      color: var(--muted);
-    }
-
-    .history-title {
-      font-size: 0.8rem;
-      font-weight: 600;
-    }
-
-    .history-clear-btn {
-      font-size: 0.7rem;
-      background: transparent;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      color: var(--muted);
-      padding: 0.1rem 0.5rem;
-      cursor: pointer;
-    }
-
-    .history-clear-btn:hover {
-      background: var(--card-bg);
-      color: var(--text);
-    }
-
-    .history-list {
-      overflow-y: auto;
-      padding-right: 0.2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.25rem;
-    }
-
-    .history-item {
-      border-radius: 0.5rem;
-      border: 1px solid var(--border);
-      padding: 0.25rem 0.4rem;
-      cursor: pointer;
-      background: transparent;
-      text-align: left;
-      color: var(--muted);
-    }
-
-    .history-item:hover {
-      background: var(--card-bg);
-      color: var(--text);
-    }
-
-    .history-label {
-      font-size: 0.76rem;
-      font-weight: 500;
-      margin-bottom: 0.05rem;
-    }
-
-    .history-url {
-      font-size: 0.7rem;
-      opacity: 0.9;
-      word-break: break-all;
-    }
-
-    .history-empty {
-      font-size: 0.74rem;
-      color: var(--muted);
-      padding: 0.1rem 0.2rem;
-    }
-
-    @media (max-width: 900px) {
-      main {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .history-panel {
-        order: -1;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .top-bar {
-        padding: 0.45rem 1rem;
-      }
-      .controls {
-        padding: 0.45rem 1rem 0.65rem;
-      }
-      main {
-        padding: 0.6rem 1rem 2.1rem;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/faviconimagesimage.png">
+
+<style>
+/* ===========================
+   GLOBAL VARIABLES & THEMES
+   =========================== */
+
+:root {
+  --bg: #0b0c10;
+  --text: #e6f1ff;
+  --muted: #9ca3af;
+  --card-bg: #020617;
+  --border: #1f2937;
+  --accent: #1d4ed8;
+  --accent-hover: #2563eb;
+  --tag-bg: rgba(15,23,42,0.8);
+  --thumb-bg: #020617;
+  --toast-bg: rgba(22,163,74,0.96);
+  --toast-text: #ecfdf5;
+  --panel-bg: #020617;
+  --panel-border: #1f2937;
+}
+
+[data-theme="light"] {
+  --bg: #f9fafb;
+  --text: #111827;
+  --muted: #4b5563;
+  --card-bg: #ffffff;
+  --border: #e5e7eb;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --tag-bg: #e5e7eb;
+  --thumb-bg: #f3f4f6;
+  --toast-bg: #16a34a;
+  --toast-text: #f9fafb;
+  --panel-bg: #ffffff;
+  --panel-border: #e5e7eb;
+}
+
+[data-theme="homey"] {
+  --bg: #434343;
+  --text: #f4f4f4;
+  --muted: #c7c7c7;
+  --card-bg: #4a4a4a;
+  --border: #606060;
+  --accent: #5c8bff;
+  --accent-hover: #7aa4ff;
+  --tag-bg: #5a5a5a;
+  --thumb-bg: #474747;
+  --toast-bg: #5c8bff;
+  --toast-text: #ffffff;
+  --panel-bg: #4a4a4a;
+  --panel-border: #606060;
+}
+
+/* ===========================
+   BASE STYLES
+   =========================== */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  overflow-y: scroll;
+}
+
+button, input, select {
+  font-family: inherit;
+}
+
+/* ===========================
+   STICKY TOP CONTROL BAR
+   =========================== */
+
+#top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border);
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+#filters-left, #filters-right {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-group label {
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-bottom: 2px;
+}
+
+.filter-group input {
+  padding: 0.25rem 0.5rem;
+  background: var(--thumb-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.checkbox-group {
+  flex-direction: row;
+  align-items: center;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  border: 1px solid var(--accent-hover);
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: var(--card-bg);
+  color: var(--text);
+}
+
+/* ===========================
+   PRESET FILTER BAR
+   =========================== */
+
+#preset-bar {
+  position: sticky;
+  top: 48px;
+  z-index: 90;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0.4rem 1rem;
+}
+
+.preset-btn {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.preset-btn:hover {
+  background: var(--card-bg);
+  color: var(--text);
+}
+
+/* ===========================
+   GALLERY GRID
+   =========================== */
+
+#gallery {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.15s;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+  border-color: var(--accent);
+}
+
+.card.pinned {
+  border-color: gold;
+  box-shadow: 0 0 5px gold;
+}
+
+.thumb {
+  background: var(--thumb-bg);
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thumb img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.card-body {
+  padding: 0.6rem 0.7rem;
+}
+
+.card-title {
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 0.2rem;
+  word-break: break-all;
+}
+
+.card-date {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.type-badge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: var(--accent);
+  color: #fff;
+  padding: 2px 6px;
+  font-size: 0.65rem;
+  border-radius: 6px;
+}
+
+.pin-btn {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 24px;
+  height: 24px;
+  background: var(--thumb-bg);
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pin-btn.pinned {
+  background: gold;
+  color: #000;
+  border-color: gold;
+}
+
+/* Tag chips */
+.tags {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.tag-chip {
+  display: inline-block;
+  padding: 1px 6px;
+  margin: 2px 3px 0 0;
+  background: var(--tag-bg);
+  color: var(--text);
+  border-radius: 999px;
+  border: 1px solid var(--border);
+}
+
+/* Highlight pulse when filters change */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0px rgba(92,139,255,0.7); }
+  50% { box-shadow: 0 0 12px rgba(92,139,255,1); }
+  100% { box-shadow: 0 0 0px rgba(92,139,255,0.7); }
+}
+.card.pulse {
+  animation: pulse 0.8s ease;
+}
+
+/* ===========================
+   FULLSCREEN OVERLAY
+   =========================== */
+
+#fullscreen {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.92);
+  backdrop-filter: blur(3px);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  z-index: 200;
+}
+
+#fullscreen.show {
+  display: flex;
+}
+
+#fs-img {
+  max-width: 90vw;
+  max-height: 80vh;
+  margin-top: 1rem;
+  border-radius: 8px;
+  background: #222;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.8);
+}
+
+#fs-top-bar {
+  display: flex;
+  justify-content: space-between;
+  width: 92vw;
+  max-width: 1200px;
+  align-items: center;
+}
+
+.fs-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.fs-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.fs-btn {
+  background: var(--accent);
+  border: 1px solid var(--accent-hover);
+  border-radius: 5px;
+  padding: 0.3rem 0.6rem;
+  color: white;
+  cursor: pointer;
+}
+
+.fs-btn:hover {
+  background: var(--accent-hover);
+}
+
+#fs-similar {
+  margin-top: 0.75rem;
+  color: #ddd;
+  font-size: 0.85rem;
+  max-width: 900px;
+  text-align: center;
+}
+
+/* ===========================
+   CLIPBOARD POPUP MODAL
+   =========================== */
+
+#clipboard-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 250;
+}
+
+#clipboard-modal.show {
+  display: flex;
+}
+
+#clipboard-box {
+  width: 340px;
+  max-height: 70vh;
+  overflow-y: auto;
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 8px;
+  padding: 0.7rem;
+}
+
+.clip-entry {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  background: var(--card-bg);
+}
+
+.clip-entry:hover {
+  background: var(--thumb-bg);
+}
+
+.clip-thumb {
+  width: 40px;
+  height: 40px;
+  background: #222;
+  border-radius: 4px;
+  object-fit: contain;
+}
+
+.clip-text {
+  font-size: 0.8rem;
+  color: var(--text);
+}
+
+/* ===========================
+   NOTES SYSTEM
+   =========================== */
+
+#notes-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 260;
+}
+
+#notes-modal.show {
+  display: flex;
+}
+
+#notes-box {
+  width: 340px;
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 8px;
+  padding: 0.8rem;
+}
+
+#notes-box h3 {
+  margin: 0 0 0.5rem;
+  color: var(--text);
+}
+
+#notes-input {
+  width: 100%;
+  height: 140px;
+  background: var(--thumb-bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 6px;
+  padding: 0.5rem;
+  resize: none;
+}
+
+#notes-save {
+  margin-top: 0.5rem;
+}
+#notes-cancel {
+  margin-top: 0.5rem;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  border-radius: 6px;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+}
+
+/* ===========================
+   COMPARE MODE
+   =========================== */
+
+#compare-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.82);
+  z-index: 270;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+#compare-modal.show {
+  display: flex;
+}
+
+#compare-container {
+  display: flex;
+  gap: 1rem;
+  max-width: 95vw;
+  max-height: 85vh;
+}
+
+.compare-box {
+  flex: 1;
+  background: #222;
+  padding: 0.5rem;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.compare-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  background: #111;
+  border-radius: 4px;
+}
+
+/* Buttons inside compare mode */
+.compare-btns {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.compare-btn {
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  background: var(--accent);
+  border: 1px solid var(--accent-hover);
+  color: #fff;
+  cursor: pointer;
+}
+
+.compare-btn:hover {
+  background: var(--accent-hover);
+}
+
+/* ===========================
+   TOAST
+   =========================== */
+
+#toast {
+  position: fixed;
+  bottom: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(40px);
+  opacity: 0;
+  pointer-events: none;
+  background: var(--toast-bg);
+  color: var(--toast-text);
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: opacity 0.2s, transform 0.2s;
+  z-index: 999;
+}
+
+#toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+#toast img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+/* ===========================
+   MAIN AREA
+   =========================== */
+
+main {
+  padding-top: 0.5rem;
+}
+
+/* ===========================
+   END OF CSS PART
+   =========================== */
+</style>
 </head>
+
 <body>
-<div class="top-bar">
-  <div class="top-title">SQ images</div>
-  <button type="button" id="theme-toggle" class="controls-button secondary">Toggle light mode</button>
-</div>
 
-<div class="controls">
-  <div class="controls-group">
-    <label for="filter-include">Include:</label>
-    <input id="filter-include" list="include-suggestions" type="text" placeholder="tags, names, dates">
-    <datalist id="include-suggestions"></datalist>
-  </div>
-  <div class="controls-group">
-    <label for="filter-exclude">Exclude:</label>
-    <input id="filter-exclude" list="exclude-suggestions" type="text" placeholder="things to hide">
-    <datalist id="exclude-suggestions"></datalist>
-  </div>
-  <div class="controls-group">
-    <label for="filter-pinned">
-      <input id="filter-pinned" type="checkbox">
-      Pinned only
+<!-- ========================= -->
+<!-- TOP BAR -->
+<!-- ========================= -->
+<div id="top-bar">
+  <div id="filters-left">
+
+    <div class="filter-group">
+      <label>Include:</label>
+      <input id="filter-include" type="text" list="include-suggestions" placeholder="tags, name, dates">
+      <datalist id="include-suggestions"></datalist>
+    </div>
+
+    <div class="filter-group">
+      <label>Exclude:</label>
+      <input id="filter-exclude" type="text" list="exclude-suggestions" placeholder="exclude tags">
+      <datalist id="exclude-suggestions"></datalist>
+    </div>
+
+    <label class="checkbox-group" style="gap:4px; cursor:pointer;">
+      <input type="checkbox" id="filter-pinned">
+      <span>Pinned only</span>
     </label>
+
+    <button id="reset-filters" class="btn-secondary">Reset</button>
   </div>
-  <div class="controls-group">
-    <button type="button" id="reset-filters" class="controls-button secondary">Reset filters</button>
-  </div>
-  <div class="controls-group">
-    <button type="button" id="multi-toggle" class="controls-button secondary">Multi select: off</button>
-    <button type="button" id="multi-copy-urls" class="controls-button" disabled>Copy selected URLs</button>
-    <button type="button" id="multi-clear" class="controls-button secondary" disabled>Clear selected</button>
-  </div>
-  <div class="controls-group">
-    <div class="preset-buttons">
-      <button type="button" class="preset-button" data-preset="seo">SEO set</button>
-      <button type="button" class="preset-button" data-preset="icons">Icons and UI</button>
-      <button type="button" class="preset-button" data-preset="games">Game thumbnails</button>
-      <button type="button" class="preset-button" data-preset="banners">Banners and headers</button>
-      <button type="button" class="preset-button" data-preset="recent">Recently added</button>
-    </div>
+
+  <div id="filters-right">
+
+    <label for="theme-select" style="font-size:0.8rem;color:var(--muted);">Theme:</label>
+    <select id="theme-select">
+      <option value="dark">Dark</option>
+      <option value="light">Light</option>
+      <option value="homey">Homey</option>
+    </select>
+
+    <button id="clipboard-btn" class="btn-secondary">Clipboard</button>
+    <button id="multi-toggle" class="btn-secondary">Multi: Off</button>
+    <button id="multi-copy" class="btn-primary" disabled>Copy</button>
+    <button id="multi-clear" class="btn-secondary" disabled>Clear</button>
+
   </div>
 </div>
 
-<main>
-  <div class="gallery-wrapper">
-    <section class="gallery" id="gallery"></section>
-  </div>
+<!-- ========================= -->
+<!-- PRESET BAR -->
+<!-- ========================= -->
+<div id="preset-bar">
+  <button class="preset-btn" data-preset="seo">SEO</button>
+  <button class="preset-btn" data-preset="icons">Icons</button>
+  <button class="preset-btn" data-preset="games">Games</button>
+  <button class="preset-btn" data-preset="banners">Banners</button>
+  <button class="preset-btn" data-preset="recent">Recent</button>
+  <button class="preset-btn" data-preset="notes">With Notes</button>
+</div>
 
-  <aside class="history-panel" id="history-panel">
-    <div class="history-header">
-      <span class="history-title">Clipboard history</span>
-      <button type="button" id="history-clear" class="history-clear-btn">Clear</button>
-    </div>
-    <div id="history-list" class="history-list">
-      <div class="history-empty">Nothing copied yet.</div>
-    </div>
-  </aside>
+<!-- ========================= -->
+<!-- GALLERY GRID -->
+<!-- ========================= -->
+<main>
+  <div id="gallery"></div>
 </main>
 
-<div class="toast" id="toast">
-  <span class="icon">✅</span>
-  <span id="toast-text">Copied to clipboard</span>
-</div>
-
-<div id="zoom-overlay" class="zoom-overlay">
-  <div class="zoom-frame">
-    <button type="button" id="zoom-prev" class="zoom-nav">‹</button>
-    <img id="zoom-image" class="zoom-image" src="" alt="">
-    <button type="button" id="zoom-next" class="zoom-nav">›</button>
-  </div>
-  <div class="zoom-meta-bar">
-    <div class="zoom-text">
-      <div id="zoom-label"></div>
-      <div id="zoom-url"></div>
-    </div>
-    <div class="zoom-buttons">
-      <button type="button" id="zoom-copy" class="zoom-copy-btn">Copy URL</button>
+<!-- ========================= -->
+<!-- FULLSCREEN VIEWER -->
+<!-- ========================= -->
+<div id="fullscreen">
+  <div id="fs-top-bar">
+    <div class="fs-title" id="fs-title">Image</div>
+    <div class="fs-buttons">
+      <button class="fs-btn" id="fs-copy">Copy URL</button>
+      <button class="fs-btn" id="fs-open">Open (N)</button>
+      <button class="fs-btn" id="fs-notes">Notes</button>
+      <button class="fs-btn" id="fs-close">Close (Esc)</button>
     </div>
   </div>
-  <div class="zoom-help">Left click to copy URL. Right click or Esc to close. Use ← → or A D to move.</div>
+
+  <img id="fs-img" src="">
+  <div id="fs-similar"></div>
 </div>
 
+<!-- ========================= -->
+<!-- CLIPBOARD MODAL -->
+<!-- ========================= -->
+<div id="clipboard-modal">
+  <div id="clipboard-box">
+    <h3 style="margin:0 0 0.5rem;color:var(--text);">Clipboard History</h3>
+    <div id="clipboard-list"></div>
+    <button id="clipboard-clear" class="btn-secondary" style="margin-top:0.5rem;width:100%;">Clear</button>
+    <button id="clipboard-close" class="btn-secondary" style="margin-top:0.4rem;width:100%;">Close</button>
+  </div>
+</div>
+
+<!-- ========================= -->
+<!-- NOTES MODAL -->
+<!-- ========================= -->
+<div id="notes-modal">
+  <div id="notes-box">
+    <h3>Image Notes</h3>
+    <textarea id="notes-input"></textarea>
+    <button id="notes-save" class="btn-primary" style="width:100%;">Save</button>
+    <button id="notes-cancel" class="btn-secondary" style="width:100%;">Cancel</button>
+  </div>
+</div>
+
+<!-- ========================= -->
+<!-- COMPARE MODAL -->
+<!-- ========================= -->
+<div id="compare-modal">
+  <div class="compare-btns">
+    <button id="compare-swap" class="compare-btn">Swap</button>
+    <button id="compare-close" class="compare-btn">Close</button>
+  </div>
+
+  <div id="compare-container">
+    <div class="compare-box">
+      <img id="compare-img-1" class="compare-img">
+    </div>
+    <div class="compare-box">
+      <img id="compare-img-2" class="compare-img">
+    </div>
+  </div>
+</div>
+
+<!-- ========================= -->
+<!-- TOAST -->
+<!-- ========================= -->
+<div id="toast">
+  <img id="toast-thumb" src="">
+  <span id="toast-text">Copied</span>
+</div>
+
+<!-- ========================= -->
+<!-- SCRIPT PART BEGINS (PART 3A-C will continue here) -->
+<!-- ========================= -->
 <script>
-  // Leave or reload warning
-  window.onbeforeunload = function () {
-    return "Are you sure you want to leave this image index page?";
+/* PART 3A BEGINS BELOW — CONTINUE WHEN READY */
+// Leave or reload warning
+window.onbeforeunload = function () {
+  return "Are you sure you want to leave this image index page?";
+};
+
+const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
+
+// Approx dates based on your mapping
+const DATE_TODAY     = "2025-12-07"; // 9 hours ago
+const DATE_2_WEEKS   = "2025-11-23";
+const DATE_3_WEEKS   = "2025-11-16";
+const DATE_LAST_WEEK = "2025-11-30";
+const DATE_LAST_MON  = "2025-11-07";
+
+// Hardcoded images - same list as before
+const images = [
+  {
+    file: "1v1.lol_Favicon_zv2lxo.jpg",
+    label: "1v1.lol Favicon",
+    type: "icon",
+    date: DATE_3_WEEKS,
+    tags: ["icon", "favicon", "1v1.lol", "game", "seo"],
+    alias: "1v1-favicon"
+  },
+  {
+    file: "1v1_Lol_StaticQuasar931_xrplna.png",
+    label: "1v1.lol Logo",
+    type: "logo",
+    date: DATE_3_WEEKS,
+    tags: ["logo", "1v1.lol", "thumbnail", "game", "cover"],
+    alias: "1v1-logo"
+  },
+  {
+    file: "3-slices_StaticQuasar931.jpg",
+    label: "3 Slices Thumbnail",
+    type: "game",
+    date: DATE_LAST_MON,
+    tags: ["game", "3 slices", "thumbnail", "cover"]
+  },
+  {
+    file: "Clash_Royale_StaticQuasar931_ixwb97.png",
+    label: "Clash Royale Thumbnail",
+    type: "game",
+    date: DATE_TODAY,
+    tags: ["game", "clash royale", "thumbnail", "mobile"],
+    alias: "clash-royale"
+  },
+  {
+    file: "Crossy_road_StaticQuasar931.webp",
+    label: "Crossy Road Thumbnail",
+    type: "game",
+    date: DATE_LAST_MON,
+    tags: ["game", "crossy road", "thumbnail", "arcade"]
+  },
+  {
+    file: "Drift_Hunters_StaticQuasar931.avif",
+    label: "Drift Hunters Thumbnail",
+    type: "game",
+    date: DATE_LAST_MON,
+    tags: ["game", "drift hunters", "racing", "thumbnail"]
+  },
+  {
+    file: "Escape_Road_1_StaticQuasar931_CDN.png",
+    label: "Escape Road 1 Game Art",
+    type: "game",
+    date: DATE_LAST_MON,
+    tags: ["game", "escape road", "fake gta", "thumbnail"]
+  },
+  {
+    file: "Follow-us--IG",
+    label: "Follow Us Instagram Icon",
+    type: "seo",
+    date: DATE_LAST_MON,
+    tags: ["seo", "icon", "instagram", "social", "visual-seo", "static brand"],
+    alias: "ig-icon"
+  },
+  {
+    file: "GTA_Mods_StaticQuasar931_vua0h4.png",
+    label: "GTA Mods Thumbnail",
+    type: "game",
+    date: DATE_LAST_MON,
+    tags: ["game", "gta", "mods", "thumbnail"]
+  },
+  {
+    file: "Google-logo-transparent-G.png",
+    label: "Google G Logo",
+    type: "seo",
+    date: DATE_2_WEEKS,
+    tags: ["seo", "icon", "google", "logo", "search", "ui"],
+    alias: "google-g"
+  },
+  {
+    file: "GoogleForm.png",
+    label: "Google Form Icon",
+    type: "seo",
+    date: DATE_LAST_MON,
+    tags: ["seo", "icon", "google form", "social", "visual-seo", "feedback"],
+    alias: "google-form"
+  },
+  {
+    file: "Java_Edition_1.12.2.webp",
+    label: "Minecraft Java 1.12.2",
+    type: "game",
+    date: DATE_3_WEEKS,
+    tags: ["minecraft", "java 1.12.2", "game", "version-art"]
+  },
+  {
+    file: "Join_Our_DC_StaticQuassar931_lcplrf.png",
+    label: "Join Our Discord Icon",
+    type: "seo",
+    date: DATE_LAST_MON,
+    tags: ["seo", "icon", "discord", "social", "visual-seo", "static brand"],
+    alias: "discord-icon"
+  },
+  {
+    file: "MV5BNGIyZDE4OTYtNjBhOS00NzFkLTkyYWMtYzAzNWUxZThmMDBlXkEyXkFqcGc@._V1_.jpg",
+    label: "Movie Poster Style Art",
+    type: "art",
+    date: DATE_2_WEEKS,
+    tags: ["art", "poster", "movie-style", "thumbnail"]
+  },
+  {
+    file: "RaftBeta.png",
+    label: "Raft Beta Thumbnail",
+    type: "game",
+    date: DATE_2_WEEKS,
+    tags: ["game", "raft", "survival", "thumbnail"]
+  },
+  {
+    file: "Retro_Bowl_StaticQuasar931_t2epwp.jpg",
+    label: "Retro Bowl Static Thumbnail",
+    type: "game",
+    date: DATE_2_WEEKS,
+    tags: ["game", "retro bowl", "football", "thumbnail"],
+    alias: "retro-bowl"
+  },
+  {
+    file: "Retrobowl_football.webp",
+    label: "Retro Bowl Football Art",
+    type: "game",
+    date: DATE_LAST_MON,
+    tags: ["game", "retro bowl", "football", "art"]
+  },
+  {
+    file: "Screenshot_2025-11-24_162537-removebg-preview.png",
+    label: "Screenshot 162537 Transparent",
+    type: "ui",
+    date: DATE_2_WEEKS,
+    tags: ["ui", "screenshot", "transparent", "asset"]
+  },
+  {
+    file: "Screenshot_2025-11-24_172246-removebg-preview.png",
+    label: "Screenshot 172246 Transparent",
+    type: "ui",
+    date: DATE_2_WEEKS,
+    tags: ["ui", "screenshot", "transparent", "asset"]
+  },
+  {
+    file: "StaticQuasar931_Banner_Media_Google_Sites_Neon_ChatGPT_Image.png",
+    label: "StaticQuasar931 Neon Banner",
+    type: "seo",
+    date: DATE_LAST_MON,
+    tags: ["seo", "banner", "header", "static brand", "google sites", "visual-seo"],
+    alias: "sq-banner"
+  },
+  {
+    file: "Stickman_Hook.webp",
+    label: "Stickman Hook Thumbnail",
+    type: "game",
+    date: DATE_2_WEEKS,
+    tags: ["game", "stickman hook", "arcade", "thumbnail"]
+  },
+  {
+    file: "Stumble_Guys_StaticQuasar931.png",
+    label: "Stumble Guys Thumbnail",
+    type: "game",
+    date: DATE_2_WEEKS,
+    tags: ["game", "stumble guys", "battle royale", "thumbnail"]
+  },
+  {
+    file: "The_Binding_Of_Isaac_Wrath_of_The_Lamb_StaticQuasar931_g0u5vx.jpg",
+    label: "Binding of Isaac Wrath of the Lamb",
+    type: "game",
+    date: DATE_TODAY,
+    tags: ["game", "binding of isaac", "wrath of the lamb", "thumbnail"],
+    alias: "isaac-wotl"
+  },
+  {
+    file: "We_Become_What_We_Behold_WBWWB_StaticQuasar931.png",
+    label: "We Become What We Behold",
+    type: "game",
+    date: DATE_3_WEEKS,
+    tags: ["game", "wbwwb", "we become what we behold", "thumbnail"]
+  },
+  {
+    file: "WithhelpbyIsaac.png",
+    label: "With help by Isaac Badge",
+    type: "credit",
+    date: DATE_LAST_WEEK,
+    tags: ["credit", "badge", "support", "helper", "overlay"],
+    alias: "isaac-credit"
+  },
+  {
+    file: "basketbros-io.jpg",
+    label: "BasketBros io",
+    type: "game",
+    date: DATE_2_WEEKS,
+    tags: ["game", "basketbros", "basketball", "thumbnail"]
+  },
+  {
+    file: "bloodmoney-online.png",
+    label: "Bloodmoney Online",
+    type: "game",
+    date: DATE_LAST_WEEK,
+    tags: ["game", "bloodmoney", "online", "thumbnail"]
+  },
+  {
+    file: "capsule_616x353.jpg",
+    label: "Capsule 616x353",
+    type: "art",
+    date: DATE_2_WEEKS,
+    tags: ["game", "capsule", "banner", "steam-style"]
+  },
+  {
+    file: "clash-of-vikings_StaticQuasar931.webp",
+    label: "Clash of Vikings",
+    type: "game",
+    date: DATE_LAST_MON,
+    tags: ["game", "clash of vikings", "strategy", "thumbnail"]
+  },
+  {
+    file: "cubes-2048-io.avif",
+    label: "Cubes 2048 io",
+    type: "game",
+    date: DATE_LAST_WEEK,
+    tags: ["game", "2048", "cubes", "io", "puzzle"]
+  },
+  {
+    file: "document-autosave.svg",
+    label: "Document Autosave Icon",
+    type: "icon",
+    date: DATE_2_WEEKS,
+    tags: ["icon", "ui", "document", "autosave", "button", "seo-ui"],
+    alias: "autosave-icon"
+  },
+  {
+    file: "icon.png",
+    label: "StaticQuasar931 Main Icon",
+    type: "logo",
+    date: DATE_LAST_MON,
+    tags: ["logo", "icon", "static brand", "favicon", "seo"],
+    alias: "sq-main-icon"
+  },
+  {
+    file: "loadishlogo-removebg-preview.png",
+    label: "Loadish Logo Transparent",
+    type: "logo",
+    date: DATE_2_WEEKS,
+    tags: ["logo", "loadish", "transparent", "brand"]
+  },
+  {
+    file: "loadishlogo.jpg",
+    label: "Loadish Logo",
+    type: "logo",
+    date: DATE_2_WEEKS,
+    tags: ["logo", "loadish", "brand"]
+  },
+  {
+    file: "minecraft-1639513933156.jpg",
+    label: "Minecraft Generic Art",
+    type: "game",
+    date: DATE_3_WEEKS,
+    tags: ["game", "minecraft", "thumbnail", "cover"]
+  },
+  {
+    file: "nuts-puzzle-sort-by-color.png",
+    label: "Nuts Puzzle Sort by Color",
+    type: "game",
+    date: DATE_3_WEEKS,
+    tags: ["game", "puzzle", "sort by color", "thumbnail"]
+  },
+  {
+    file: "ragdoll-archers_StaticQuasar931.png",
+    label: "Ragdoll Archers",
+    type: "game",
+    date: DATE_LAST_MON,
+    tags: ["game", "ragdoll archers", "archery", "thumbnail"]
+  },
+  {
+    file: "savelogo-removebg-preview.png",
+    label: "Save Logo Transparent",
+    type: "icon",
+    date: DATE_2_WEEKS,
+    tags: ["icon", "save", "ui", "button", "transparent"]
+  },
+  {
+    file: "savelogo.jpg",
+    label: "Save Logo",
+    type: "icon",
+    date: DATE_2_WEEKS,
+    tags: ["icon", "save", "ui", "button"]
+  },
+  {
+    file: "signout_logout-removebg-preview.png",
+    label: "Signout Logout Transparent",
+    type: "icon",
+    date: DATE_2_WEEKS,
+    tags: ["icon", "logout", "ui", "button", "transparent"]
+  },
+  {
+    file: "signout_logout.png",
+    label: "Signout Logout Icon",
+    type: "icon",
+    date: DATE_2_WEEKS,
+    tags: ["icon", "logout", "ui", "button"]
+  },
+  {
+    file: "slope_Staticquasar931_stable_agqxto.png",
+    label: "Slope StaticQuasar931 Stable",
+    type: "game",
+    date: DATE_3_WEEKS,
+    tags: ["game", "slope", "unblocked", "thumbnail"],
+    alias: "slope-stable"
+  },
+  {
+    file: "staticquasar931qrcodehomepage.png",
+    label: "StaticQuasar931 Homepage QR Code",
+    type: "seo",
+    date: DATE_LAST_WEEK,
+    tags: ["seo", "qr code", "static brand", "homepage", "visual-seo"]
+  },
+  {
+    file: "survival-race-banner_Area_king_StaticQuasar931.png",
+    label: "Survival Race Banner",
+    type: "game",
+    date: DATE_LAST_MON,
+    tags: ["game", "survival race", "banner", "thumbnail"]
+  },
+  {
+    file: "the-baby-in-yellow-pc-game-steam-cover.jpg",
+    label: "The Baby in Yellow Steam Cover",
+    type: "game",
+    date: DATE_3_WEEKS,
+    tags: ["game", "the baby in yellow", "steam cover", "horror"]
+  }
+];
+
+// State
+let currentTheme = localStorage.getItem("sq_img_theme") || "dark";
+let pinned = new Set(JSON.parse(localStorage.getItem("sq_img_pinned") || "[]"));
+let notes = JSON.parse(localStorage.getItem("sq_img_notes") || "{}");
+let clipboardHistory = JSON.parse(localStorage.getItem("sq_img_clipboard") || "[]");
+let multiMode = false;
+let multiSelected = new Set();
+let currentFiltered = [];
+let currentFsIndex = -1;
+let currentNotesIndex = -1;
+let compareSelection = [];
+let pulseFlag = false;
+
+// DOM refs
+const galleryEl = document.getElementById("gallery");
+const includeInput = document.getElementById("filter-include");
+const excludeInput = document.getElementById("filter-exclude");
+const pinnedCheckbox = document.getElementById("filter-pinned");
+const resetFiltersBtn = document.getElementById("reset-filters");
+const presetButtons = Array.from(document.querySelectorAll(".preset-btn"));
+const themeSelect = document.getElementById("theme-select");
+const clipboardBtn = document.getElementById("clipboard-btn");
+const clipboardModal = document.getElementById("clipboard-modal");
+const clipboardList = document.getElementById("clipboard-list");
+const clipboardClear = document.getElementById("clipboard-clear");
+const clipboardClose = document.getElementById("clipboard-close");
+const multiToggle = document.getElementById("multi-toggle");
+const multiCopy = document.getElementById("multi-copy");
+const multiClear = document.getElementById("multi-clear");
+const toastEl = document.getElementById("toast");
+const toastText = document.getElementById("toast-text");
+const toastThumb = document.getElementById("toast-thumb");
+const fsEl = document.getElementById("fullscreen");
+const fsImg = document.getElementById("fs-img");
+const fsTitle = document.getElementById("fs-title");
+const fsSimilar = document.getElementById("fs-similar");
+const fsCopy = document.getElementById("fs-copy");
+const fsOpen = document.getElementById("fs-open");
+const fsNotesBtn = document.getElementById("fs-notes");
+const fsClose = document.getElementById("fs-close");
+const notesModal = document.getElementById("notes-modal");
+const notesInput = document.getElementById("notes-input");
+const notesSave = document.getElementById("notes-save");
+const notesCancel = document.getElementById("notes-cancel");
+const compareModal = document.getElementById("compare-modal");
+const compareImg1 = document.getElementById("compare-img-1");
+const compareImg2 = document.getElementById("compare-img-2");
+const compareSwap = document.getElementById("compare-swap");
+const compareClose = document.getElementById("compare-close");
+const includeSuggestions = document.getElementById("include-suggestions");
+const excludeSuggestions = document.getElementById("exclude-suggestions");
+
+function setTheme(theme) {
+  currentTheme = theme;
+  document.documentElement.setAttribute("data-theme", theme);
+  themeSelect.value = theme;
+  localStorage.setItem("sq_img_theme", theme);
+}
+
+function cycleTheme() {
+  const order = ["dark", "light", "homey"];
+  const idx = order.indexOf(currentTheme);
+  const next = order[(idx + 1) % order.length];
+  setTheme(next);
+}
+
+setTheme(currentTheme);
+
+// Helper to see if typing focus should block hotkeys
+function isTyping() {
+  const el = document.activeElement;
+  if (!el) return false;
+  const tag = el.tagName.toLowerCase();
+  if (tag === "input" || tag === "textarea" || tag === "select") return true;
+  if (el.isContentEditable) return true;
+  return false;
+}
+
+function savePinned() {
+  localStorage.setItem("sq_img_pinned", JSON.stringify(Array.from(pinned)));
+}
+
+function saveNotes() {
+  localStorage.setItem("sq_img_notes", JSON.stringify(notes));
+}
+
+function saveClipboard() {
+  localStorage.setItem("sq_img_clipboard", JSON.stringify(clipboardHistory));
+}
+
+function buildSuggestions() {
+  const setInc = new Set();
+  const setExc = new Set();
+  images.forEach(img => {
+    img.tags.forEach(t => {
+      setInc.add(t);
+      setExc.add(t);
+    });
+    setInc.add(img.type);
+    setExc.add(img.type);
+    setInc.add(img.date);
+    setExc.add(img.date);
+    setInc.add(img.label.toLowerCase());
+    setExc.add(img.label.toLowerCase());
+    if (img.alias) {
+      setInc.add(img.alias.toLowerCase());
+      setExc.add(img.alias.toLowerCase());
+    }
+  });
+  includeSuggestions.innerHTML = "";
+  excludeSuggestions.innerHTML = "";
+  Array.from(setInc).forEach(v => {
+    const o = document.createElement("option");
+    o.value = v;
+    includeSuggestions.appendChild(o);
+  });
+  Array.from(setExc).forEach(v => {
+    const o = document.createElement("option");
+    o.value = v;
+    excludeSuggestions.appendChild(o);
+  });
+}
+
+function getAspectBadge(file, tags) {
+  const name = file.toLowerCase();
+  if (name.includes("banner") || name.includes("616x") || tags.includes("banner") || tags.includes("steam-style")) {
+    return "wide";
+  }
+  if (name.includes("qrcode") || name.includes("icon") || name.includes("favicon")) {
+    return "square";
+  }
+  return "";
+}
+
+function showToast(message, thumbUrl) {
+  toastText.textContent = message;
+  if (thumbUrl) {
+    toastThumb.src = thumbUrl;
+    toastThumb.style.display = "block";
+  } else {
+    toastThumb.style.display = "none";
+  }
+  toastEl.classList.add("show");
+  setTimeout(() => {
+    toastEl.classList.remove("show");
+  }, 1600);
+}
+
+function copyText(text) {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    return navigator.clipboard.writeText(text);
+  }
+  return new Promise((resolve, reject) => {
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    document.body.appendChild(ta);
+    ta.select();
+    try {
+      document.execCommand("copy");
+      resolve();
+    } catch (e) {
+      reject(e);
+    }
+    document.body.removeChild(ta);
+  });
+}
+
+function addClipboardEntry(img) {
+  const url = baseCdn + encodeURIComponent(img.file);
+  const entry = {
+    file: img.file,
+    label: img.label,
+    url,
+    date: new Date().toISOString()
   };
+  clipboardHistory.unshift(entry);
+  clipboardHistory = clipboardHistory.slice(0, 50);
+  saveClipboard();
+}
 
-  const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
-
-  // Helper dates (approx)
-  const DATE_TODAY     = "2025-12-07"; // 9 hours ago, 1 minute ago
-  const DATE_2_WEEKS   = "2025-11-23"; // 2 weeks ago
-  const DATE_3_WEEKS   = "2025-11-16"; // 3 weeks ago
-  const DATE_LAST_WEEK = "2025-11-30"; // last week
-  const DATE_LAST_MON  = "2025-11-07"; // last month
-
-  // All images
-  const images = [
-    { file: "1v1.lol_Favicon_zv2lxo.jpg", label: "1v1.lol Favicon", type: "icon", date: DATE_3_WEEKS, tags: ["icon", "favicon", "1v1.lol", "game", "seo"] },
-    { file: "1v1_Lol_StaticQuasar931_xrplna.png", label: "1v1.lol Logo", type: "logo", date: DATE_3_WEEKS, tags: ["logo", "1v1.lol", "thumbnail", "game", "cover"] },
-    { file: "3-slices_StaticQuasar931.jpg", label: "3 Slices Thumbnail", type: "game", date: DATE_LAST_MON, tags: ["game", "3 slices", "thumbnail", "cover"] },
-    { file: "Clash_Royale_StaticQuasar931_ixwb97.png", label: "Clash Royale Thumbnail", type: "game", date: DATE_TODAY, tags: ["game", "clash royale", "thumbnail", "mobile"] },
-    { file: "Crossy_road_StaticQuasar931.webp", label: "Crossy Road Thumbnail", type: "game", date: DATE_LAST_MON, tags: ["game", "crossy road", "thumbnail", "arcade"] },
-    { file: "Drift_Hunters_StaticQuasar931.avif", label: "Drift Hunters Thumbnail", type: "game", date: DATE_LAST_MON, tags: ["game", "drift hunters", "racing", "thumbnail"] },
-    { file: "Escape_Road_1_StaticQuasar931_CDN.png", label: "Escape Road 1 Game Art", type: "game", date: DATE_LAST_MON, tags: ["game", "escape road", "fake gta", "thumbnail"] },
-    { file: "Follow-us--IG", label: "Follow Us Instagram Icon", type: "seo", date: DATE_LAST_MON, tags: ["seo", "icon", "instagram", "social", "visual-seo", "static brand"] },
-    { file: "GTA_Mods_StaticQuasar931_vua0h4.png", label: "GTA Mods Thumbnail", type: "game", date: DATE_LAST_MON, tags: ["game", "gta", "mods", "thumbnail"] },
-    { file: "Google-logo-transparent-G.png", label: "Google G Logo", type: "seo", date: DATE_2_WEEKS, tags: ["seo", "icon", "google", "logo", "search", "ui"] },
-    { file: "GoogleForm.png", label: "Google Form Icon", type: "seo", date: DATE_LAST_MON, tags: ["seo", "icon", "google form", "social", "visual-seo", "feedback"] },
-    { file: "Java_Edition_1.12.2.webp", label: "Minecraft Java 1.12.2", type: "game", date: DATE_3_WEEKS, tags: ["minecraft", "java 1.12.2", "game", "version-art"] },
-    { file: "Join_Our_DC_StaticQuassar931_lcplrf.png", label: "Join Our Discord Icon", type: "seo", date: DATE_LAST_MON, tags: ["seo", "icon", "discord", "social", "visual-seo", "static brand"] },
-    { file: "MV5BNGIyZDE4OTYtNjBhOS00NzFkLTkyYWMtYzAzNWUxZThmMDBlXkEyXkFqcGc@._V1_.jpg", label: "Movie Poster Style Art", type: "art", date: DATE_2_WEEKS, tags: ["art", "poster", "movie-style", "thumbnail"] },
-    { file: "RaftBeta.png", label: "Raft Beta Thumbnail", type: "game", date: DATE_2_WEEKS, tags: ["game", "raft", "survival", "thumbnail"] },
-    { file: "Retro_Bowl_StaticQuasar931_t2epwp.jpg", label: "Retro Bowl Static Thumbnail", type: "game", date: DATE_2_WEEKS, tags: ["game", "retro bowl", "football", "thumbnail"] },
-    { file: "Retrobowl_football.webp", label: "Retro Bowl Football Art", type: "game", date: DATE_LAST_MON, tags: ["game", "retro bowl", "football", "art"] },
-    { file: "Screenshot_2025-11-24_162537-removebg-preview.png", label: "Screenshot 162537 Transparent", type: "ui", date: DATE_2_WEEKS, tags: ["ui", "screenshot", "transparent", "asset"] },
-    { file: "Screenshot_2025-11-24_172246-removebg-preview.png", label: "Screenshot 172246 Transparent", type: "ui", date: DATE_2_WEEKS, tags: ["ui", "screenshot", "transparent", "asset"] },
-    { file: "StaticQuasar931_Banner_Media_Google_Sites_Neon_ChatGPT_Image.png", label: "StaticQuasar931 Neon Banner", type: "seo", date: DATE_LAST_MON, tags: ["seo", "banner", "header", "static brand", "google sites", "visual-seo"] },
-    { file: "Stickman_Hook.webp", label: "Stickman Hook Thumbnail", type: "game", date: DATE_2_WEEKS, tags: ["game", "stickman hook", "arcade", "thumbnail"] },
-    { file: "Stumble_Guys_StaticQuasar931.png", label: "Stumble Guys Thumbnail", type: "game", date: DATE_2_WEEKS, tags: ["game", "stumble guys", "battle royale", "thumbnail"] },
-    { file: "The_Binding_Of_Isaac_Wrath_of_The_Lamb_StaticQuasar931_g0u5vx.jpg", label: "Binding of Isaac Wrath of the Lamb", type: "game", date: DATE_TODAY, tags: ["game", "binding of isaac", "wrath of the lamb", "thumbnail"] },
-    { file: "We_Become_What_We_Behold_WBWWB_StaticQuasar931.png", label: "We Become What We Behold", type: "game", date: DATE_3_WEEKS, tags: ["game", "wbwwb", "we become what we behold", "thumbnail"] },
-    { file: "WithhelpbyIsaac.png", label: "With help by Isaac Badge", type: "credit", date: DATE_LAST_WEEK, tags: ["credit", "badge", "support", "helper", "overlay"] },
-    { file: "basketbros-io.jpg", label: "BasketBros io", type: "game", date: DATE_2_WEEKS, tags: ["game", "basketbros", "basketball", "thumbnail"] },
-    { file: "bloodmoney-online.png", label: "Bloodmoney Online", type: "game", date: DATE_LAST_WEEK, tags: ["game", "bloodmoney", "online", "thumbnail"] },
-    { file: "capsule_616x353.jpg", label: "Capsule 616x353", type: "art", date: DATE_2_WEEKS, tags: ["game", "capsule", "banner", "steam-style"] },
-    { file: "clash-of-vikings_StaticQuasar931.webp", label: "Clash of Vikings", type: "game", date: DATE_LAST_MON, tags: ["game", "clash of vikings", "strategy", "thumbnail"] },
-    { file: "cubes-2048-io.avif", label: "Cubes 2048 io", type: "game", date: DATE_LAST_WEEK, tags: ["game", "2048", "cubes", "io", "puzzle"] },
-    { file: "document-autosave.svg", label: "Document Autosave Icon", type: "icon", date: DATE_2_WEEKS, tags: ["icon", "ui", "document", "autosave", "button", "seo-ui"] },
-    { file: "icon.png", label: "StaticQuasar931 Main Icon", type: "logo", date: DATE_LAST_MON, tags: ["logo", "icon", "static brand", "favicon", "seo"] },
-    { file: "loadishlogo-removebg-preview.png", label: "Loadish Logo Transparent", type: "logo", date: DATE_2_WEEKS, tags: ["logo", "loadish", "transparent", "brand"] },
-    { file: "loadishlogo.jpg", label: "Loadish Logo", type: "logo", date: DATE_2_WEEKS, tags: ["logo", "loadish", "brand"] },
-    { file: "minecraft-1639513933156.jpg", label: "Minecraft Generic Art", type: "game", date: DATE_3_WEEKS, tags: ["game", "minecraft", "thumbnail", "cover"] },
-    { file: "nuts-puzzle-sort-by-color.png", label: "Nuts Puzzle Sort by Color", type: "game", date: DATE_3_WEEKS, tags: ["game", "puzzle", "sort by color", "thumbnail"] },
-    { file: "ragdoll-archers_StaticQuasar931.png", label: "Ragdoll Archers", type: "game", date: DATE_LAST_MON, tags: ["game", "ragdoll archers", "archery", "thumbnail"] },
-    { file: "savelogo-removebg-preview.png", label: "Save Logo Transparent", type: "icon", date: DATE_2_WEEKS, tags: ["icon", "save", "ui", "button", "transparent"] },
-    { file: "savelogo.jpg", label: "Save Logo", type: "icon", date: DATE_2_WEEKS, tags: ["icon", "save", "ui", "button"] },
-    { file: "signout_logout-removebg-preview.png", label: "Signout Logout Transparent", type: "icon", date: DATE_2_WEEKS, tags: ["icon", "logout", "ui", "button", "transparent"] },
-    { file: "signout_logout.png", label: "Signout Logout Icon", type: "icon", date: DATE_2_WEEKS, tags: ["icon", "logout", "ui", "button"] },
-    { file: "slope_Staticquasar931_stable_agqxto.png", label: "Slope StaticQuasar931 Stable", type: "game", date: DATE_3_WEEKS, tags: ["game", "slope", "unblocked", "thumbnail"] },
-    { file: "staticquasar931qrcodehomepage.png", label: "StaticQuasar931 Homepage QR Code", type: "seo", date: DATE_LAST_WEEK, tags: ["seo", "qr code", "static brand", "homepage", "visual-seo"] },
-    { file: "survival-race-banner_Area_king_StaticQuasar931.png", label: "Survival Race Banner", type: "game", date: DATE_LAST_MON, tags: ["game", "survival race", "banner", "thumbnail"] },
-    { file: "the-baby-in-yellow-pc-game-steam-cover.jpg", label: "The Baby in Yellow Steam Cover", type: "game", date: DATE_3_WEEKS, tags: ["game", "the baby in yellow", "steam cover", "horror"] }
-  ];
-
-  const galleryEl = document.getElementById("gallery");
-  const toastEl = document.getElementById("toast");
-  const toastTextEl = document.getElementById("toast-text");
-
-  const zoomOverlay = document.getElementById("zoom-overlay");
-  const zoomImage = document.getElementById("zoom-image");
-  const zoomLabelEl = document.getElementById("zoom-label");
-  const zoomUrlEl = document.getElementById("zoom-url");
-  const zoomCopyBtn = document.getElementById("zoom-copy");
-  const zoomPrevBtn = document.getElementById("zoom-prev");
-  const zoomNextBtn = document.getElementById("zoom-next");
-
-  const includeInput = document.getElementById("filter-include");
-  const excludeInput = document.getElementById("filter-exclude");
-  const pinnedOnlyCheckbox = document.getElementById("filter-pinned");
-  const resetFiltersButton = document.getElementById("reset-filters");
-
-  const themeToggleBtn = document.getElementById("theme-toggle");
-
-  const multiToggleBtn = document.getElementById("multi-toggle");
-  const multiCopyUrlsBtn = document.getElementById("multi-copy-urls");
-  const multiClearBtn = document.getElementById("multi-clear");
-
-  const historyListEl = document.getElementById("history-list");
-  const historyClearBtn = document.getElementById("history-clear");
-
-  const includeSuggestions = document.getElementById("include-suggestions");
-  const excludeSuggestions = document.getElementById("exclude-suggestions");
-
-  const presetButtons = document.querySelectorAll(".preset-button");
-
-  const PINNED_KEY = "sq_image_index_pinned";
-  const HISTORY_KEY = "sq_image_clipboard_history";
-  const THEME_KEY = "sq_image_theme";
-
-  let pinnedSet = new Set();
-  let visibleList = [];
-  let currentZoomIndex = -1;
-  let currentZoomUrl = "";
-  let historyArr = [];
-  let multiSelectMode = false;
-  let selectedSet = new Set();
-
-  function showToast(message) {
-    toastTextEl.textContent = message;
-    toastEl.classList.add("show");
-    setTimeout(function () {
-      toastEl.classList.remove("show");
-    }, 1600);
-  }
-
-  function getBadgeType(type) {
-    if (type === "seo") return "SEO";
-    if (type === "icon") return "ICON";
-    if (type === "logo") return "LOGO";
-    if (type === "game") return "GAME";
-    if (type === "ui") return "UI";
-    if (type === "credit") return "CREDIT";
-    if (type === "art") return "ART";
-    return (type || "asset").toUpperCase();
-  }
-
-  function createTagChips(tags) {
-    return tags.map(function (tag) {
-      const span = document.createElement("span");
-      span.className = "tag-chip";
-      span.textContent = tag;
-      return span;
-    });
-  }
-
-  function loadPinned() {
-    try {
-      const data = localStorage.getItem(PINNED_KEY);
-      if (data) {
-        const arr = JSON.parse(data);
-        if (Array.isArray(arr)) pinnedSet = new Set(arr);
-      }
-    } catch (e) {
-      pinnedSet = new Set();
-    }
-  }
-
-  function savePinned() {
-    try {
-      localStorage.setItem(PINNED_KEY, JSON.stringify(Array.from(pinnedSet)));
-    } catch (e) {}
-  }
-
-  function loadHistory() {
-    try {
-      const data = localStorage.getItem(HISTORY_KEY);
-      if (data) {
-        const arr = JSON.parse(data);
-        if (Array.isArray(arr)) historyArr = arr;
-      }
-    } catch (e) {
-      historyArr = [];
-    }
-  }
-
-  function saveHistory() {
-    try {
-      localStorage.setItem(HISTORY_KEY, JSON.stringify(historyArr));
-    } catch (e) {}
-  }
-
-  function renderHistory() {
-    historyListEl.innerHTML = "";
-    if (!historyArr.length) {
-      const empty = document.createElement("div");
-      empty.className = "history-empty";
-      empty.textContent = "Nothing copied yet.";
-      historyListEl.appendChild(empty);
-      return;
-    }
-    historyArr.forEach(function (entry, index) {
-      const btn = document.createElement("button");
-      btn.type = "button";
-      btn.className = "history-item";
-      const label = document.createElement("div");
-      label.className = "history-label";
-      label.textContent = entry.label || "(no label)";
-      const url = document.createElement("div");
-      url.className = "history-url";
-      url.textContent = entry.url;
-      btn.appendChild(label);
-      btn.appendChild(url);
-      btn.addEventListener("click", function () {
-        copyUrl(entry.url, entry.label || "Image");
+function renderClipboard() {
+  clipboardList.innerHTML = "";
+  clipboardHistory.forEach(entry => {
+    const row = document.createElement("div");
+    row.className = "clip-entry";
+    const imgEl = document.createElement("img");
+    imgEl.className = "clip-thumb";
+    imgEl.src = baseCdn + encodeURIComponent(entry.file);
+    const text = document.createElement("div");
+    text.className = "clip-text";
+    text.textContent = entry.label;
+    row.appendChild(imgEl);
+    row.appendChild(text);
+    row.addEventListener("click", () => {
+      copyText(entry.url).then(() => {
+        showToast("Copied " + entry.label, imgEl.src);
       });
-      historyListEl.appendChild(btn);
     });
-  }
+    clipboardList.appendChild(row);
+  });
+}
 
-  function recordCopy(url, label) {
-    const filtered = historyArr.filter(function (e) {
-      return e.url !== url;
-    });
-    filtered.unshift({ url: url, label: label || "" });
-    historyArr = filtered.slice(0, 20);
-    saveHistory();
-    renderHistory();
-  }
+function filterImages() {
+  const inc = includeInput.value.trim().toLowerCase();
+  const exc = excludeInput.value.trim().toLowerCase();
+  const incParts = inc ? inc.split(/\s+/).filter(Boolean) : [];
+  const excParts = exc ? exc.split(/\s+/).filter(Boolean) : [];
+  const pinnedOnly = pinnedCheckbox.checked;
+  const notesPreset = presetButtons.some(b => b.dataset.preset === "notes" && b.classList.contains("active"));
 
-  function copyUrl(url, label) {
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(url)
-        .then(function () {
-          showToast("Copied URL to clipboard");
-          recordCopy(url, label);
-        })
-        .catch(function () {
-          showToast("Copy failed");
-        });
-    } else {
-      const temp = document.createElement("textarea");
-      temp.value = url;
-      document.body.appendChild(temp);
-      temp.select();
-      try {
-        document.execCommand("copy");
-        showToast("Copied URL to clipboard");
-        recordCopy(url, label);
-      } catch (e) {
-        showToast("Copy failed");
-      }
-      document.body.removeChild(temp);
+  const result = images.slice().sort((a, b) => {
+    if (a.date === b.date) return 0;
+    return a.date < b.date ? 1 : -1; // newest first
+  }).filter(img => {
+    if (pinnedOnly && !pinned.has(img.file)) return false;
+    if (notesPreset && !notes[img.file]) return false;
+
+    const haystack = [
+      img.file.toLowerCase(),
+      img.label.toLowerCase(),
+      img.type.toLowerCase(),
+      img.date.toLowerCase(),
+      (img.alias || "").toLowerCase(),
+      img.tags.join(" ").toLowerCase(),
+      (notes[img.file] || "").toLowerCase()
+    ].join(" ");
+
+    for (const term of incParts) {
+      if (!haystack.includes(term)) return false;
     }
-  }
-
-  function passesFilters(img) {
-    const includeValue = includeInput.value.toLowerCase().trim();
-    const excludeValue = excludeInput.value.toLowerCase().trim();
-    const includeTerms = includeValue ? includeValue.split(/\s+/).filter(Boolean) : [];
-    const excludeTerms = excludeValue ? excludeValue.split(/\s+/).filter(Boolean) : [];
-
-    const text = (img.label + " " + img.file + " " + img.tags.join(" ") + " " + img.date + " " + img.type).toLowerCase();
-
-    for (const t of includeTerms) {
-      if (!text.includes(t)) return false;
+    for (const term of excParts) {
+      if (term && haystack.includes(term)) return false;
     }
-    for (const t of excludeTerms) {
-      if (text.includes(t)) return false;
-    }
-
-    if (pinnedOnlyCheckbox.checked && !pinnedSet.has(img.file)) return false;
-
     return true;
-  }
+  });
 
-  function openZoomByIndex(index) {
-    if (index < 0 || index >= visibleList.length) return;
-    currentZoomIndex = index;
-    const img = visibleList[index];
-    const cdnUrl = baseCdn + encodeURIComponent(img.file);
-    currentZoomUrl = cdnUrl;
-    zoomImage.src = cdnUrl;
-    zoomImage.alt = img.label + " (" + img.file + ")";
-    zoomLabelEl.textContent = img.label + " — " + img.file;
-    zoomUrlEl.textContent = cdnUrl;
-    zoomOverlay.classList.add("show");
-  }
+  return result;
+}
 
-  function closeZoom() {
-    zoomOverlay.classList.remove("show");
-    zoomImage.src = "";
-    currentZoomIndex = -1;
-    currentZoomUrl = "";
-  }
+function clearPulse() {
+  document.querySelectorAll(".card.pulse").forEach(el => el.classList.remove("pulse"));
+}
 
-  function applyTheme(theme) {
-    const root = document.documentElement;
-    root.setAttribute("data-theme", theme);
-    themeToggleBtn.textContent = theme === "light" ? "Toggle dark mode" : "Toggle light mode";
-  }
+function renderGallery(doPulse) {
+  const filtered = filterImages();
+  currentFiltered = filtered;
+  galleryEl.innerHTML = "";
+  clearPulse();
+  multiSelected.clear();
 
-  function loadTheme() {
-    const stored = localStorage.getItem(THEME_KEY);
-    if (stored === "light" || stored === "dark") {
-      applyTheme(stored);
-    } else {
-      applyTheme("dark");
+  filtered.forEach((img, idx) => {
+    const url = baseCdn + encodeURIComponent(img.file);
+
+    const card = document.createElement("article");
+    card.className = "card";
+    card.dataset.file = img.file;
+    card.dataset.index = idx;
+
+    if (pinned.has(img.file)) card.classList.add("pinned");
+
+    const thumb = document.createElement("div");
+    thumb.className = "thumb";
+    const image = document.createElement("img");
+    image.src = url;
+    image.alt = img.label;
+    thumb.appendChild(image);
+
+    const badge = document.createElement("div");
+    badge.className = "type-badge";
+    badge.textContent = img.type.toUpperCase();
+
+    const pinBtn = document.createElement("button");
+    pinBtn.className = "pin-btn" + (pinned.has(img.file) ? " pinned" : "");
+    pinBtn.textContent = "★";
+
+    const body = document.createElement("div");
+    body.className = "card-body";
+
+    const title = document.createElement("div");
+    title.className = "card-title";
+    title.textContent = img.label;
+
+    const dateEl = document.createElement("div");
+    dateEl.className = "card-date";
+    dateEl.textContent = img.date;
+
+    const tagsEl = document.createElement("div");
+    tagsEl.className = "tags";
+    if (img.alias) {
+      const aliasChip = document.createElement("span");
+      aliasChip.className = "tag-chip";
+      aliasChip.textContent = "alias: " + img.alias;
+      tagsEl.appendChild(aliasChip);
     }
-  }
+    img.tags.forEach(t => {
+      const chip = document.createElement("span");
+      chip.className = "tag-chip";
+      chip.textContent = t;
+      tagsEl.appendChild(chip);
+    });
+    const ratio = getAspectBadge(img.file, img.tags);
+    if (ratio) {
+      const chip = document.createElement("span");
+      chip.className = "tag-chip";
+      chip.textContent = ratio;
+      tagsEl.appendChild(chip);
+    }
 
-  function saveTheme(theme) {
-    localStorage.setItem(THEME_KEY, theme);
-  }
+    body.appendChild(title);
+    body.appendChild(dateEl);
+    body.appendChild(tagsEl);
 
-  function updateMultiButtons() {
-    multiToggleBtn.textContent = "Multi select: " + (multiSelectMode ? "on" : "off");
-    const hasSelection = selectedSet.size > 0;
-    multiCopyUrlsBtn.disabled = !hasSelection;
-    multiClearBtn.disabled = !hasSelection;
-  }
+    card.appendChild(thumb);
+    card.appendChild(badge);
+    card.appendChild(pinBtn);
+    card.appendChild(body);
 
-  function renderSuggestions() {
-    const seen = new Set();
-    const values = [];
-
-    images.forEach(function (img) {
-      values.push(img.type);
-      img.tags.forEach(function (t) { values.push(t); });
-      values.push(img.label);
-      values.push(img.date);
+    pinBtn.addEventListener("click", e => {
+      e.stopPropagation();
+      const key = img.file;
+      if (pinned.has(key)) {
+        pinned.delete(key);
+        pinBtn.classList.remove("pinned");
+        card.classList.remove("pinned");
+      } else {
+        pinned.add(key);
+        pinBtn.classList.add("pinned");
+        card.classList.add("pinned");
+      }
+      savePinned();
     });
 
-    includeSuggestions.innerHTML = "";
-    excludeSuggestions.innerHTML = "";
-
-    values.forEach(function (val) {
-      const v = String(val).toLowerCase();
-      if (seen.has(v)) return;
-      seen.add(v);
-      const opt1 = document.createElement("option");
-      opt1.value = v;
-      includeSuggestions.appendChild(opt1);
-      const opt2 = document.createElement("option");
-      opt2.value = v;
-      excludeSuggestions.appendChild(opt2);
-    });
-  }
-
-  function renderGallery() {
-    galleryEl.innerHTML = "";
-    visibleList = [];
-
-    const sorted = images.slice().sort(function (a, b) {
-      const aPinned = pinnedSet.has(a.file);
-      const bPinned = pinnedSet.has(b.file);
-      if (aPinned && !bPinned) return -1;
-      if (!aPinned && bPinned) return 1;
-      const aDate = new Date(a.date);
-      const bDate = new Date(b.date);
-      return bDate - aDate;
-    });
-
-    sorted.forEach(function (img) {
-      if (!passesFilters(img)) return;
-
-      const cdnUrl = baseCdn + encodeURIComponent(img.file);
-      const visibleIndex = visibleList.length;
-      visibleList.push(img);
-
-      const card = document.createElement("article");
-      card.className = "card";
-      if (pinnedSet.has(img.file)) card.classList.add("pinned");
-      if (selectedSet.has(img.file)) card.classList.add("selected");
-      card.dataset.index = String(visibleIndex);
-
-      const badge = document.createElement("div");
-      badge.className = "badge-type " + (img.type || "");
-      badge.textContent = getBadgeType(img.type || "asset");
-      card.appendChild(badge);
-
-      const pinBtn = document.createElement("button");
-      pinBtn.type = "button";
-      pinBtn.className = "pin-button" + (pinnedSet.has(img.file) ? " pinned" : "");
-      const starSpan = document.createElement("span");
-      starSpan.textContent = "★";
-      pinBtn.appendChild(starSpan);
-      pinBtn.addEventListener("click", function (event) {
-        event.stopPropagation();
-        if (pinnedSet.has(img.file)) pinnedSet.delete(img.file);
-        else pinnedSet.add(img.file);
-        savePinned();
-        renderGallery();
-      });
-      card.appendChild(pinBtn);
-
-      const thumbWrap = document.createElement("div");
-      thumbWrap.className = "thumb-wrap";
-      const imageEl = document.createElement("img");
-      imageEl.src = cdnUrl;
-      imageEl.alt = img.label + " (" + img.file + ")";
-      thumbWrap.appendChild(imageEl);
-
-      const body = document.createElement("div");
-      body.className = "card-body";
-
-      const filename = document.createElement("div");
-      filename.className = "filename";
-      filename.textContent = img.label;
-
-      const dateLine = document.createElement("div");
-      dateLine.className = "date-line";
-      dateLine.textContent = "Date: " + img.date;
-
-      const tagsRow = document.createElement("div");
-      tagsRow.className = "tags";
-      const tagLabel = document.createElement("span");
-      tagLabel.textContent = "Tags: ";
-      tagsRow.appendChild(tagLabel);
-      createTagChips(img.tags).forEach(function (chip) {
-        tagsRow.appendChild(chip);
-      });
-
-      const copyHint = document.createElement("div");
-      copyHint.className = "copy-hint";
-      copyHint.textContent = "Left click to copy URL. Right click to zoom.";
-
-      body.appendChild(filename);
-      body.appendChild(dateLine);
-      body.appendChild(tagsRow);
-      body.appendChild(copyHint);
-
-      card.appendChild(thumbWrap);
-      card.appendChild(body);
-
-      card.addEventListener("click", function () {
-        if (multiSelectMode) {
-          if (selectedSet.has(img.file)) selectedSet.delete(img.file);
-          else selectedSet.add(img.file);
-          updateMultiButtons();
-          renderGallery();
-          return;
+    card.addEventListener("click", e => {
+      if (multiMode) {
+        const key = img.file;
+        if (multiSelected.has(key)) {
+          multiSelected.delete(key);
+          card.style.outline = "";
+        } else {
+          multiSelected.add(key);
+          card.style.outline = "2px solid " + getComputedStyle(document.documentElement).getPropertyValue("--accent");
         }
-        copyUrl(cdnUrl, img.label);
+        updateMultiButtons();
+        return;
+      }
+      const copyUrl = url;
+      copyText(copyUrl).then(() => {
+        addClipboardEntry(img);
+        showToast("Copied " + img.label, url);
       });
-
-      card.addEventListener("contextmenu", function (event) {
-        event.preventDefault();
-        openZoomByIndex(visibleIndex);
-      });
-
-      galleryEl.appendChild(card);
     });
 
-    updateMultiButtons();
+    card.addEventListener("contextmenu", e => {
+      e.preventDefault();
+      const indexInFiltered = idx;
+      openFullscreen(indexInFiltered);
+    });
+
+    galleryEl.appendChild(card);
+  });
+
+  if (doPulse) {
+    requestAnimationFrame(() => {
+      document.querySelectorAll(".card").forEach(c => c.classList.add("pulse"));
+      setTimeout(clearPulse, 800);
+    });
+  }
+}
+
+function updateMultiButtons() {
+  const count = multiSelected.size;
+  multiCopy.disabled = count === 0;
+  multiClear.disabled = count === 0;
+}
+
+function openFullscreen(filteredIndex) {
+  if (filteredIndex < 0 || filteredIndex >= currentFiltered.length) return;
+  currentFsIndex = filteredIndex;
+  const img = currentFiltered[filteredIndex];
+  const url = baseCdn + encodeURIComponent(img.file);
+  fsImg.src = url;
+  fsTitle.textContent = img.label + "  [" + img.date + "]";
+  fsEl.classList.add("show");
+
+  const similarTags = img.tags.slice(0, 4);
+  if (similarTags.length > 0) {
+    const tagString = similarTags.join(", ");
+    fsSimilar.textContent = "Similar tags: " + tagString;
+  } else {
+    fsSimilar.textContent = "";
+  }
+}
+
+function closeFullscreen() {
+  fsEl.classList.remove("show");
+  currentFsIndex = -1;
+}
+
+function moveFullscreen(delta) {
+  if (!fsEl.classList.contains("show")) return;
+  if (currentFiltered.length === 0) return;
+  let idx = currentFsIndex + delta;
+  if (idx < 0) idx = currentFiltered.length - 1;
+  if (idx >= currentFiltered.length) idx = 0;
+  openFullscreen(idx);
+}
+
+fsCopy.addEventListener("click", () => {
+  if (currentFsIndex < 0) return;
+  const img = currentFiltered[currentFsIndex];
+  const url = baseCdn + encodeURIComponent(img.file);
+  copyText(url).then(() => {
+    addClipboardEntry(img);
+    showToast("Copied " + img.label, url);
+  });
+});
+
+fsOpen.addEventListener("click", () => {
+  if (currentFsIndex < 0) return;
+  const img = currentFiltered[currentFsIndex];
+  const url = baseCdn + encodeURIComponent(img.file);
+  window.open(url, "_blank");
+});
+
+fsNotesBtn.addEventListener("click", () => {
+  if (currentFsIndex < 0) return;
+  const img = currentFiltered[currentFsIndex];
+  currentNotesIndex = images.indexOf(img);
+  const key = img.file;
+  notesInput.value = notes[key] || "";
+  notesModal.classList.add("show");
+});
+
+fsClose.addEventListener("click", () => {
+  closeFullscreen();
+});
+
+fsImg.addEventListener("click", () => {
+  if (currentFsIndex < 0) return;
+  const img = currentFiltered[currentFsIndex];
+  const url = baseCdn + encodeURIComponent(img.file);
+  copyText(url).then(() => {
+    addClipboardEntry(img);
+    showToast("Copied " + img.label, url);
+  });
+});
+
+fsEl.addEventListener("contextmenu", e => {
+  e.preventDefault();
+  closeFullscreen();
+});
+
+notesSave.addEventListener("click", () => {
+  if (currentNotesIndex < 0) {
+    notesModal.classList.remove("show");
+    return;
+  }
+  const img = images[currentNotesIndex];
+  const key = img.file;
+  const value = notesInput.value.trim();
+  if (value) {
+    notes[key] = value;
+  } else {
+    delete notes[key];
+  }
+  saveNotes();
+  notesModal.classList.remove("show");
+  renderGallery(false);
+});
+
+notesCancel.addEventListener("click", () => {
+  notesModal.classList.remove("show");
+});
+
+clipboardBtn.addEventListener("click", () => {
+  renderClipboard();
+  clipboardModal.classList.add("show");
+});
+
+clipboardClose.addEventListener("click", () => {
+  clipboardModal.classList.remove("show");
+});
+
+clipboardClear.addEventListener("click", () => {
+  clipboardHistory = [];
+  saveClipboard();
+  renderClipboard();
+});
+
+multiToggle.addEventListener("click", () => {
+  multiMode = !multiMode;
+  multiToggle.textContent = multiMode ? "Multi: On" : "Multi: Off";
+  if (!multiMode) {
+    multiSelected.clear();
+    document.querySelectorAll(".card").forEach(c => c.style.outline = "");
+  }
+  updateMultiButtons();
+});
+
+multiCopy.addEventListener("click", () => {
+  if (!multiSelected.size) return;
+  const urls = [];
+  images.forEach(img => {
+    if (multiSelected.has(img.file)) {
+      const url = baseCdn + encodeURIComponent(img.file);
+      urls.push(url);
+      addClipboardEntry(img);
+    }
+  });
+  const text = urls.join("\n");
+  copyText(text).then(() => {
+    showToast("Copied " + multiSelected.size + " images", urls[0] || "");
+  });
+});
+
+multiClear.addEventListener("click", () => {
+  multiSelected.clear();
+  document.querySelectorAll(".card").forEach(c => c.style.outline = "");
+  updateMultiButtons();
+});
+
+themeSelect.addEventListener("change", () => {
+  setTheme(themeSelect.value);
+});
+
+includeInput.addEventListener("input", () => {
+  renderGallery(true);
+});
+
+excludeInput.addEventListener("input", () => {
+  renderGallery(true);
+});
+
+pinnedCheckbox.addEventListener("change", () => {
+  renderGallery(true);
+});
+
+resetFiltersBtn.addEventListener("click", () => {
+  includeInput.value = "";
+  excludeInput.value = "";
+  pinnedCheckbox.checked = false;
+  presetButtons.forEach(b => b.classList.remove("active"));
+  renderGallery(true);
+});
+
+presetButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const type = btn.dataset.preset;
+    const already = btn.classList.contains("active");
+    presetButtons.forEach(b => b.classList.remove("active"));
+    if (!already) btn.classList.add("active");
+
+    if (type === "seo") {
+      includeInput.value = "seo";
+      excludeInput.value = "";
+    } else if (type === "icons") {
+      includeInput.value = "icon";
+      excludeInput.value = "";
+    } else if (type === "games") {
+      includeInput.value = "game";
+      excludeInput.value = "";
+    } else if (type === "banners") {
+      includeInput.value = "banner";
+      excludeInput.value = "";
+    } else if (type === "recent") {
+      includeInput.value = "";
+      excludeInput.value = "";
+    } else if (type === "notes") {
+      // notes filter handled in filterImages via active class
+    }
+    renderGallery(true);
+  });
+});
+
+// Compare mode
+function openCompareWith(currentImg) {
+  if (!currentImg) return;
+  const key = currentImg.file;
+  if (!compareSelection.includes(key)) {
+    compareSelection.push(key);
+  }
+  if (compareSelection.length > 2) {
+    compareSelection.shift();
+  }
+  if (compareSelection.length === 2) {
+    const a = images.find(i => i.file === compareSelection[0]);
+    const b = images.find(i => i.file === compareSelection[1]);
+    if (!a || !b) return;
+    compareImg1.src = baseCdn + encodeURIComponent(a.file);
+    compareImg2.src = baseCdn + encodeURIComponent(b.file);
+    compareModal.classList.add("show");
+  }
+}
+
+compareSwap.addEventListener("click", () => {
+  const temp = compareImg1.src;
+  compareImg1.src = compareImg2.src;
+  compareImg2.src = temp;
+});
+
+compareClose.addEventListener("click", () => {
+  compareModal.classList.remove("show");
+});
+
+// Keyboard shortcuts
+document.addEventListener("keydown", e => {
+  if (isTyping()) return;
+
+  if (e.key === "t" || e.key === "T") {
+    e.preventDefault();
+    cycleTheme();
+    return;
   }
 
-  zoomOverlay.addEventListener("click", function (event) {
-    if (event.target === zoomOverlay) closeZoom();
-  });
-
-  zoomOverlay.addEventListener("contextmenu", function (event) {
-    event.preventDefault();
-    closeZoom();
-  });
-
-  zoomImage.addEventListener("click", function () {
-    if (currentZoomUrl) copyUrl(currentZoomUrl, zoomLabelEl.textContent || "Image");
-  });
-
-  zoomCopyBtn.addEventListener("click", function () {
-    if (currentZoomUrl) copyUrl(currentZoomUrl, zoomLabelEl.textContent || "Image");
-  });
-
-  zoomPrevBtn.addEventListener("click", function () {
-    if (visibleList.length === 0) return;
-    const nextIndex = (currentZoomIndex - 1 + visibleList.length) % visibleList.length;
-    openZoomByIndex(nextIndex);
-  });
-
-  zoomNextBtn.addEventListener("click", function () {
-    if (visibleList.length === 0) return;
-    const nextIndex = (currentZoomIndex + 1) % visibleList.length;
-    openZoomByIndex(nextIndex);
-  });
-
-  document.addEventListener("keydown", function (event) {
-    if (!zoomOverlay.classList.contains("show")) return;
-
-    if (event.key === "Escape") {
-      closeZoom();
+  if (e.key === "Escape") {
+    if (notesModal.classList.contains("show")) {
+      notesModal.classList.remove("show");
       return;
     }
-    if (event.key === "ArrowRight" || event.key === "d" || event.key === "D") {
-      event.preventDefault();
-      zoomNextBtn.click();
+    if (clipboardModal.classList.contains("show")) {
+      clipboardModal.classList.remove("show");
       return;
     }
-    if (event.key === "ArrowLeft" || event.key === "a" || event.key === "A") {
-      event.preventDefault();
-      zoomPrevBtn.click();
+    if (compareModal.classList.contains("show")) {
+      compareModal.classList.remove("show");
       return;
     }
-  });
+    if (fsEl.classList.contains("show")) {
+      closeFullscreen();
+      return;
+    }
+  }
 
-  includeInput.addEventListener("input", renderGallery);
-  excludeInput.addEventListener("input", renderGallery);
-  pinnedOnlyCheckbox.addEventListener("change", renderGallery);
+  if (!fsEl.classList.contains("show")) {
+    return;
+  }
 
-  resetFiltersButton.addEventListener("click", function () {
-    includeInput.value = "";
-    excludeInput.value = "";
-    pinnedOnlyCheckbox.checked = false;
-    renderGallery();
-  });
+  if (e.key === "ArrowRight" || e.key === "d" || e.key === "D" || e.key === "s" || e.key === "S") {
+    e.preventDefault();
+    moveFullscreen(1);
+  } else if (e.key === "ArrowLeft" || e.key === "a" || e.key === "A" || e.key === "w" || e.key === "W") {
+    e.preventDefault();
+    moveFullscreen(-1);
+  } else if (e.key === "n" || e.key === "N") {
+    e.preventDefault();
+    if (currentFsIndex >= 0) {
+      const img = currentFiltered[currentFsIndex];
+      const url = baseCdn + encodeURIComponent(img.file);
+      window.open(url, "_blank");
+    }
+  } else if (e.key === "c" || e.key === "C") {
+    e.preventDefault();
+    if (currentFsIndex >= 0) {
+      const img = currentFiltered[currentFsIndex];
+      openCompareWith(img);
+    }
+  }
+});
 
-  themeToggleBtn.addEventListener("click", function () {
-    const current = document.documentElement.getAttribute("data-theme") || "dark";
-    const next = current === "dark" ? "light" : "dark";
-    applyTheme(next);
-    saveTheme(next);
-  });
-
-  multiToggleBtn.addEventListener("click", function () {
-    multiSelectMode = !multiSelectMode;
-    updateMultiButtons();
-    renderGallery();
-  });
-
-  multiCopyUrlsBtn.addEventListener("click", function () {
-    if (!selectedSet.size) return;
-    const urls = [];
-    images.forEach(function (img) {
-      if (selectedSet.has(img.file)) {
-        urls.push(baseCdn + encodeURIComponent(img.file));
-      }
-    });
-    const text = urls.join("\n");
-    copyUrl(text, "Multiple URLs");
-  });
-
-  multiClearBtn.addEventListener("click", function () {
-    selectedSet.clear();
-    updateMultiButtons();
-    renderGallery();
-  });
-
-  historyClearBtn.addEventListener("click", function () {
-    historyArr = [];
-    saveHistory();
-    renderHistory();
-  });
-
-  presetButtons.forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      const preset = btn.dataset.preset;
-      if (preset === "seo") {
-        includeInput.value = "seo";
-        excludeInput.value = "";
-        pinnedOnlyCheckbox.checked = false;
-      } else if (preset === "icons") {
-        includeInput.value = "icon ui";
-        excludeInput.value = "banner";
-        pinnedOnlyCheckbox.checked = false;
-      } else if (preset === "games") {
-        includeInput.value = "game";
-        excludeInput.value = "seo icon ui";
-        pinnedOnlyCheckbox.checked = false;
-      } else if (preset === "banners") {
-        includeInput.value = "banner header";
-        excludeInput.value = "";
-        pinnedOnlyCheckbox.checked = false;
-      } else if (preset === "recent") {
-        includeInput.value = DATE_TODAY + " " + DATE_LAST_WEEK;
-        excludeInput.value = "";
-        pinnedOnlyCheckbox.checked = false;
-      }
-      renderGallery();
-    });
-  });
-
-  loadPinned();
-  loadHistory();
-  renderHistory();
-  renderSuggestions();
-  loadTheme();
-  renderGallery();
+// Initial setup
+buildSuggestions();
+renderGallery(false);
 </script>
+
 </body>
 </html>
