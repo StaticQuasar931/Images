@@ -740,12 +740,21 @@ main {
 <!-- ========================= -->
 <script>
 /* PART 3A BEGINS BELOW — CONTINUE WHEN READY */
+<!-- ========================= -->
 <script src="images-data.js"></script>
+
 <script>
 // Leave or reload warning
 window.onbeforeunload = function () {
   return "Are you sure you want to leave this image index page?";
 };
+
+// your other JS that uses `images` goes here, for example:
+// const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
+// buildSuggestions();
+// renderGallery(false);
+
+
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
