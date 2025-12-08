@@ -1,9 +1,11 @@
 // Approx dates based on your mapping (you can tweak these if needed)
-const DATE_TODAY     = "2025-12-07"; // 9 hours ago
-const DATE_2_WEEKS   = "2025-11-23";
-const DATE_3_WEEKS   = "2025-11-16";
-const DATE_LAST_WEEK = "2025-11-30";
-const DATE_LAST_MON  = "2025-11-07";
+const DATE_TODAY       = "2025-12-07"; // now / latest commit day
+const DATE_YESTERDAY   = "2025-12-06";
+const DATE_2_DAYS_AGO  = "2025-12-05";
+const DATE_2_WEEKS     = "2025-11-23";
+const DATE_3_WEEKS     = "2025-11-16";
+const DATE_LAST_WEEK   = "2025-11-30";
+const DATE_LAST_MON    = "2025-11-07";
 
 // Images data list
 const images = [
@@ -11,7 +13,7 @@ const images = [
     file: "1v1.lol_Favicon_zv2lxo.jpg",
     label: "1v1.lol Favicon",
     type: "icon",
-    date: DATE_3_WEEKS,
+    date: DATE_3_WEEKS, // 3 weeks ago
     tags: ["icon", "favicon", "1v1.lol", "game", "seo"],
     alias: "1v1-favicon"
   },
@@ -19,7 +21,7 @@ const images = [
     file: "1v1_Lol_StaticQuasar931_xrplna.png",
     label: "1v1.lol Logo",
     type: "logo",
-    date: DATE_3_WEEKS,
+    date: DATE_3_WEEKS, // 3 weeks ago
     tags: ["logo", "1v1.lol", "thumbnail", "game", "cover"],
     alias: "1v1-logo"
   },
@@ -27,14 +29,22 @@ const images = [
     file: "3-slices_StaticQuasar931.jpg",
     label: "3 Slices Thumbnail",
     type: "game",
-    date: DATE_LAST_MON,
+    date: DATE_LAST_MON, // last month
     tags: ["game", "3 slices", "thumbnail", "cover"]
+  },
+  {
+    file: "Arrow_Hero_Modern_Box_StaticQuasar931.png",
+    label: "Arrow Hero Modern Box",
+    type: "game",
+    date: DATE_YESTERDAY, // yesterday
+    tags: ["game", "arrow hero", "modern", "thumbnail", "box art"],
+    alias: "arrow-hero"
   },
   {
     file: "Clash_Royale_StaticQuasar931_ixwb97.png",
     label: "Clash Royale Thumbnail",
     type: "game",
-    date: DATE_TODAY,
+    date: DATE_2_DAYS_AGO, // 2 days ago
     tags: ["game", "clash royale", "thumbnail", "mobile"],
     alias: "clash-royale"
   },
@@ -42,28 +52,28 @@ const images = [
     file: "Crossy_road_StaticQuasar931.webp",
     label: "Crossy Road Thumbnail",
     type: "game",
-    date: DATE_LAST_MON,
+    date: DATE_LAST_MON, // last month
     tags: ["game", "crossy road", "thumbnail", "arcade"]
   },
   {
     file: "Drift_Hunters_StaticQuasar931.avif",
     label: "Drift Hunters Thumbnail",
     type: "game",
-    date: DATE_LAST_MON,
+    date: DATE_LAST_MON, // last month
     tags: ["game", "drift hunters", "racing", "thumbnail"]
   },
   {
     file: "Escape_Road_1_StaticQuasar931_CDN.png",
     label: "Escape Road 1 Game Art",
     type: "game",
-    date: DATE_LAST_MON,
+    date: DATE_LAST_MON, // last month
     tags: ["game", "escape road", "fake gta", "thumbnail"]
   },
   {
     file: "Follow-us--IG",
     label: "Follow Us Instagram Icon",
     type: "seo",
-    date: DATE_LAST_MON,
+    date: DATE_LAST_MON, // last month
     tags: ["seo", "icon", "instagram", "social", "visual-seo", "static brand"],
     alias: "ig-icon"
   },
@@ -71,14 +81,14 @@ const images = [
     file: "GTA_Mods_StaticQuasar931_vua0h4.png",
     label: "GTA Mods Thumbnail",
     type: "game",
-    date: DATE_LAST_MON,
+    date: DATE_LAST_MON, // last month
     tags: ["game", "gta", "mods", "thumbnail"]
   },
   {
     file: "Google-logo-transparent-G.png",
     label: "Google G Logo",
     type: "seo",
-    date: DATE_2_WEEKS,
+    date: DATE_2_WEEKS, // 2 weeks ago
     tags: ["seo", "icon", "google", "logo", "search", "ui"],
     alias: "google-g"
   },
@@ -86,7 +96,7 @@ const images = [
     file: "GoogleForm.png",
     label: "Google Form Icon",
     type: "seo",
-    date: DATE_LAST_MON,
+    date: DATE_LAST_MON, // last month
     tags: ["seo", "icon", "google form", "social", "visual-seo", "feedback"],
     alias: "google-form"
   },
@@ -94,14 +104,14 @@ const images = [
     file: "Java_Edition_1.12.2.webp",
     label: "Minecraft Java 1.12.2",
     type: "game",
-    date: DATE_3_WEEKS,
+    date: DATE_3_WEEKS, // 3 weeks ago
     tags: ["minecraft", "java 1.12.2", "game", "version-art"]
   },
   {
     file: "Join_Our_DC_StaticQuassar931_lcplrf.png",
     label: "Join Our Discord Icon",
     type: "seo",
-    date: DATE_LAST_MON,
+    date: DATE_LAST_MON, // last month
     tags: ["seo", "icon", "discord", "social", "visual-seo", "static brand"],
     alias: "discord-icon"
   },
@@ -109,21 +119,21 @@ const images = [
     file: "MV5BNGIyZDE4OTYtNjBhOS00NzFkLTkyYWMtYzAzNWUxZThmMDBlXkEyXkFqcGc@._V1_.jpg",
     label: "Movie Poster Style Art",
     type: "art",
-    date: DATE_2_WEEKS,
+    date: DATE_3_WEEKS, // 3 weeks ago
     tags: ["art", "poster", "movie-style", "thumbnail"]
   },
   {
     file: "RaftBeta.png",
     label: "Raft Beta Thumbnail",
     type: "game",
-    date: DATE_2_WEEKS,
+    date: DATE_2_WEEKS, // 2 weeks ago
     tags: ["game", "raft", "survival", "thumbnail"]
   },
   {
     file: "Retro_Bowl_StaticQuasar931_t2epwp.jpg",
     label: "Retro Bowl Static Thumbnail",
     type: "game",
-    date: DATE_2_WEEKS,
+    date: DATE_3_WEEKS, // 3 weeks ago
     tags: ["game", "retro bowl", "football", "thumbnail"],
     alias: "retro-bowl"
   },
@@ -131,50 +141,74 @@ const images = [
     file: "Retrobowl_football.webp",
     label: "Retro Bowl Football Art",
     type: "game",
-    date: DATE_LAST_MON,
+    date: DATE_LAST_MON, // last month
     tags: ["game", "retro bowl", "football", "art"]
   },
   {
     file: "Screenshot_2025-11-24_162537-removebg-preview.png",
     label: "Screenshot 162537 Transparent",
     type: "ui",
-    date: DATE_2_WEEKS,
+    date: DATE_2_WEEKS, // 2 weeks ago
     tags: ["ui", "screenshot", "transparent", "asset"]
   },
   {
     file: "Screenshot_2025-11-24_172246-removebg-preview.png",
     label: "Screenshot 172246 Transparent",
     type: "ui",
-    date: DATE_2_WEEKS,
+    date: DATE_2_WEEKS, // 2 weeks ago
     tags: ["ui", "screenshot", "transparent", "asset"]
+  },
+  {
+    file: "SmashKarts_StaticQuasar931.jpg",
+    label: "SmashKarts Thumbnail",
+    type: "game",
+    date: DATE_YESTERDAY, // yesterday
+    tags: ["game", "smashkarts", "kart", "multiplayer", "thumbnail"],
+    alias: "smashkarts"
   },
   {
     file: "StaticQuasar931_Banner_Media_Google_Sites_Neon_ChatGPT_Image.png",
     label: "StaticQuasar931 Neon Banner",
     type: "seo",
-    date: DATE_LAST_MON,
+    date: DATE_LAST_MON, // last month
     tags: ["seo", "banner", "header", "static brand", "google sites", "visual-seo"],
     alias: "sq-banner"
+  },
+  {
+    file: "Steal_a_Brainrot_1_StaticQuasar931.png",
+    label: "Steal a Brainrot 1",
+    type: "game",
+    date: DATE_YESTERDAY, // yesterday
+    tags: ["game", "steal a brainrot", "thumbnail", "meme"],
+    alias: "brainrot-1"
   },
   {
     file: "Stickman_Hook.webp",
     label: "Stickman Hook Thumbnail",
     type: "game",
-    date: DATE_2_WEEKS,
+    date: DATE_2_WEEKS, // 2 weeks ago
     tags: ["game", "stickman hook", "arcade", "thumbnail"]
   },
   {
     file: "Stumble_Guys_StaticQuasar931.png",
     label: "Stumble Guys Thumbnail",
     type: "game",
-    date: DATE_2_WEEKS,
+    date: DATE_2_WEEKS, // 2 weeks ago
     tags: ["game", "stumble guys", "battle royale", "thumbnail"]
+  },
+  {
+    file: "The_Binding_Of_Isaac_Wrath_of_The_Lamb_GOTW_Thumb.jpg",
+    label: "Binding of Isaac GOTW Thumb",
+    type: "game",
+    date: DATE_YESTERDAY, // yesterday
+    tags: ["game", "binding of isaac", "gotw", "thumbnail"],
+    alias: "isaac-gotw"
   },
   {
     file: "The_Binding_Of_Isaac_Wrath_of_The_Lamb_StaticQuasar931_g0u5vx.jpg",
     label: "Binding of Isaac Wrath of the Lamb",
     type: "game",
-    date: DATE_TODAY,
+    date: DATE_2_DAYS_AGO, // 2 days ago
     tags: ["game", "binding of isaac", "wrath of the lamb", "thumbnail"],
     alias: "isaac-wotl"
   },
@@ -182,14 +216,14 @@ const images = [
     file: "We_Become_What_We_Behold_WBWWB_StaticQuasar931.png",
     label: "We Become What We Behold",
     type: "game",
-    date: DATE_3_WEEKS,
+    date: DATE_3_WEEKS, // 3 weeks ago
     tags: ["game", "wbwwb", "we become what we behold", "thumbnail"]
   },
   {
     file: "WithhelpbyIsaac.png",
     label: "With help by Isaac Badge",
     type: "credit",
-    date: DATE_LAST_WEEK,
+    date: DATE_LAST_WEEK, // last week
     tags: ["credit", "badge", "support", "helper", "overlay"],
     alias: "isaac-credit"
   },
@@ -197,50 +231,65 @@ const images = [
     file: "basketbros-io.jpg",
     label: "BasketBros io",
     type: "game",
-    date: DATE_2_WEEKS,
+    date: DATE_2_WEEKS, // 2 weeks ago
     tags: ["game", "basketbros", "basketball", "thumbnail"]
   },
   {
     file: "bloodmoney-online.png",
     label: "Bloodmoney Online",
     type: "game",
-    date: DATE_LAST_WEEK,
+    date: DATE_LAST_WEEK, // last week
     tags: ["game", "bloodmoney", "online", "thumbnail"]
   },
   {
     file: "capsule_616x353.jpg",
     label: "Capsule 616x353",
     type: "art",
-    date: DATE_2_WEEKS,
+    date: DATE_3_WEEKS, // 3 weeks ago
     tags: ["game", "capsule", "banner", "steam-style"]
   },
   {
     file: "clash-of-vikings_StaticQuasar931.webp",
     label: "Clash of Vikings",
     type: "game",
-    date: DATE_LAST_MON,
+    date: DATE_LAST_MON, // last month
     tags: ["game", "clash of vikings", "strategy", "thumbnail"]
   },
   {
     file: "cubes-2048-io.avif",
     label: "Cubes 2048 io",
     type: "game",
-    date: DATE_LAST_WEEK,
+    date: DATE_LAST_WEEK, // last week
     tags: ["game", "2048", "cubes", "io", "puzzle"]
   },
   {
     file: "document-autosave.svg",
     label: "Document Autosave Icon",
     type: "icon",
-    date: DATE_2_WEEKS,
+    date: DATE_2_WEEKS, // 2 weeks ago
     tags: ["icon", "ui", "document", "autosave", "button", "seo-ui"],
     alias: "autosave-icon"
+  },
+  {
+    file: "faviconimageoriginalimagesimagecopy.png",
+    label: "Original Favicon Image Copy",
+    type: "icon",
+    date: DATE_2_DAYS_AGO, // 2 days ago
+    tags: ["icon", "favicon", "sq", "staticquasar931"]
+  },
+  {
+    file: "faviconimagesimage.png",
+    label: "Main Favicon Image",
+    type: "icon",
+    date: DATE_2_DAYS_AGO, // 2 days ago
+    tags: ["icon", "favicon", "sq", "staticquasar931"],
+    alias: "sq-favicon"
   },
   {
     file: "icon.png",
     label: "StaticQuasar931 Main Icon",
     type: "logo",
-    date: DATE_LAST_MON,
+    date: DATE_LAST_MON, // last month
     tags: ["logo", "icon", "static brand", "favicon", "seo"],
     alias: "sq-main-icon"
   },
@@ -248,70 +297,70 @@ const images = [
     file: "loadishlogo-removebg-preview.png",
     label: "Loadish Logo Transparent",
     type: "logo",
-    date: DATE_2_WEEKS,
+    date: DATE_2_WEEKS, // 2 weeks ago
     tags: ["logo", "loadish", "transparent", "brand"]
   },
   {
     file: "loadishlogo.jpg",
     label: "Loadish Logo",
     type: "logo",
-    date: DATE_2_WEEKS,
+    date: DATE_2_WEEKS, // 2 weeks ago
     tags: ["logo", "loadish", "brand"]
   },
   {
     file: "minecraft-1639513933156.jpg",
     label: "Minecraft Generic Art",
     type: "game",
-    date: DATE_3_WEEKS,
+    date: DATE_3_WEEKS, // 3 weeks ago
     tags: ["game", "minecraft", "thumbnail", "cover"]
   },
   {
     file: "nuts-puzzle-sort-by-color.png",
     label: "Nuts Puzzle Sort by Color",
     type: "game",
-    date: DATE_3_WEEKS,
+    date: DATE_LAST_MON, // last month
     tags: ["game", "puzzle", "sort by color", "thumbnail"]
   },
   {
     file: "ragdoll-archers_StaticQuasar931.png",
     label: "Ragdoll Archers",
     type: "game",
-    date: DATE_LAST_MON,
+    date: DATE_LAST_MON, // last month
     tags: ["game", "ragdoll archers", "archery", "thumbnail"]
   },
   {
     file: "savelogo-removebg-preview.png",
     label: "Save Logo Transparent",
     type: "icon",
-    date: DATE_2_WEEKS,
+    date: DATE_2_WEEKS, // 2 weeks ago
     tags: ["icon", "save", "ui", "button", "transparent"]
   },
   {
     file: "savelogo.jpg",
     label: "Save Logo",
     type: "icon",
-    date: DATE_2_WEEKS,
+    date: DATE_2_WEEKS, // 2 weeks ago
     tags: ["icon", "save", "ui", "button"]
   },
   {
     file: "signout_logout-removebg-preview.png",
     label: "Signout Logout Transparent",
     type: "icon",
-    date: DATE_2_WEEKS,
+    date: DATE_2_WEEKS, // 2 weeks ago
     tags: ["icon", "logout", "ui", "button", "transparent"]
   },
   {
     file: "signout_logout.png",
     label: "Signout Logout Icon",
     type: "icon",
-    date: DATE_2_WEEKS,
+    date: DATE_2_WEEKS, // 2 weeks ago
     tags: ["icon", "logout", "ui", "button"]
   },
   {
     file: "slope_Staticquasar931_stable_agqxto.png",
     label: "Slope StaticQuasar931 Stable",
     type: "game",
-    date: DATE_3_WEEKS,
+    date: DATE_LAST_MON, // last month
     tags: ["game", "slope", "unblocked", "thumbnail"],
     alias: "slope-stable"
   },
@@ -319,21 +368,21 @@ const images = [
     file: "staticquasar931qrcodehomepage.png",
     label: "StaticQuasar931 Homepage QR Code",
     type: "seo",
-    date: DATE_LAST_WEEK,
+    date: DATE_LAST_WEEK, // last week
     tags: ["seo", "qr code", "static brand", "homepage", "visual-seo"]
   },
   {
     file: "survival-race-banner_Area_king_StaticQuasar931.png",
     label: "Survival Race Banner",
     type: "game",
-    date: DATE_LAST_MON,
+    date: DATE_LAST_MON, // last month
     tags: ["game", "survival race", "banner", "thumbnail"]
   },
   {
     file: "the-baby-in-yellow-pc-game-steam-cover.jpg",
     label: "The Baby in Yellow Steam Cover",
     type: "game",
-    date: DATE_3_WEEKS,
+    date: DATE_3_WEEKS, // 3 weeks ago
     tags: ["game", "the baby in yellow", "steam cover", "horror"]
   }
 ];
