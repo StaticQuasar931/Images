@@ -1,1426 +1,1446 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- Favicon -->
-<link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/faviconimagesimage.png">
-
-<style>
-/* ===========================
-   GLOBAL VARIABLES & THEMES
-   =========================== */
-
-:root {
-  --bg: #0b0c10;
-  --text: #e6f1ff;
-  --muted: #9ca3af;
-  --card-bg: #020617;
-  --border: #1f2937;
-  --accent: #1d4ed8;
-  --accent-hover: #2563eb;
-  --tag-bg: rgba(15,23,42,0.8);
-  --thumb-bg: #020617;
-  --toast-bg: rgba(22,163,74,0.96);
-  --toast-text: #ecfdf5;
-  --panel-bg: #020617;
-  --panel-border: #1f2937;
-}
-
-[data-theme="light"] {
-  --bg: #f9fafb;
-  --text: #111827;
-  --muted: #4b5563;
-  --card-bg: #ffffff;
-  --border: #e5e7eb;
-  --accent: #2563eb;
-  --accent-hover: #1d4ed8;
-  --tag-bg: #e5e7eb;
-  --thumb-bg: #f3f4f6;
-  --toast-bg: #16a34a;
-  --toast-text: #f9fafb;
-  --panel-bg: #ffffff;
-  --panel-border: #e5e7eb;
-}
-
-[data-theme="homey"] {
-  --bg: #434343;
-  --text: #f4f4f4;
-  --muted: #c7c7c7;
-  --card-bg: #4a4a4a;
-  --border: #606060;
-  --accent: #5c8bff;
-  --accent-hover: #7aa4ff;
-  --tag-bg: #5a5a5a;
-  --thumb-bg: #474747;
-  --toast-bg: #5c8bff;
-  --toast-text: #ffffff;
-  --panel-bg: #4a4a4a;
-  --panel-border: #606060;
-}
-
-/* ===========================
-   BASE STYLES
-   =========================== */
-
-body {
-  margin: 0;
-  padding: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  overflow-y: scroll;
-}
-
-button, input, select {
-  font-family: inherit;
-}
-
-/* ===========================
-   STICKY TOP CONTROL BAR
-   =========================== */
-
-#top-bar {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: var(--card-bg);
-  border-bottom: 1px solid var(--border);
-  padding: 0.5rem 1rem;
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  align-items: center;
-}
-
-#filters-left, #filters-right {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.filter-group {
-  display: flex;
-  flex-direction: column;
-}
-
-.filter-group label {
-  font-size: 0.7rem;
-  color: var(--muted);
-  margin-bottom: 2px;
-}
-
-.filter-group input {
-  padding: 0.25rem 0.5rem;
-  background: var(--thumb-bg);
-  color: var(--text);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-}
-
-.checkbox-group {
-  flex-direction: row;
-  align-items: center;
-}
-
-.btn-primary {
-  background: var(--accent);
-  color: #fff;
-  border: 1px solid var(--accent-hover);
-  padding: 0.3rem 0.6rem;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.btn-primary:hover {
-  background: var(--accent-hover);
-}
-
-.btn-secondary {
-  background: transparent;
-  color: var(--muted);
-  border: 1px solid var(--border);
-  padding: 0.3rem 0.6rem;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.btn-secondary:hover {
-  background: var(--card-bg);
-  color: var(--text);
-}
-
-/* ===========================
-   PRESET FILTER BAR
-   =========================== */
-
-#preset-bar {
-  position: sticky;
-  top: 48px;
-  z-index: 90;
-  background: var(--bg);
-  border-bottom: 1px solid var(--border);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  padding: 0.4rem 1rem;
-}
-
-.preset-btn {
-  background: transparent;
-  color: var(--muted);
-  border: 1px solid var(--border);
-  padding: 0.25rem 0.6rem;
-  border-radius: 999px;
-  font-size: 0.75rem;
-  cursor: pointer;
-}
-
-.preset-btn:hover {
-  background: var(--card-bg);
-  color: var(--text);
-}
-
-/* ===========================
-   GALLERY GRID
-   =========================== */
-
-#gallery {
-  padding: 1rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
-  gap: 1rem;
-}
-
-.card {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  overflow: hidden;
-  cursor: pointer;
-  transition: 0.15s;
-  position: relative;
-}
-
-.card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
-  border-color: var(--accent);
-}
-
-.card.pinned {
-  border-color: gold;
-  box-shadow: 0 0 5px gold;
-}
-
-.thumb {
-  background: var(--thumb-bg);
-  height: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.thumb img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-.card-body {
-  padding: 0.6rem 0.7rem;
-}
-
-.card-title {
-  font-weight: 600;
-  font-size: 0.85rem;
-  margin-bottom: 0.2rem;
-  word-break: break-all;
-}
-
-.card-date {
-  font-size: 0.75rem;
-  color: var(--muted);
-}
-
-.type-badge {
-  position: absolute;
-  top: 6px;
-  right: 6px;
-  background: var(--accent);
-  color: #fff;
-  padding: 2px 6px;
-  font-size: 0.65rem;
-  border-radius: 6px;
-}
-
-.pin-btn {
-  position: absolute;
-  top: 6px;
-  left: 6px;
-  width: 24px;
-  height: 24px;
-  background: var(--thumb-bg);
-  color: var(--muted);
-  border: 1px solid var(--border);
-  border-radius: 50%;
-  font-size: 0.85rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.pin-btn.pinned {
-  background: gold;
-  color: #000;
-  border-color: gold;
-}
-
-/* Tag chips */
-.tags {
-  margin-top: 0.25rem;
-  font-size: 0.75rem;
-  color: var(--muted);
-}
-
-.tag-chip {
-  display: inline-block;
-  padding: 1px 6px;
-  margin: 2px 3px 0 0;
-  background: var(--tag-bg);
-  color: var(--text);
-  border-radius: 999px;
-  border: 1px solid var(--border);
-}
-
-/* Highlight pulse when filters change */
-@keyframes pulse {
-  0% { box-shadow: 0 0 0px rgba(92,139,255,0.7); }
-  50% { box-shadow: 0 0 12px rgba(92,139,255,1); }
-  100% { box-shadow: 0 0 0px rgba(92,139,255,0.7); }
-}
-.card.pulse {
-  animation: pulse 0.8s ease;
-}
-
-/* ===========================
-   FULLSCREEN OVERLAY
-   =========================== */
-
-#fullscreen {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.92);
-  backdrop-filter: blur(3px);
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem;
-  z-index: 200;
-}
-
-#fullscreen.show {
-  display: flex;
-}
-
-#fs-img {
-  max-width: 90vw;
-  max-height: 80vh;
-  margin-top: 1rem;
-  border-radius: 8px;
-  background: #222;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.8);
-}
-
-#fs-top-bar {
-  display: flex;
-  justify-content: space-between;
-  width: 92vw;
-  max-width: 1200px;
-  align-items: center;
-}
-
-.fs-title {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #fff;
-}
-
-.fs-buttons {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.fs-btn {
-  background: var(--accent);
-  border: 1px solid var(--accent-hover);
-  border-radius: 5px;
-  padding: 0.3rem 0.6rem;
-  color: white;
-  cursor: pointer;
-}
-
-.fs-btn:hover {
-  background: var(--accent-hover);
-}
-
-#fs-similar {
-  margin-top: 0.75rem;
-  color: #ddd;
-  font-size: 0.85rem;
-  max-width: 900px;
-  text-align: center;
-}
-
-/* ===========================
-   CLIPBOARD POPUP MODAL
-   =========================== */
-
-#clipboard-modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.75);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 250;
-}
-
-#clipboard-modal.show {
-  display: flex;
-}
-
-#clipboard-box {
-  width: 340px;
-  max-height: 70vh;
-  overflow-y: auto;
-  background: var(--panel-bg);
-  border: 1px solid var(--panel-border);
-  border-radius: 8px;
-  padding: 0.7rem;
-}
-
-.clip-entry {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.3rem;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  margin-bottom: 0.5rem;
-  cursor: pointer;
-  background: var(--card-bg);
-}
-
-.clip-entry:hover {
-  background: var(--thumb-bg);
-}
-
-.clip-thumb {
-  width: 40px;
-  height: 40px;
-  background: #222;
-  border-radius: 4px;
-  object-fit: contain;
-}
-
-.clip-text {
-  font-size: 0.8rem;
-  color: var(--text);
-}
-
-/* ===========================
-   NOTES SYSTEM
-   =========================== */
-
-#notes-modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.75);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 260;
-}
-
-#notes-modal.show {
-  display: flex;
-}
-
-#notes-box {
-  width: 340px;
-  background: var(--panel-bg);
-  border: 1px solid var(--panel-border);
-  border-radius: 8px;
-  padding: 0.8rem;
-}
-
-#notes-box h3 {
-  margin: 0 0 0.5rem;
-  color: var(--text);
-}
-
-#notes-input {
-  width: 100%;
-  height: 140px;
-  background: var(--thumb-bg);
-  border: 1px solid var(--border);
-  color: var(--text);
-  border-radius: 6px;
-  padding: 0.5rem;
-  resize: none;
-}
-
-#notes-save {
-  margin-top: 0.5rem;
-}
-#notes-cancel {
-  margin-top: 0.5rem;
-  background: transparent;
-  border: 1px solid var(--border);
-  color: var(--muted);
-  border-radius: 6px;
-  padding: 0.3rem 0.6rem;
-  cursor: pointer;
-}
-
-/* ===========================
-   COMPARE MODE
-   =========================== */
-
-#compare-modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.82);
-  z-index: 270;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-}
-
-#compare-modal.show {
-  display: flex;
-}
-
-#compare-container {
-  display: flex;
-  gap: 1rem;
-  max-width: 95vw;
-  max-height: 85vh;
-}
-
-.compare-box {
-  flex: 1;
-  background: #222;
-  padding: 0.5rem;
-  border-radius: 6px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.compare-img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  background: #111;
-  border-radius: 4px;
-}
-
-/* Buttons inside compare mode */
-.compare-btns {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  display: flex;
-  gap: 0.5rem;
-}
-
-.compare-btn {
-  padding: 0.4rem 0.7rem;
-  border-radius: 6px;
-  background: var(--accent);
-  border: 1px solid var(--accent-hover);
-  color: #fff;
-  cursor: pointer;
-}
-
-.compare-btn:hover {
-  background: var(--accent-hover);
-}
-
-/* ===========================
-   TOAST
-   =========================== */
-
-#toast {
-  position: fixed;
-  bottom: 1.2rem;
-  left: 50%;
-  transform: translateX(-50%) translateY(40px);
-  opacity: 0;
-  pointer-events: none;
-  background: var(--toast-bg);
-  color: var(--toast-text);
-  padding: 0.5rem 0.9rem;
-  border-radius: 999px;
-  font-size: 0.85rem;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  transition: opacity 0.2s, transform 0.2s;
-  z-index: 999;
-}
-
-#toast.show {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-}
-
-#toast img {
-  width: 22px;
-  height: 22px;
-  object-fit: contain;
-  border-radius: 4px;
-}
-
-/* ===========================
-   MAIN AREA
-   =========================== */
-
-main {
-  padding-top: 0.5rem;
-}
-
-/* ===========================
-   END OF CSS PART
-   =========================== */
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>StaticQuasar931 Image Index</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/faviconimagesimage.png">
+
+  <style>
+  /* ===========================
+     GLOBAL VARIABLES & THEMES
+     =========================== */
+
+  :root {
+    --bg: #0b0c10;
+    --text: #e6f1ff;
+    --muted: #9ca3af;
+    --card-bg: #020617;
+    --border: #1f2937;
+    --accent: #1d4ed8;
+    --accent-hover: #2563eb;
+    --tag-bg: rgba(15,23,42,0.8);
+    --thumb-bg: #020617;
+    --toast-bg: rgba(22,163,74,0.96);
+    --toast-text: #ecfdf5;
+    --panel-bg: #020617;
+    --panel-border: #1f2937;
+  }
+
+  [data-theme="light"] {
+    --bg: #f9fafb;
+    --text: #111827;
+    --muted: #4b5563;
+    --card-bg: #ffffff;
+    --border: #e5e7eb;
+    --accent: #2563eb;
+    --accent-hover: #1d4ed8;
+    --tag-bg: #e5e7eb;
+    --thumb-bg: #f3f4f6;
+    --toast-bg: #16a34a;
+    --toast-text: #f9fafb;
+    --panel-bg: #ffffff;
+    --panel-border: #e5e7eb;
+  }
+
+  [data-theme="homey"] {
+    --bg: #434343;
+    --text: #f4f4f4;
+    --muted: #c7c7c7;
+    --card-bg: #4a4a4a;
+    --border: #606060;
+    --accent: #5c8bff;
+    --accent-hover: #7aa4ff;
+    --tag-bg: #5a5a5a;
+    --thumb-bg: #474747;
+    --toast-bg: #5c8bff;
+    --toast-text: #ffffff;
+    --panel-bg: #4a4a4a;
+    --panel-border: #606060;
+  }
+
+  /* ===========================
+     BASE STYLES
+     =========================== */
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    overflow-y: scroll;
+  }
+
+  button, input, select {
+    font-family: inherit;
+  }
+
+  /* ===========================
+     STICKY TOP CONTROL BAR
+     =========================== */
+
+  #top-bar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--border);
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  #filters-left, #filters-right {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .filter-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .filter-group label {
+    font-size: 0.7rem;
+    color: var(--muted);
+    margin-bottom: 2px;
+  }
+
+  .filter-group input {
+    padding: 0.25rem 0.5rem;
+    background: var(--thumb-bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+  }
+
+  .checkbox-group {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: #fff;
+    border: 1px solid var(--accent-hover);
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .btn-primary:hover {
+    background: var(--accent-hover);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .btn-secondary:hover {
+    background: var(--card-bg);
+    color: var(--text);
+  }
+
+  /* ===========================
+     PRESET FILTER BAR
+     =========================== */
+
+  #preset-bar {
+    position: sticky;
+    top: 48px;
+    z-index: 90;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .preset-btn {
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    cursor: pointer;
+  }
+
+  .preset-btn:hover {
+    background: var(--card-bg);
+    color: var(--text);
+  }
+
+  .preset-btn.active {
+    background: var(--accent);
+    border-color: var(--accent-hover);
+    color: #fff;
+  }
+
+  /* ===========================
+     GALLERY GRID
+     =========================== */
+
+  #gallery {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+    gap: 1rem;
+  }
+
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.15s;
+    position: relative;
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    border-color: var(--accent);
+  }
+
+  .card.pinned {
+    border-color: gold;
+    box-shadow: 0 0 5px gold;
+  }
+
+  .thumb {
+    background: var(--thumb-bg);
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .thumb img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .card-body {
+    padding: 0.6rem 0.7rem;
+  }
+
+  .card-title {
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 0.2rem;
+    word-break: break-all;
+  }
+
+  .card-date {
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+
+  .type-badge {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: var(--accent);
+    color: #fff;
+    padding: 2px 6px;
+    font-size: 0.65rem;
+    border-radius: 6px;
+  }
+
+  .pin-btn {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 24px;
+    height: 24px;
+    background: var(--thumb-bg);
+    color: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pin-btn.pinned {
+    background: gold;
+    color: #000;
+    border-color: gold;
+  }
+
+  /* Tag chips */
+  .tags {
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+
+  .tag-chip {
+    display: inline-block;
+    padding: 1px 6px;
+    margin: 2px 3px 0 0;
+    background: var(--tag-bg);
+    color: var(--text);
+    border-radius: 999px;
+    border: 1px solid var(--border);
+  }
+
+  /* Highlight pulse when filters change */
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0px rgba(92,139,255,0.7); }
+    50% { box-shadow: 0 0 12px rgba(92,139,255,1); }
+    100% { box-shadow: 0 0 0px rgba(92,139,255,0.7); }
+  }
+  .card.pulse {
+    animation: pulse 0.8s ease;
+  }
+
+  /* ===========================
+     FULLSCREEN OVERLAY
+     =========================== */
+
+  #fullscreen {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.92);
+    backdrop-filter: blur(3px);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    z-index: 200;
+  }
+
+  #fullscreen.show {
+    display: flex;
+  }
+
+  #fs-img {
+    max-width: 90vw;
+    max-height: 72vh;
+    margin-top: 1rem;
+    border-radius: 8px;
+    background: #222;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.8);
+  }
+
+  #fs-top-bar {
+    display: flex;
+    justify-content: space-between;
+    width: 92vw;
+    max-width: 1200px;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .fs-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .fs-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .fs-btn {
+    background: var(--accent);
+    border: 1px solid var(--accent-hover);
+    border-radius: 5px;
+    padding: 0.3rem 0.6rem;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8rem;
+  }
+
+  .fs-btn:hover {
+    background: var(--accent-hover);
+  }
+
+  #fs-similar {
+    margin-top: 0.75rem;
+    color: #ddd;
+    font-size: 0.85rem;
+    max-width: 900px;
+    text-align: center;
+  }
+
+  #fs-url {
+    margin-top: 0.4rem;
+    font-size: 0.75rem;
+    color: var(--muted);
+    max-width: 900px;
+    word-break: break-all;
+    text-align: center;
+  }
+
+  /* ===========================
+     CLIPBOARD POPUP MODAL
+     =========================== */
+
+  #clipboard-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 250;
+  }
+
+  #clipboard-modal.show {
+    display: flex;
+  }
+
+  #clipboard-box {
+    width: 340px;
+    max-height: 70vh;
+    overflow-y: auto;
+    background: var(--panel-bg);
+    border: 1px solid var(--panel-border);
+    border-radius: 8px;
+    padding: 0.7rem;
+  }
+
+  .clip-entry {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.3rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    background: var(--card-bg);
+  }
+
+  .clip-entry:hover {
+    background: var(--thumb-bg);
+  }
+
+  .clip-thumb {
+    width: 40px;
+    height: 40px;
+    background: #222;
+    border-radius: 4px;
+    object-fit: contain;
+  }
+
+  .clip-text {
+    font-size: 0.8rem;
+    color: var(--text);
+  }
+
+  /* ===========================
+     NOTES SYSTEM
+     =========================== */
+
+  #notes-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 260;
+  }
+
+  #notes-modal.show {
+    display: flex;
+  }
+
+  #notes-box {
+    width: 340px;
+    background: var(--panel-bg);
+    border: 1px solid var(--panel-border);
+    border-radius: 8px;
+    padding: 0.8rem;
+  }
+
+  #notes-box h3 {
+    margin: 0 0 0.5rem;
+    color: var(--text);
+  }
+
+  #notes-input {
+    width: 100%;
+    height: 140px;
+    background: var(--thumb-bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 6px;
+    padding: 0.5rem;
+    resize: none;
+  }
+
+  #notes-save {
+    margin-top: 0.5rem;
+  }
+  #notes-cancel {
+    margin-top: 0.5rem;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    border-radius: 6px;
+    padding: 0.3rem 0.6rem;
+    cursor: pointer;
+  }
+
+  /* ===========================
+     COMPARE MODE
+     =========================== */
+
+  #compare-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.82);
+    z-index: 270;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  #compare-modal.show {
+    display: flex;
+  }
+
+  #compare-container {
+    display: flex;
+    gap: 1rem;
+    max-width: 95vw;
+    max-height: 85vh;
+  }
+
+  .compare-box {
+    flex: 1;
+    background: #222;
+    padding: 0.5rem;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .compare-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    background: #111;
+    border-radius: 4px;
+  }
+
+  .compare-btns {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .compare-btn {
+    padding: 0.4rem 0.7rem;
+    border-radius: 6px;
+    background: var(--accent);
+    border: 1px solid var(--accent-hover);
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .compare-btn:hover {
+    background: var(--accent-hover);
+  }
+
+  /* ===========================
+     TOAST
+     =========================== */
+
+  #toast {
+    position: fixed;
+    bottom: 1.2rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(40px);
+    opacity: 0;
+    pointer-events: none;
+    background: var(--toast-bg);
+    color: var(--toast-text);
+    padding: 0.5rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: opacity 0.2s, transform 0.2s;
+    z-index: 999;
+  }
+
+  #toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  #toast img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    border-radius: 4px;
+  }
+
+  /* ===========================
+     MAIN AREA
+     =========================== */
+
+  main {
+    padding-top: 0.5rem;
+  }
+
+  /* ===========================
+     END OF CSS
+     =========================== */
+  </style>
 </head>
 
 <body>
 
-<!-- ========================= -->
-<!-- TOP BAR -->
-<!-- ========================= -->
-<div id="top-bar">
-  <div id="filters-left">
+  <!-- ========================= -->
+  <!-- TOP BAR -->
+  <!-- ========================= -->
+  <div id="top-bar">
+    <div id="filters-left">
+      <div class="filter-group">
+        <label>Include:</label>
+        <input id="filter-include" type="text" list="include-suggestions" placeholder="tags, name, dates">
+        <datalist id="include-suggestions"></datalist>
+      </div>
 
-    <div class="filter-group">
-      <label>Include:</label>
-      <input id="filter-include" type="text" list="include-suggestions" placeholder="tags, name, dates">
-      <datalist id="include-suggestions"></datalist>
+      <div class="filter-group">
+        <label>Exclude:</label>
+        <input id="filter-exclude" type="text" list="exclude-suggestions" placeholder="exclude tags">
+        <datalist id="exclude-suggestions"></datalist>
+      </div>
+
+      <label class="checkbox-group" style="gap:4px; cursor:pointer;">
+        <input type="checkbox" id="filter-pinned">
+        <span>Pinned only</span>
+      </label>
+
+      <button id="reset-filters" class="btn-secondary">Reset</button>
     </div>
 
-    <div class="filter-group">
-      <label>Exclude:</label>
-      <input id="filter-exclude" type="text" list="exclude-suggestions" placeholder="exclude tags">
-      <datalist id="exclude-suggestions"></datalist>
-    </div>
+    <div id="filters-right">
+      <label for="theme-select" style="font-size:0.8rem;color:var(--muted);">Theme:</label>
+      <select id="theme-select">
+        <option value="dark">Dark</option>
+        <option value="light">Light</option>
+        <option value="homey">Homey</option>
+      </select>
 
-    <label class="checkbox-group" style="gap:4px; cursor:pointer;">
-      <input type="checkbox" id="filter-pinned">
-      <span>Pinned only</span>
-    </label>
-
-    <button id="reset-filters" class="btn-secondary">Reset</button>
-  </div>
-
-  <div id="filters-right">
-
-    <label for="theme-select" style="font-size:0.8rem;color:var(--muted);">Theme:</label>
-    <select id="theme-select">
-      <option value="dark">Dark</option>
-      <option value="light">Light</option>
-      <option value="homey">Homey</option>
-    </select>
-
-    <button id="clipboard-btn" class="btn-secondary">Clipboard</button>
-    <button id="multi-toggle" class="btn-secondary">Multi: Off</button>
-    <button id="multi-copy" class="btn-primary" disabled>Copy</button>
-    <button id="multi-clear" class="btn-secondary" disabled>Clear</button>
-
-  </div>
-</div>
-
-<!-- ========================= -->
-<!-- PRESET BAR -->
-<!-- ========================= -->
-<div id="preset-bar">
-  <button class="preset-btn" data-preset="seo">SEO</button>
-  <button class="preset-btn" data-preset="icons">Icons</button>
-  <button class="preset-btn" data-preset="games">Games</button>
-  <button class="preset-btn" data-preset="banners">Banners</button>
-  <button class="preset-btn" data-preset="recent">Recent</button>
-  <button class="preset-btn" data-preset="notes">With Notes</button>
-</div>
-
-<!-- ========================= -->
-<!-- GALLERY GRID -->
-<!-- ========================= -->
-<main>
-  <div id="gallery"></div>
-</main>
-
-<!-- ========================= -->
-<!-- FULLSCREEN VIEWER -->
-<!-- ========================= -->
-<div id="fullscreen">
-  <div id="fs-top-bar">
-    <div class="fs-title" id="fs-title">Image</div>
-    <div class="fs-buttons">
-      <button class="fs-btn" id="fs-copy">Copy URL</button>
-      <button class="fs-btn" id="fs-open">Open (N)</button>
-      <button class="fs-btn" id="fs-notes">Notes</button>
-      <button class="fs-btn" id="fs-close">Close (Esc)</button>
+      <button id="clipboard-btn" class="btn-secondary">Clipboard</button>
+      <button id="multi-toggle" class="btn-secondary">Multi: Off</button>
+      <button id="multi-copy" class="btn-primary" disabled>Copy</button>
+      <button id="multi-clear" class="btn-secondary" disabled>Clear</button>
     </div>
   </div>
 
-  <img id="fs-img" src="">
-  <div id="fs-similar"></div>
-</div>
-
-<!-- ========================= -->
-<!-- CLIPBOARD MODAL -->
-<!-- ========================= -->
-<div id="clipboard-modal">
-  <div id="clipboard-box">
-    <h3 style="margin:0 0 0.5rem;color:var(--text);">Clipboard History</h3>
-    <div id="clipboard-list"></div>
-    <button id="clipboard-clear" class="btn-secondary" style="margin-top:0.5rem;width:100%;">Clear</button>
-    <button id="clipboard-close" class="btn-secondary" style="margin-top:0.4rem;width:100%;">Close</button>
-  </div>
-</div>
-
-<!-- ========================= -->
-<!-- NOTES MODAL -->
-<!-- ========================= -->
-<div id="notes-modal">
-  <div id="notes-box">
-    <h3>Image Notes</h3>
-    <textarea id="notes-input"></textarea>
-    <button id="notes-save" class="btn-primary" style="width:100%;">Save</button>
-    <button id="notes-cancel" class="btn-secondary" style="width:100%;">Cancel</button>
-  </div>
-</div>
-
-<!-- ========================= -->
-<!-- COMPARE MODAL -->
-<!-- ========================= -->
-<div id="compare-modal">
-  <div class="compare-btns">
-    <button id="compare-swap" class="compare-btn">Swap</button>
-    <button id="compare-close" class="compare-btn">Close</button>
+  <!-- ========================= -->
+  <!-- PRESET BAR -->
+  <!-- ========================= -->
+  <div id="preset-bar">
+    <button class="preset-btn" data-preset="seo">SEO</button>
+    <button class="preset-btn" data-preset="icons">Icons</button>
+    <button class="preset-btn" data-preset="games">Games</button>
+    <button class="preset-btn" data-preset="banners">Banners</button>
+    <button class="preset-btn" data-preset="recent">Recent</button>
+    <button class="preset-btn" data-preset="notes">With Notes</button>
   </div>
 
-  <div id="compare-container">
-    <div class="compare-box">
-      <img id="compare-img-1" class="compare-img">
+  <!-- ========================= -->
+  <!-- GALLERY GRID -->
+  <!-- ========================= -->
+  <main>
+    <div id="gallery"></div>
+  </main>
+
+  <!-- ========================= -->
+  <!-- FULLSCREEN VIEWER -->
+  <!-- ========================= -->
+  <div id="fullscreen">
+    <div id="fs-top-bar">
+      <div class="fs-title" id="fs-title">Image</div>
+      <div class="fs-buttons">
+        <button class="fs-btn" id="fs-copy">Copy URL</button>
+        <button class="fs-btn" id="fs-open">Open (N)</button>
+        <button class="fs-btn" id="fs-notes">Notes</button>
+        <button class="fs-btn" id="fs-close">Close (Esc)</button>
+      </div>
     </div>
-    <div class="compare-box">
-      <img id="compare-img-2" class="compare-img">
+
+    <img id="fs-img" src="">
+    <div id="fs-similar"></div>
+    <div id="fs-url"></div>
+  </div>
+
+  <!-- ========================= -->
+  <!-- CLIPBOARD MODAL -->
+  <!-- ========================= -->
+  <div id="clipboard-modal">
+    <div id="clipboard-box">
+      <h3 style="margin:0 0 0.5rem;color:var(--text);">Clipboard History</h3>
+      <div id="clipboard-list"></div>
+      <button id="clipboard-clear" class="btn-secondary" style="margin-top:0.5rem;width:100%;">Clear</button>
+      <button id="clipboard-close" class="btn-secondary" style="margin-top:0.4rem;width:100%;">Close</button>
     </div>
   </div>
-</div>
 
-<!-- ========================= -->
-<!-- TOAST -->
-<!-- ========================= -->
-<div id="toast">
-  <img id="toast-thumb" src="">
-  <span id="toast-text">Copied</span>
-</div>
+  <!-- ========================= -->
+  <!-- NOTES MODAL -->
+  <!-- ========================= -->
+  <div id="notes-modal">
+    <div id="notes-box">
+      <h3>Image Notes</h3>
+      <textarea id="notes-input"></textarea>
+      <button id="notes-save" class="btn-primary" style="width:100%;">Save</button>
+      <button id="notes-cancel" class="btn-secondary" style="width:100%;">Cancel</button>
+    </div>
+  </div>
 
-<!-- ========================= -->
-<!-- SCRIPT PART BEGINS (PART 3A-C will continue here) -->
-<!-- ========================= -->
-<script>
-/* PART 3A BEGINS BELOW — CONTINUE WHEN READY */
-<!-- ========================= -->
-<script src="images-data.js"></script>
+  <!-- ========================= -->
+  <!-- COMPARE MODAL -->
+  <!-- ========================= -->
+  <div id="compare-modal">
+    <div class="compare-btns">
+      <button id="compare-swap" class="compare-btn">Swap</button>
+      <button id="compare-close" class="compare-btn">Close</button>
+    </div>
 
-<script>
-// Leave or reload warning
-window.onbeforeunload = function () {
-  return "Are you sure you want to leave this image index page?";
-};
+    <div id="compare-container">
+      <div class="compare-box">
+        <img id="compare-img-1" class="compare-img">
+      </div>
+      <div class="compare-box">
+        <img id="compare-img-2" class="compare-img">
+      </div>
+    </div>
+  </div>
 
-// your other JS that uses `images` goes here, for example:
-// const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
-// buildSuggestions();
-// renderGallery(false);
+  <!-- ========================= -->
+  <!-- TOAST -->
+  <!-- ========================= -->
+  <div id="toast">
+    <img id="toast-thumb" src="">
+    <span id="toast-text">Copied</span>
+  </div>
 
+  <!-- ========================= -->
+  <!-- SCRIPTS
+       images-data.js must define: DATE_* and const images = [...]
+     ========================= -->
+  <script src="images-data.js"></script>
 
-
-const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
-
-// State
-let currentTheme = localStorage.getItem("sq_img_theme") || "dark";
-let pinned = new Set(JSON.parse(localStorage.getItem("sq_img_pinned") || "[]"));
-let notes = JSON.parse(localStorage.getItem("sq_img_notes") || "{}");
-let clipboardHistory = JSON.parse(localStorage.getItem("sq_img_clipboard") || "[]");
-let multiMode = false;
-let multiSelected = new Set();
-let currentFiltered = [];
-let currentFsIndex = -1;
-let currentNotesIndex = -1;
-let compareSelection = [];
-let pulseFlag = false;
-
-// DOM refs
-const galleryEl = document.getElementById("gallery");
-const includeInput = document.getElementById("filter-include");
-const excludeInput = document.getElementById("filter-exclude");
-const pinnedCheckbox = document.getElementById("filter-pinned");
-const resetFiltersBtn = document.getElementById("reset-filters");
-const presetButtons = Array.from(document.querySelectorAll(".preset-btn"));
-const themeSelect = document.getElementById("theme-select");
-const clipboardBtn = document.getElementById("clipboard-btn");
-const clipboardModal = document.getElementById("clipboard-modal");
-const clipboardList = document.getElementById("clipboard-list");
-const clipboardClear = document.getElementById("clipboard-clear");
-const clipboardClose = document.getElementById("clipboard-close");
-const multiToggle = document.getElementById("multi-toggle");
-const multiCopy = document.getElementById("multi-copy");
-const multiClear = document.getElementById("multi-clear");
-const toastEl = document.getElementById("toast");
-const toastText = document.getElementById("toast-text");
-const toastThumb = document.getElementById("toast-thumb");
-const fsEl = document.getElementById("fullscreen");
-const fsImg = document.getElementById("fs-img");
-const fsTitle = document.getElementById("fs-title");
-const fsSimilar = document.getElementById("fs-similar");
-const fsCopy = document.getElementById("fs-copy");
-const fsOpen = document.getElementById("fs-open");
-const fsNotesBtn = document.getElementById("fs-notes");
-const fsClose = document.getElementById("fs-close");
-const notesModal = document.getElementById("notes-modal");
-const notesInput = document.getElementById("notes-input");
-const notesSave = document.getElementById("notes-save");
-const notesCancel = document.getElementById("notes-cancel");
-const compareModal = document.getElementById("compare-modal");
-const compareImg1 = document.getElementById("compare-img-1");
-const compareImg2 = document.getElementById("compare-img-2");
-const compareSwap = document.getElementById("compare-swap");
-const compareClose = document.getElementById("compare-close");
-const includeSuggestions = document.getElementById("include-suggestions");
-const excludeSuggestions = document.getElementById("exclude-suggestions");
-
-function setTheme(theme) {
-  currentTheme = theme;
-  document.documentElement.setAttribute("data-theme", theme);
-  themeSelect.value = theme;
-  localStorage.setItem("sq_img_theme", theme);
-}
-
-function cycleTheme() {
-  const order = ["dark", "light", "homey"];
-  const idx = order.indexOf(currentTheme);
-  const next = order[(idx + 1) % order.length];
-  setTheme(next);
-}
-
-setTheme(currentTheme);
-
-// Helper to see if typing focus should block hotkeys
-function isTyping() {
-  const el = document.activeElement;
-  if (!el) return false;
-  const tag = el.tagName.toLowerCase();
-  if (tag === "input" || tag === "textarea" || tag === "select") return true;
-  if (el.isContentEditable) return true;
-  return false;
-}
-
-function savePinned() {
-  localStorage.setItem("sq_img_pinned", JSON.stringify(Array.from(pinned)));
-}
-
-function saveNotes() {
-  localStorage.setItem("sq_img_notes", JSON.stringify(notes));
-}
-
-function saveClipboard() {
-  localStorage.setItem("sq_img_clipboard", JSON.stringify(clipboardHistory));
-}
-
-function buildSuggestions() {
-  const setInc = new Set();
-  const setExc = new Set();
-  images.forEach(img => {
-    img.tags.forEach(t => {
-      setInc.add(t);
-      setExc.add(t);
-    });
-    setInc.add(img.type);
-    setExc.add(img.type);
-    setInc.add(img.date);
-    setExc.add(img.date);
-    setInc.add(img.label.toLowerCase());
-    setExc.add(img.label.toLowerCase());
-    if (img.alias) {
-      setInc.add(img.alias.toLowerCase());
-      setExc.add(img.alias.toLowerCase());
-    }
-  });
-  includeSuggestions.innerHTML = "";
-  excludeSuggestions.innerHTML = "";
-  Array.from(setInc).forEach(v => {
-    const o = document.createElement("option");
-    o.value = v;
-    includeSuggestions.appendChild(o);
-  });
-  Array.from(setExc).forEach(v => {
-    const o = document.createElement("option");
-    o.value = v;
-    excludeSuggestions.appendChild(o);
-  });
-}
-
-function getAspectBadge(file, tags) {
-  const name = file.toLowerCase();
-  if (name.includes("banner") || name.includes("616x") || tags.includes("banner") || tags.includes("steam-style")) {
-    return "wide";
-  }
-  if (name.includes("qrcode") || name.includes("icon") || name.includes("favicon")) {
-    return "square";
-  }
-  return "";
-}
-
-function showToast(message, thumbUrl) {
-  toastText.textContent = message;
-  if (thumbUrl) {
-    toastThumb.src = thumbUrl;
-    toastThumb.style.display = "block";
-  } else {
-    toastThumb.style.display = "none";
-  }
-  toastEl.classList.add("show");
-  setTimeout(() => {
-    toastEl.classList.remove("show");
-  }, 1600);
-}
-
-function copyText(text) {
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    return navigator.clipboard.writeText(text);
-  }
-  return new Promise((resolve, reject) => {
-    const ta = document.createElement("textarea");
-    ta.value = text;
-    document.body.appendChild(ta);
-    ta.select();
-    try {
-      document.execCommand("copy");
-      resolve();
-    } catch (e) {
-      reject(e);
-    }
-    document.body.removeChild(ta);
-  });
-}
-
-function addClipboardEntry(img) {
-  const url = baseCdn + encodeURIComponent(img.file);
-  const entry = {
-    file: img.file,
-    label: img.label,
-    url,
-    date: new Date().toISOString()
+  <script>
+  // Leave or reload warning
+  window.onbeforeunload = function () {
+    return "Are you sure you want to leave this image index page?";
   };
-  clipboardHistory.unshift(entry);
-  clipboardHistory = clipboardHistory.slice(0, 50);
-  saveClipboard();
-}
 
-function renderClipboard() {
-  clipboardList.innerHTML = "";
-  clipboardHistory.forEach(entry => {
-    const row = document.createElement("div");
-    row.className = "clip-entry";
-    const imgEl = document.createElement("img");
-    imgEl.className = "clip-thumb";
-    imgEl.src = baseCdn + encodeURIComponent(entry.file);
-    const text = document.createElement("div");
-    text.className = "clip-text";
-    text.textContent = entry.label;
-    row.appendChild(imgEl);
-    row.appendChild(text);
-    row.addEventListener("click", () => {
-      copyText(entry.url).then(() => {
-        showToast("Copied " + entry.label, imgEl.src);
+  const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
+
+  // State
+  let currentTheme = localStorage.getItem("sq_img_theme") || "dark";
+  let pinned = new Set(JSON.parse(localStorage.getItem("sq_img_pinned") || "[]"));
+  let notes = JSON.parse(localStorage.getItem("sq_img_notes") || "{}");
+  let clipboardHistory = JSON.parse(localStorage.getItem("sq_img_clipboard") || "[]");
+  let multiMode = false;
+  let multiSelected = new Set();
+  let currentFiltered = [];
+  let currentFsIndex = -1;
+  let currentNotesIndex = -1;
+  let compareSelection = [];
+  let pulseFlag = false;
+
+  // DOM refs
+  const galleryEl = document.getElementById("gallery");
+  const includeInput = document.getElementById("filter-include");
+  const excludeInput = document.getElementById("filter-exclude");
+  const pinnedCheckbox = document.getElementById("filter-pinned");
+  const resetFiltersBtn = document.getElementById("reset-filters");
+  const presetButtons = Array.from(document.querySelectorAll(".preset-btn"));
+  const themeSelect = document.getElementById("theme-select");
+  const clipboardBtn = document.getElementById("clipboard-btn");
+  const clipboardModal = document.getElementById("clipboard-modal");
+  const clipboardList = document.getElementById("clipboard-list");
+  const clipboardClear = document.getElementById("clipboard-clear");
+  const clipboardClose = document.getElementById("clipboard-close");
+  const multiToggle = document.getElementById("multi-toggle");
+  const multiCopy = document.getElementById("multi-copy");
+  const multiClear = document.getElementById("multi-clear");
+  const toastEl = document.getElementById("toast");
+  const toastText = document.getElementById("toast-text");
+  const toastThumb = document.getElementById("toast-thumb");
+  const fsEl = document.getElementById("fullscreen");
+  const fsImg = document.getElementById("fs-img");
+  const fsTitle = document.getElementById("fs-title");
+  const fsSimilar = document.getElementById("fs-similar");
+  const fsUrlEl = document.getElementById("fs-url");
+  const fsCopy = document.getElementById("fs-copy");
+  const fsOpen = document.getElementById("fs-open");
+  const fsNotesBtn = document.getElementById("fs-notes");
+  const fsClose = document.getElementById("fs-close");
+  const notesModal = document.getElementById("notes-modal");
+  const notesInput = document.getElementById("notes-input");
+  const notesSave = document.getElementById("notes-save");
+  const notesCancel = document.getElementById("notes-cancel");
+  const compareModal = document.getElementById("compare-modal");
+  const compareImg1 = document.getElementById("compare-img-1");
+  const compareImg2 = document.getElementById("compare-img-2");
+  const compareSwap = document.getElementById("compare-swap");
+  const compareClose = document.getElementById("compare-close");
+  const includeSuggestions = document.getElementById("include-suggestions");
+  const excludeSuggestions = document.getElementById("exclude-suggestions");
+
+  // Theme helpers
+  function setTheme(theme) {
+    currentTheme = theme;
+    document.documentElement.setAttribute("data-theme", theme);
+    if (themeSelect) themeSelect.value = theme;
+    localStorage.setItem("sq_img_theme", theme);
+  }
+
+  function cycleTheme() {
+    const order = ["dark", "light", "homey"];
+    const idx = order.indexOf(currentTheme);
+    const next = order[(idx + 1) % order.length];
+    setTheme(next);
+  }
+
+  setTheme(currentTheme);
+
+  // Helper to see if typing focus should block hotkeys
+  function isTyping() {
+    const el = document.activeElement;
+    if (!el) return false;
+    const tag = el.tagName.toLowerCase();
+    if (tag === "input" || tag === "textarea" || tag === "select") return true;
+    if (el.isContentEditable) return true;
+    return false;
+  }
+
+  function savePinned() {
+    localStorage.setItem("sq_img_pinned", JSON.stringify(Array.from(pinned)));
+  }
+
+  function saveNotes() {
+    localStorage.setItem("sq_img_notes", JSON.stringify(notes));
+  }
+
+  function saveClipboard() {
+    localStorage.setItem("sq_img_clipboard", JSON.stringify(clipboardHistory));
+  }
+
+  function buildSuggestions() {
+    const setInc = new Set();
+    const setExc = new Set();
+    images.forEach(img => {
+      img.tags.forEach(t => {
+        setInc.add(t);
+        setExc.add(t);
       });
+      setInc.add(img.type);
+      setExc.add(img.type);
+      setInc.add(img.date);
+      setExc.add(img.date);
+      setInc.add(img.label.toLowerCase());
+      setExc.add(img.label.toLowerCase());
+      if (img.alias) {
+        setInc.add(img.alias.toLowerCase());
+        setExc.add(img.alias.toLowerCase());
+      }
     });
-    clipboardList.appendChild(row);
-  });
-}
+    includeSuggestions.innerHTML = "";
+    excludeSuggestions.innerHTML = "";
+    Array.from(setInc).forEach(v => {
+      const o = document.createElement("option");
+      o.value = v;
+      includeSuggestions.appendChild(o);
+    });
+    Array.from(setExc).forEach(v => {
+      const o = document.createElement("option");
+      o.value = v;
+      excludeSuggestions.appendChild(o);
+    });
+  }
 
-function filterImages() {
-  const inc = includeInput.value.trim().toLowerCase();
-  const exc = excludeInput.value.trim().toLowerCase();
-  const incParts = inc ? inc.split(/\s+/).filter(Boolean) : [];
-  const excParts = exc ? exc.split(/\s+/).filter(Boolean) : [];
-  const pinnedOnly = pinnedCheckbox.checked;
-  const notesPreset = presetButtons.some(b => b.dataset.preset === "notes" && b.classList.contains("active"));
-
-  const result = images.slice().sort((a, b) => {
-    if (a.date === b.date) return 0;
-    return a.date < b.date ? 1 : -1;
-  }).filter(img => {
-    if (pinnedOnly && !pinned.has(img.file)) return false;
-    if (notesPreset && !notes[img.file]) return false;
-
-    const haystack = [
-      img.file.toLowerCase(),
-      img.label.toLowerCase(),
-      img.type.toLowerCase(),
-      img.date.toLowerCase(),
-      (img.alias || "").toLowerCase(),
-      img.tags.join(" ").toLowerCase(),
-      (notes[img.file] || "").toLowerCase()
-    ].join(" ");
-
-    for (const term of incParts) {
-      if (!haystack.includes(term)) return false;
+  function getAspectBadge(file, tags) {
+    const name = file.toLowerCase();
+    if (name.includes("banner") || name.includes("616x") || tags.includes("banner") || tags.includes("steam-style")) {
+      return "wide";
     }
-    for (const term of excParts) {
-      if (term && haystack.includes(term)) return false;
+    if (name.includes("qrcode") || name.includes("icon") || name.includes("favicon")) {
+      return "square";
     }
-    return true;
-  });
+    return "";
+  }
 
-  return result;
-}
+  function showToast(message, thumbUrl) {
+    toastText.textContent = message;
+    if (thumbUrl) {
+      toastThumb.src = thumbUrl;
+      toastThumb.style.display = "block";
+    } else {
+      toastThumb.style.display = "none";
+    }
+    toastEl.classList.add("show");
+    setTimeout(() => {
+      toastEl.classList.remove("show");
+    }, 1600);
+  }
 
-function clearPulse() {
-  document.querySelectorAll(".card.pulse").forEach(el => el.classList.remove("pulse"));
-}
+  function copyText(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text);
+    }
+    return new Promise((resolve, reject) => {
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand("copy");
+        resolve();
+      } catch (e) {
+        reject(e);
+      }
+      document.body.removeChild(ta);
+    });
+  }
 
-function renderGallery(doPulse) {
-  const filtered = filterImages();
-  currentFiltered = filtered;
-  galleryEl.innerHTML = "";
-  clearPulse();
-  multiSelected.clear();
-
-  filtered.forEach((img, idx) => {
+  function addClipboardEntry(img) {
     const url = baseCdn + encodeURIComponent(img.file);
+    const entry = {
+      file: img.file,
+      label: img.label,
+      url,
+      date: new Date().toISOString()
+    };
+    clipboardHistory.unshift(entry);
+    clipboardHistory = clipboardHistory.slice(0, 50);
+    saveClipboard();
+  }
 
-    const card = document.createElement("article");
-    card.className = "card";
-    card.dataset.file = img.file;
-    card.dataset.index = idx;
-
-    if (pinned.has(img.file)) card.classList.add("pinned");
-
-    const thumb = document.createElement("div");
-    thumb.className = "thumb";
-    const image = document.createElement("img");
-    image.src = url;
-    image.alt = img.label;
-    thumb.appendChild(image);
-
-    const badge = document.createElement("div");
-    badge.className = "type-badge";
-    badge.textContent = img.type.toUpperCase();
-
-    const pinBtn = document.createElement("button");
-    pinBtn.className = "pin-btn" + (pinned.has(img.file) ? " pinned" : "");
-    pinBtn.textContent = "★";
-
-    const body = document.createElement("div");
-    body.className = "card-body";
-
-    const title = document.createElement("div");
-    title.className = "card-title";
-    title.textContent = img.label;
-
-    const dateEl = document.createElement("div");
-    dateEl.className = "card-date";
-    dateEl.textContent = img.date;
-
-    const tagsEl = document.createElement("div");
-    tagsEl.className = "tags";
-    if (img.alias) {
-      const aliasChip = document.createElement("span");
-      aliasChip.className = "tag-chip";
-      aliasChip.textContent = "alias: " + img.alias;
-      tagsEl.appendChild(aliasChip);
-    }
-    img.tags.forEach(t => {
-      const chip = document.createElement("span");
-      chip.className = "tag-chip";
-      chip.textContent = t;
-      tagsEl.appendChild(chip);
-    });
-    const ratio = getAspectBadge(img.file, img.tags);
-    if (ratio) {
-      const chip = document.createElement("span");
-      chip.className = "tag-chip";
-      chip.textContent = ratio;
-      tagsEl.appendChild(chip);
-    }
-
-    body.appendChild(title);
-    body.appendChild(dateEl);
-    body.appendChild(tagsEl);
-
-    card.appendChild(thumb);
-    card.appendChild(badge);
-    card.appendChild(pinBtn);
-    card.appendChild(body);
-
-    pinBtn.addEventListener("click", e => {
-      e.stopPropagation();
-      const key = img.file;
-      if (pinned.has(key)) {
-        pinned.delete(key);
-        pinBtn.classList.remove("pinned");
-        card.classList.remove("pinned");
-      } else {
-        pinned.add(key);
-        pinBtn.classList.add("pinned");
-        card.classList.add("pinned");
-      }
-      savePinned();
-    });
-
-    card.addEventListener("click", e => {
-      if (multiMode) {
-        const key = img.file;
-        if (multiSelected.has(key)) {
-          multiSelected.delete(key);
-          card.style.outline = "";
-        } else {
-          multiSelected.add(key);
-          card.style.outline = "2px solid " + getComputedStyle(document.documentElement).getPropertyValue("--accent");
-        }
-        updateMultiButtons();
-        return;
-      }
-      const copyUrl = url;
-      copyText(copyUrl).then(() => {
-        addClipboardEntry(img);
-        showToast("Copied " + img.label, url);
+  function renderClipboard() {
+    clipboardList.innerHTML = "";
+    clipboardHistory.forEach(entry => {
+      const row = document.createElement("div");
+      row.className = "clip-entry";
+      const imgEl = document.createElement("img");
+      imgEl.className = "clip-thumb";
+      imgEl.src = baseCdn + encodeURIComponent(entry.file);
+      const text = document.createElement("div");
+      text.className = "clip-text";
+      text.textContent = entry.label;
+      row.appendChild(imgEl);
+      row.appendChild(text);
+      row.addEventListener("click", () => {
+        copyText(entry.url).then(() => {
+          showToast("Copied " + entry.label, imgEl.src);
+        });
       });
-    });
-
-    card.addEventListener("contextmenu", e => {
-      e.preventDefault();
-      const indexInFiltered = idx;
-      openFullscreen(indexInFiltered);
-    });
-
-    galleryEl.appendChild(card);
-  });
-
-  if (doPulse) {
-    requestAnimationFrame(() => {
-      document.querySelectorAll(".card").forEach(c => c.classList.add("pulse"));
-      setTimeout(clearPulse, 800);
+      clipboardList.appendChild(row);
     });
   }
-}
 
-function updateMultiButtons() {
-  const count = multiSelected.size;
-  multiCopy.disabled = count === 0;
-  multiClear.disabled = count === 0;
-}
+  function filterImages() {
+    const inc = includeInput.value.trim().toLowerCase();
+    const exc = excludeInput.value.trim().toLowerCase();
+    const incParts = inc ? inc.split(/\s+/).filter(Boolean) : [];
+    const excParts = exc ? exc.split(/\s+/).filter(Boolean) : [];
+    const pinnedOnly = pinnedCheckbox.checked;
+    const notesPreset = presetButtons.some(b => b.dataset.preset === "notes" && b.classList.contains("active"));
 
-function openFullscreen(filteredIndex) {
-  if (filteredIndex < 0 || filteredIndex >= currentFiltered.length) return;
-  currentFsIndex = filteredIndex;
-  const img = currentFiltered[filteredIndex];
-  const url = baseCdn + encodeURIComponent(img.file);
-  fsImg.src = url;
-  fsTitle.textContent = img.label + "  [" + img.date + "]";
-  fsEl.classList.add("show");
+    const result = images
+      .slice()
+      .sort((a, b) => {
+        if (a.date === b.date) return 0;
+        return a.date < b.date ? 1 : -1;
+      })
+      .filter(img => {
+        if (pinnedOnly && !pinned.has(img.file)) return false;
+        if (notesPreset && !notes[img.file]) return false;
 
-  const similarTags = img.tags.slice(0, 4);
-  if (similarTags.length > 0) {
-    const tagString = similarTags.join(", ");
-    fsSimilar.textContent = "Similar tags: " + tagString;
-  } else {
-    fsSimilar.textContent = "";
+        const haystack = [
+          img.file.toLowerCase(),
+          img.label.toLowerCase(),
+          img.type.toLowerCase(),
+          img.date.toLowerCase(),
+          (img.alias || "").toLowerCase(),
+          img.tags.join(" ").toLowerCase(),
+          (notes[img.file] || "").toLowerCase()
+        ].join(" ");
+
+        for (const term of incParts) {
+          if (!haystack.includes(term)) return false;
+        }
+        for (const term of excParts) {
+          if (term && haystack.includes(term)) return false;
+        }
+        return true;
+      });
+
+    return result;
   }
-}
 
-function closeFullscreen() {
-  fsEl.classList.remove("show");
-  currentFsIndex = -1;
-}
-
-function moveFullscreen(delta) {
-  if (!fsEl.classList.contains("show")) return;
-  if (currentFiltered.length === 0) return;
-  let idx = currentFsIndex + delta;
-  if (idx < 0) idx = currentFiltered.length - 1;
-  if (idx >= currentFiltered.length) idx = 0;
-  openFullscreen(idx);
-}
-
-fsCopy.addEventListener("click", () => {
-  if (currentFsIndex < 0) return;
-  const img = currentFiltered[currentFsIndex];
-  const url = baseCdn + encodeURIComponent(img.file);
-  copyText(url).then(() => {
-    addClipboardEntry(img);
-    showToast("Copied " + img.label, url);
-  });
-});
-
-fsOpen.addEventListener("click", () => {
-  if (currentFsIndex < 0) return;
-  const img = currentFiltered[currentFsIndex];
-  const url = baseCdn + encodeURIComponent(img.file);
-  window.open(url, "_blank");
-});
-
-fsNotesBtn.addEventListener("click", () => {
-  if (currentFsIndex < 0) return;
-  const img = currentFiltered[currentFsIndex];
-  currentNotesIndex = images.indexOf(img);
-  const key = img.file;
-  notesInput.value = notes[key] || "";
-  notesModal.classList.add("show");
-});
-
-fsClose.addEventListener("click", () => {
-  closeFullscreen();
-});
-
-fsImg.addEventListener("click", () => {
-  if (currentFsIndex < 0) return;
-  const img = currentFiltered[currentFsIndex];
-  const url = baseCdn + encodeURIComponent(img.file);
-  copyText(url).then(() => {
-    addClipboardEntry(img);
-    showToast("Copied " + img.label, url);
-  });
-});
-
-fsEl.addEventListener("contextmenu", e => {
-  e.preventDefault();
-  closeFullscreen();
-});
-
-notesSave.addEventListener("click", () => {
-  if (currentNotesIndex < 0) {
-    notesModal.classList.remove("show");
-    return;
+  function clearPulse() {
+    document.querySelectorAll(".card.pulse").forEach(el => el.classList.remove("pulse"));
   }
-  const img = images[currentNotesIndex];
-  const key = img.file;
-  const value = notesInput.value.trim();
-  if (value) {
-    notes[key] = value;
-  } else {
-    delete notes[key];
-  }
-  saveNotes();
-  notesModal.classList.remove("show");
-  renderGallery(false);
-});
 
-notesCancel.addEventListener("click", () => {
-  notesModal.classList.remove("show");
-});
-
-clipboardBtn.addEventListener("click", () => {
-  renderClipboard();
-  clipboardModal.classList.add("show");
-});
-
-clipboardClose.addEventListener("click", () => {
-  clipboardModal.classList.remove("show");
-});
-
-clipboardClear.addEventListener("click", () => {
-  clipboardHistory = [];
-  saveClipboard();
-  renderClipboard();
-});
-
-multiToggle.addEventListener("click", () => {
-  multiMode = !multiMode;
-  multiToggle.textContent = multiMode ? "Multi: On" : "Multi: Off";
-  if (!multiMode) {
+  function renderGallery(doPulse) {
+    const filtered = filterImages();
+    currentFiltered = filtered;
+    galleryEl.innerHTML = "";
+    clearPulse();
     multiSelected.clear();
-    document.querySelectorAll(".card").forEach(c => c.style.outline = "");
-  }
-  updateMultiButtons();
-});
 
-multiCopy.addEventListener("click", () => {
-  if (!multiSelected.size) return;
-  const urls = [];
-  images.forEach(img => {
-    if (multiSelected.has(img.file)) {
+    filtered.forEach((img, idx) => {
       const url = baseCdn + encodeURIComponent(img.file);
-      urls.push(url);
+
+      const card = document.createElement("article");
+      card.className = "card";
+      card.dataset.file = img.file;
+      card.dataset.index = idx;
+
+      if (pinned.has(img.file)) card.classList.add("pinned");
+
+      const thumb = document.createElement("div");
+      thumb.className = "thumb";
+      const image = document.createElement("img");
+      image.src = url;
+      image.alt = img.label;
+      thumb.appendChild(image);
+
+      const badge = document.createElement("div");
+      badge.className = "type-badge";
+      badge.textContent = img.type.toUpperCase();
+
+      const pinBtn = document.createElement("button");
+      pinBtn.className = "pin-btn" + (pinned.has(img.file) ? " pinned" : "");
+      pinBtn.textContent = "★";
+
+      const body = document.createElement("div");
+      body.className = "card-body";
+
+      const title = document.createElement("div");
+      title.className = "card-title";
+      title.textContent = img.label;
+
+      const dateEl = document.createElement("div");
+      dateEl.className = "card-date";
+      dateEl.textContent = img.date;
+
+      const tagsEl = document.createElement("div");
+      tagsEl.className = "tags";
+      if (img.alias) {
+        const aliasChip = document.createElement("span");
+        aliasChip.className = "tag-chip";
+        aliasChip.textContent = "alias: " + img.alias;
+        tagsEl.appendChild(aliasChip);
+      }
+      img.tags.forEach(t => {
+        const chip = document.createElement("span");
+        chip.className = "tag-chip";
+        chip.textContent = t;
+        tagsEl.appendChild(chip);
+      });
+      const ratio = getAspectBadge(img.file, img.tags);
+      if (ratio) {
+        const chip = document.createElement("span");
+        chip.className = "tag-chip";
+        chip.textContent = ratio;
+        tagsEl.appendChild(chip);
+      }
+
+      body.appendChild(title);
+      body.appendChild(dateEl);
+      body.appendChild(tagsEl);
+
+      card.appendChild(thumb);
+      card.appendChild(badge);
+      card.appendChild(pinBtn);
+      card.appendChild(body);
+
+      pinBtn.addEventListener("click", e => {
+        e.stopPropagation();
+        const key = img.file;
+        if (pinned.has(key)) {
+          pinned.delete(key);
+          pinBtn.classList.remove("pinned");
+          card.classList.remove("pinned");
+        } else {
+          pinned.add(key);
+          pinBtn.classList.add("pinned");
+          card.classList.add("pinned");
+        }
+        savePinned();
+      });
+
+      // Left click - copy URL
+      card.addEventListener("click", () => {
+        if (multiMode) {
+          const key = img.file;
+          if (multiSelected.has(key)) {
+            multiSelected.delete(key);
+            card.style.outline = "";
+          } else {
+            multiSelected.add(key);
+            card.style.outline = "2px solid " + getComputedStyle(document.documentElement).getPropertyValue("--accent");
+          }
+          updateMultiButtons();
+          return;
+        }
+        const copyUrl = url;
+        copyText(copyUrl).then(() => {
+          addClipboardEntry(img);
+          showToast("Copied " + img.label, url);
+        });
+      });
+
+      // Right click - fullscreen
+      card.addEventListener("contextmenu", e => {
+        e.preventDefault();
+        openFullscreen(idx);
+      });
+
+      galleryEl.appendChild(card);
+    });
+
+    if (doPulse) {
+      requestAnimationFrame(() => {
+        document.querySelectorAll(".card").forEach(c => c.classList.add("pulse"));
+        setTimeout(clearPulse, 800);
+      });
+    }
+  }
+
+  function updateMultiButtons() {
+    const count = multiSelected.size;
+    multiCopy.disabled = count === 0;
+    multiClear.disabled = count === 0;
+  }
+
+  function openFullscreen(filteredIndex) {
+    if (filteredIndex < 0 || filteredIndex >= currentFiltered.length) return;
+    currentFsIndex = filteredIndex;
+    const img = currentFiltered[filteredIndex];
+    const url = baseCdn + encodeURIComponent(img.file);
+    fsImg.src = url;
+    fsTitle.textContent = img.label + " [" + img.date + "]";
+    fsEl.classList.add("show");
+
+    const similarTags = img.tags.slice(0, 4);
+    if (similarTags.length > 0) {
+      const tagString = similarTags.join(", ");
+      fsSimilar.textContent = "Similar tags: " + tagString;
+    } else {
+      fsSimilar.textContent = "";
+    }
+
+    fsUrlEl.textContent = url;
+  }
+
+  function closeFullscreen() {
+    fsEl.classList.remove("show");
+    currentFsIndex = -1;
+  }
+
+  function moveFullscreen(delta) {
+    if (!fsEl.classList.contains("show")) return;
+    if (currentFiltered.length === 0) return;
+    let idx = currentFsIndex + delta;
+    if (idx < 0) idx = currentFiltered.length - 1;
+    if (idx >= currentFiltered.length) idx = 0;
+    openFullscreen(idx);
+  }
+
+  fsCopy.addEventListener("click", () => {
+    if (currentFsIndex < 0) return;
+    const img = currentFiltered[currentFsIndex];
+    const url = baseCdn + encodeURIComponent(img.file);
+    copyText(url).then(() => {
       addClipboardEntry(img);
-    }
+      showToast("Copied " + img.label, url);
+    });
   });
-  const text = urls.join("\n");
-  copyText(text).then(() => {
-    showToast("Copied " + multiSelected.size + " images", urls[0] || "");
+
+  fsOpen.addEventListener("click", () => {
+    if (currentFsIndex < 0) return;
+    const img = currentFiltered[currentFsIndex];
+    const url = baseCdn + encodeURIComponent(img.file);
+    window.open(url, "_blank");
   });
-});
 
-multiClear.addEventListener("click", () => {
-  multiSelected.clear();
-  document.querySelectorAll(".card").forEach(c => c.style.outline = "");
-  updateMultiButtons();
-});
-
-themeSelect.addEventListener("change", () => {
-  setTheme(themeSelect.value);
-});
-
-includeInput.addEventListener("input", () => {
-  renderGallery(true);
-});
-
-excludeInput.addEventListener("input", () => {
-  renderGallery(true);
-});
-
-pinnedCheckbox.addEventListener("change", () => {
-  renderGallery(true);
-});
-
-resetFiltersBtn.addEventListener("click", () => {
-  includeInput.value = "";
-  excludeInput.value = "";
-  pinnedCheckbox.checked = false;
-  presetButtons.forEach(b => b.classList.remove("active"));
-  renderGallery(true);
-});
-
-presetButtons.forEach(btn => {
-  btn.addEventListener("click", () => {
-    const type = btn.dataset.preset;
-    const already = btn.classList.contains("active");
-    presetButtons.forEach(b => b.classList.remove("active"));
-    if (!already) btn.classList.add("active");
-
-    if (type === "seo") {
-      includeInput.value = "seo";
-      excludeInput.value = "";
-    } else if (type === "icons") {
-      includeInput.value = "icon";
-      excludeInput.value = "";
-    } else if (type === "games") {
-      includeInput.value = "game";
-      excludeInput.value = "";
-    } else if (type === "banners") {
-      includeInput.value = "banner";
-      excludeInput.value = "";
-    } else if (type === "recent") {
-      includeInput.value = "";
-      excludeInput.value = "";
-    } else if (type === "notes") {
-      // notes filter handled in filterImages via active class
-    }
-    renderGallery(true);
+  fsNotesBtn.addEventListener("click", () => {
+    if (currentFsIndex < 0) return;
+    const img = currentFiltered[currentFsIndex];
+    currentNotesIndex = images.indexOf(img);
+    const key = img.file;
+    notesInput.value = notes[key] || "";
+    notesModal.classList.add("show");
   });
-});
 
-// Compare mode
-function openCompareWith(currentImg) {
-  if (!currentImg) return;
-  const key = currentImg.file;
-  if (!compareSelection.includes(key)) {
-    compareSelection.push(key);
-  }
-  if (compareSelection.length > 2) {
-    compareSelection.shift();
-  }
-  if (compareSelection.length === 2) {
-    const a = images.find(i => i.file === compareSelection[0]);
-    const b = images.find(i => i.file === compareSelection[1]);
-    if (!a || !b) return;
-    compareImg1.src = baseCdn + encodeURIComponent(a.file);
-    compareImg2.src = baseCdn + encodeURIComponent(b.file);
-    compareModal.classList.add("show");
-  }
-}
+  fsClose.addEventListener("click", () => {
+    closeFullscreen();
+  });
 
-compareSwap.addEventListener("click", () => {
-  const temp = compareImg1.src;
-  compareImg1.src = compareImg2.src;
-  compareImg2.src = temp;
-});
+  // Click image in fullscreen - copy url
+  fsImg.addEventListener("click", () => {
+    if (currentFsIndex < 0) return;
+    const img = currentFiltered[currentFsIndex];
+    const url = baseCdn + encodeURIComponent(img.file);
+    copyText(url).then(() => {
+      addClipboardEntry(img);
+      showToast("Copied " + img.label, url);
+    });
+  });
 
-compareClose.addEventListener("click", () => {
-  compareModal.classList.remove("show");
-});
-
-// Keyboard shortcuts
-document.addEventListener("keydown", e => {
-  if (isTyping()) return;
-
-  if (e.key === "t" || e.key === "T") {
+  fsEl.addEventListener("contextmenu", e => {
     e.preventDefault();
-    cycleTheme();
-    return;
-  }
+    closeFullscreen();
+  });
 
-  if (e.key === "Escape") {
-    if (notesModal.classList.contains("show")) {
+  notesSave.addEventListener("click", () => {
+    if (currentNotesIndex < 0) {
       notesModal.classList.remove("show");
       return;
     }
-    if (clipboardModal.classList.contains("show")) {
-      clipboardModal.classList.remove("show");
-      return;
+    const img = images[currentNotesIndex];
+    const key = img.file;
+    const value = notesInput.value.trim();
+    if (value) {
+      notes[key] = value;
+    } else {
+      delete notes[key];
     }
-    if (compareModal.classList.contains("show")) {
-      compareModal.classList.remove("show");
-      return;
+    saveNotes();
+    notesModal.classList.remove("show");
+    renderGallery(false);
+  });
+
+  notesCancel.addEventListener("click", () => {
+    notesModal.classList.remove("show");
+  });
+
+  clipboardBtn.addEventListener("click", () => {
+    renderClipboard();
+    clipboardModal.classList.add("show");
+  });
+
+  clipboardClose.addEventListener("click", () => {
+    clipboardModal.classList.remove("show");
+  });
+
+  clipboardClear.addEventListener("click", () => {
+    clipboardHistory = [];
+    saveClipboard();
+    renderClipboard();
+  });
+
+  multiToggle.addEventListener("click", () => {
+    multiMode = !multiMode;
+    multiToggle.textContent = multiMode ? "Multi: On" : "Multi: Off";
+    if (!multiMode) {
+      multiSelected.clear();
+      document.querySelectorAll(".card").forEach(c => (c.style.outline = ""));
     }
-    if (fsEl.classList.contains("show")) {
-      closeFullscreen();
-      return;
+    updateMultiButtons();
+  });
+
+  multiCopy.addEventListener("click", () => {
+    if (!multiSelected.size) return;
+    const urls = [];
+    images.forEach(img => {
+      if (multiSelected.has(img.file)) {
+        const url = baseCdn + encodeURIComponent(img.file);
+        urls.push(url);
+        addClipboardEntry(img);
+      }
+    });
+    const text = urls.join("\n");
+    copyText(text).then(() => {
+      showToast("Copied " + multiSelected.size + " images", urls[0] || "");
+    });
+  });
+
+  multiClear.addEventListener("click", () => {
+    multiSelected.clear();
+    document.querySelectorAll(".card").forEach(c => (c.style.outline = ""));
+    updateMultiButtons();
+  });
+
+  if (themeSelect) {
+    themeSelect.addEventListener("change", () => {
+      setTheme(themeSelect.value);
+    });
+  }
+
+  includeInput.addEventListener("input", () => {
+    renderGallery(true);
+  });
+
+  excludeInput.addEventListener("input", () => {
+    renderGallery(true);
+  });
+
+  pinnedCheckbox.addEventListener("change", () => {
+    renderGallery(true);
+  });
+
+  resetFiltersBtn.addEventListener("click", () => {
+    includeInput.value = "";
+    excludeInput.value = "";
+    pinnedCheckbox.checked = false;
+    presetButtons.forEach(b => b.classList.remove("active"));
+    renderGallery(true);
+  });
+
+  presetButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const type = btn.dataset.preset;
+      const already = btn.classList.contains("active");
+      presetButtons.forEach(b => b.classList.remove("active"));
+      if (!already) btn.classList.add("active");
+
+      if (type === "seo") {
+        includeInput.value = "seo";
+        excludeInput.value = "";
+      } else if (type === "icons") {
+        includeInput.value = "icon";
+        excludeInput.value = "";
+      } else if (type === "games") {
+        includeInput.value = "game";
+        excludeInput.value = "";
+      } else if (type === "banners") {
+        includeInput.value = "banner";
+        excludeInput.value = "";
+      } else if (type === "recent") {
+        includeInput.value = "";
+        excludeInput.value = "";
+      } else if (type === "notes") {
+        // notes filter is handled in filterImages using active class
+      }
+      renderGallery(true);
+    });
+  });
+
+  // Compare mode
+  function openCompareWith(currentImg) {
+    if (!currentImg) return;
+    const key = currentImg.file;
+    if (!compareSelection.includes(key)) {
+      compareSelection.push(key);
+    }
+    if (compareSelection.length > 2) {
+      compareSelection.shift();
+    }
+    if (compareSelection.length === 2) {
+      const a = images.find(i => i.file === compareSelection[0]);
+      const b = images.find(i => i.file === compareSelection[1]);
+      if (!a || !b) return;
+      compareImg1.src = baseCdn + encodeURIComponent(a.file);
+      compareImg2.src = baseCdn + encodeURIComponent(b.file);
+      compareModal.classList.add("show");
     }
   }
 
-  if (!fsEl.classList.contains("show")) {
-    return;
-  }
+  compareSwap.addEventListener("click", () => {
+    const temp = compareImg1.src;
+    compareImg1.src = compareImg2.src;
+    compareImg2.src = temp;
+  });
 
-  if (e.key === "ArrowRight" || e.key === "d" || e.key === "D" || e.key === "s" || e.key === "S") {
-    e.preventDefault();
-    moveFullscreen(1);
-  } else if (e.key === "ArrowLeft" || e.key === "a" || e.key === "A" || e.key === "w" || e.key === "W") {
-    e.preventDefault();
-    moveFullscreen(-1);
-  } else if (e.key === "n" || e.key === "N") {
-    e.preventDefault();
-    if (currentFsIndex >= 0) {
-      const img = currentFiltered[currentFsIndex];
-      const url = baseCdn + encodeURIComponent(img.file);
-      window.open(url, "_blank");
+  compareClose.addEventListener("click", () => {
+    compareModal.classList.remove("show");
+  });
+
+  // Keyboard shortcuts
+  document.addEventListener("keydown", e => {
+    if (isTyping()) return;
+
+    // t - cycle theme
+    if (e.key === "t" || e.key === "T") {
+      e.preventDefault();
+      cycleTheme();
+      return;
     }
-  } else if (e.key === "c" || e.key === "C") {
-    e.preventDefault();
-    if (currentFsIndex >= 0) {
-      const img = currentFiltered[currentFsIndex];
-      openCompareWith(img);
+
+    if (e.key === "Escape") {
+      if (notesModal.classList.contains("show")) {
+        notesModal.classList.remove("show");
+        return;
+      }
+      if (clipboardModal.classList.contains("show")) {
+        clipboardModal.classList.remove("show");
+        return;
+      }
+      if (compareModal.classList.contains("show")) {
+        compareModal.classList.remove("show");
+        return;
+      }
+      if (fsEl.classList.contains("show")) {
+        closeFullscreen();
+        return;
+      }
     }
-  }
-});
 
-// Initial setup
-buildSuggestions();
-renderGallery(false);
-</script>
+    if (!fsEl.classList.contains("show")) {
+      return;
+    }
 
+    // Fullscreen navigation - arrows and WASD
+    if (e.key === "ArrowRight" || e.key === "d" || e.key === "D" || e.key === "s" || e.key === "S") {
+      e.preventDefault();
+      moveFullscreen(1);
+    } else if (e.key === "ArrowLeft" || e.key === "a" || e.key === "A" || e.key === "w" || e.key === "W") {
+      e.preventDefault();
+      moveFullscreen(-1);
+    } else if (e.key === "n" || e.key === "N") {
+      e.preventDefault();
+      if (currentFsIndex >= 0) {
+        const img = currentFiltered[currentFsIndex];
+        const url = baseCdn + encodeURIComponent(img.file);
+        window.open(url, "_blank");
+      }
+    } else if (e.key === "c" || e.key === "C") {
+      e.preventDefault();
+      if (currentFsIndex >= 0) {
+        const img = currentFiltered[currentFsIndex];
+        openCompareWith(img);
+      }
+    }
+  });
+
+  // Initial setup
+  buildSuggestions();
+  renderGallery(false);
+  </script>
 </body>
 </html>
