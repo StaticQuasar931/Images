@@ -1442,5 +1442,25 @@
   buildSuggestions();
   renderGallery(false);
   </script>
+
+<!-- 1) load data first -->
+<script src="images-data.js"></script>
+
+<!-- 2) then your main script that uses window.images -->
+<script>
+  // Your existing JS that uses `images` goes here.
+  // IMPORTANT: do NOT redeclare `const images = ...` in index.html anymore.
+  // Use the global `images` from images-data.js.
+
+  // Example: if your code expects `images` as a variable:
+  const images = window.images || [];
+  const baseCdn = window.baseCdn || "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
+
+  // then run your setup:
+  buildSuggestions();
+  renderGallery(false);
+</script>
+
+  
 </body>
 </html>
