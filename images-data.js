@@ -1,10 +1,20 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-01-25T23:43:31.741Z
+// Generated: 2026-01-25T23:48:47.094Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "FootballBros.png",
+    "label": "FootballBros",
+    "type": "game",
+    "date": "2026-01-25",
+    "tags": [
+      "game"
+    ],
+    "alias": "footballbros"
+  },
   {
     "file": "Rocket-Goal-2(gotw).JPG",
     "label": "Rocket Goal 2(gotw)",
@@ -44,6 +54,16 @@ const images = [
       "game"
     ],
     "alias": "rocket-goal"
+  },
+  {
+    "file": "volley-randomgotw.webp",
+    "label": "volley randomgotw",
+    "type": "game",
+    "date": "2026-01-25",
+    "tags": [
+      "game"
+    ],
+    "alias": "volley-randomgotw"
   },
   {
     "file": "squarestaticquasar931logo.jpg",
