@@ -754,21 +754,24 @@
 
   <!-- ========================= -->
   <!-- SCRIPTS
-       images-data.js provides: window.images and window.baseCdn
+       images-data.js defines `const images = [...]` and `const baseCdn = "..."`
      ========================= -->
   <script src="images-data.js"></script>
 
   <script>
-  // Pull data from images-data.js safely
-  const images = Array.isArray(window.images) ? window.images : [];
-  const baseCdn = (typeof window.baseCdn === "string" && window.baseCdn.trim())
-    ? window.baseCdn
-    : "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
-
   // Leave or reload warning
   window.onbeforeunload = function () {
     return "Are you sure you want to leave this image index page?";
   };
+
+  // IMPORTANT:
+  // images-data.js already defines `const baseCdn`, so DO NOT redeclare `baseCdn` here.
+  // Use a different name to avoid SyntaxError.
+  const BASE_CDN = (typeof window.baseCdn === "string" && window.baseCdn) ? window.baseCdn : "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
+
+  // images-data.js defines `const images = [...]` globally. Do NOT redeclare it here.
+  // If it ever fails to load, we fall back to empty list.
+  const IMAGES = (typeof window.images !== "undefined" && Array.isArray(window.images)) ? window.images : (typeof images !== "undefined" ? images : []);
 
   // State
   let currentTheme = localStorage.getItem("sq_img_theme") || "dark";
@@ -781,7 +784,6 @@
   let currentFsIndex = -1;
   let currentNotesIndex = -1;
   let compareSelection = [];
-  let pulseFlag = false;
 
   // DOM refs
   const galleryEl = document.getElementById("gallery");
@@ -840,7 +842,6 @@
 
   setTheme(currentTheme);
 
-  // Helper to see if typing focus should block hotkeys
   function isTyping() {
     const el = document.activeElement;
     if (!el) return false;
@@ -865,17 +866,17 @@
   function buildSuggestions() {
     const setInc = new Set();
     const setExc = new Set();
-    images.forEach(img => {
+    IMAGES.forEach(img => {
       (img.tags || []).forEach(t => {
         setInc.add(t);
         setExc.add(t);
       });
-      setInc.add(img.type);
-      setExc.add(img.type);
-      setInc.add(img.date);
-      setExc.add(img.date);
-      setInc.add(img.label.toLowerCase());
-      setExc.add(img.label.toLowerCase());
+      setInc.add((img.type || "").toLowerCase());
+      setExc.add((img.type || "").toLowerCase());
+      setInc.add(img.date || "");
+      setExc.add(img.date || "");
+      setInc.add((img.label || "").toLowerCase());
+      setExc.add((img.label || "").toLowerCase());
       if (img.alias) {
         setInc.add(img.alias.toLowerCase());
         setExc.add(img.alias.toLowerCase());
@@ -896,13 +897,10 @@
   }
 
   function getAspectBadge(file, tags) {
-    const name = file.toLowerCase();
-    if (name.includes("banner") || name.includes("616x") || tags.includes("banner") || tags.includes("steam-style")) {
-      return "wide";
-    }
-    if (name.includes("qrcode") || name.includes("icon") || name.includes("favicon")) {
-      return "square";
-    }
+    const name = (file || "").toLowerCase();
+    const t = tags || [];
+    if (name.includes("banner") || name.includes("616x") || t.includes("banner") || t.includes("steam-style")) return "wide";
+    if (name.includes("qrcode") || name.includes("icon") || name.includes("favicon")) return "square";
     return "";
   }
 
@@ -915,9 +913,7 @@
       toastThumb.style.display = "none";
     }
     toastEl.classList.add("show");
-    setTimeout(() => {
-      toastEl.classList.remove("show");
-    }, 1600);
+    setTimeout(() => toastEl.classList.remove("show"), 1600);
   }
 
   function copyText(text) {
@@ -940,13 +936,8 @@
   }
 
   function addClipboardEntry(img) {
-    const url = baseCdn + encodeURIComponent(img.file);
-    const entry = {
-      file: img.file,
-      label: img.label,
-      url,
-      date: new Date().toISOString()
-    };
+    const url = BASE_CDN + encodeURIComponent(img.file);
+    const entry = { file: img.file, label: img.label, url, date: new Date().toISOString() };
     clipboardHistory.unshift(entry);
     clipboardHistory = clipboardHistory.slice(0, 50);
     saveClipboard();
@@ -959,16 +950,14 @@
       row.className = "clip-entry";
       const imgEl = document.createElement("img");
       imgEl.className = "clip-thumb";
-      imgEl.src = baseCdn + encodeURIComponent(entry.file);
+      imgEl.src = BASE_CDN + encodeURIComponent(entry.file);
       const text = document.createElement("div");
       text.className = "clip-text";
       text.textContent = entry.label;
       row.appendChild(imgEl);
       row.appendChild(text);
       row.addEventListener("click", () => {
-        copyText(entry.url).then(() => {
-          showToast("Copied " + entry.label, imgEl.src);
-        });
+        copyText(entry.url).then(() => showToast("Copied " + entry.label, imgEl.src));
       });
       clipboardList.appendChild(row);
     });
@@ -982,36 +971,27 @@
     const pinnedOnly = pinnedCheckbox.checked;
     const notesPreset = presetButtons.some(b => b.dataset.preset === "notes" && b.classList.contains("active"));
 
-    const result = images
+    return IMAGES
       .slice()
-      .sort((a, b) => {
-        if (a.date === b.date) return 0;
-        return a.date < b.date ? 1 : -1;
-      })
+      .sort((a, b) => (a.date === b.date ? 0 : (a.date < b.date ? 1 : -1)))
       .filter(img => {
         if (pinnedOnly && !pinned.has(img.file)) return false;
         if (notesPreset && !notes[img.file]) return false;
 
         const haystack = [
-          img.file.toLowerCase(),
-          img.label.toLowerCase(),
-          img.type.toLowerCase(),
-          img.date.toLowerCase(),
+          (img.file || "").toLowerCase(),
+          (img.label || "").toLowerCase(),
+          (img.type || "").toLowerCase(),
+          (img.date || "").toLowerCase(),
           (img.alias || "").toLowerCase(),
           (img.tags || []).join(" ").toLowerCase(),
           (notes[img.file] || "").toLowerCase()
         ].join(" ");
 
-        for (const term of incParts) {
-          if (!haystack.includes(term)) return false;
-        }
-        for (const term of excParts) {
-          if (term && haystack.includes(term)) return false;
-        }
+        for (const term of incParts) if (!haystack.includes(term)) return false;
+        for (const term of excParts) if (term && haystack.includes(term)) return false;
         return true;
       });
-
-    return result;
   }
 
   function clearPulse() {
@@ -1026,7 +1006,7 @@
     multiSelected.clear();
 
     filtered.forEach((img, idx) => {
-      const url = baseCdn + encodeURIComponent(img.file);
+      const url = BASE_CDN + encodeURIComponent(img.file);
 
       const card = document.createElement("article");
       card.className = "card";
@@ -1044,7 +1024,7 @@
 
       const badge = document.createElement("div");
       badge.className = "type-badge";
-      badge.textContent = img.type.toUpperCase();
+      badge.textContent = (img.type || "").toUpperCase();
 
       const pinBtn = document.createElement("button");
       pinBtn.className = "pin-btn" + (pinned.has(img.file) ? " pinned" : "");
@@ -1063,19 +1043,22 @@
 
       const tagsEl = document.createElement("div");
       tagsEl.className = "tags";
+
       if (img.alias) {
         const aliasChip = document.createElement("span");
         aliasChip.className = "tag-chip";
         aliasChip.textContent = "alias: " + img.alias;
         tagsEl.appendChild(aliasChip);
       }
+
       (img.tags || []).forEach(t => {
         const chip = document.createElement("span");
         chip.className = "tag-chip";
         chip.textContent = t;
         tagsEl.appendChild(chip);
       });
-      const ratio = getAspectBadge(img.file, img.tags || []);
+
+      const ratio = getAspectBadge(img.file, img.tags);
       if (ratio) {
         const chip = document.createElement("span");
         chip.className = "tag-chip";
@@ -1107,7 +1090,7 @@
         savePinned();
       });
 
-      // Left click - copy URL
+      // Left click - copy URL (or multi select)
       card.addEventListener("click", () => {
         if (multiMode) {
           const key = img.file;
@@ -1121,8 +1104,7 @@
           updateMultiButtons();
           return;
         }
-        const copyUrl = url;
-        copyText(copyUrl).then(() => {
+        copyText(url).then(() => {
           addClipboardEntry(img);
           showToast("Copied " + img.label, url);
         });
@@ -1155,19 +1137,13 @@
     if (filteredIndex < 0 || filteredIndex >= currentFiltered.length) return;
     currentFsIndex = filteredIndex;
     const img = currentFiltered[filteredIndex];
-    const url = baseCdn + encodeURIComponent(img.file);
+    const url = BASE_CDN + encodeURIComponent(img.file);
     fsImg.src = url;
     fsTitle.textContent = img.label + " [" + img.date + "]";
     fsEl.classList.add("show");
 
     const similarTags = (img.tags || []).slice(0, 4);
-    if (similarTags.length > 0) {
-      const tagString = similarTags.join(", ");
-      fsSimilar.textContent = "Similar tags: " + tagString;
-    } else {
-      fsSimilar.textContent = "";
-    }
-
+    fsSimilar.textContent = similarTags.length ? ("Similar tags: " + similarTags.join(", ")) : "";
     fsUrlEl.textContent = url;
   }
 
@@ -1188,7 +1164,7 @@
   fsCopy.addEventListener("click", () => {
     if (currentFsIndex < 0) return;
     const img = currentFiltered[currentFsIndex];
-    const url = baseCdn + encodeURIComponent(img.file);
+    const url = BASE_CDN + encodeURIComponent(img.file);
     copyText(url).then(() => {
       addClipboardEntry(img);
       showToast("Copied " + img.label, url);
@@ -1198,28 +1174,26 @@
   fsOpen.addEventListener("click", () => {
     if (currentFsIndex < 0) return;
     const img = currentFiltered[currentFsIndex];
-    const url = baseCdn + encodeURIComponent(img.file);
+    const url = BASE_CDN + encodeURIComponent(img.file);
     window.open(url, "_blank");
   });
 
   fsNotesBtn.addEventListener("click", () => {
     if (currentFsIndex < 0) return;
     const img = currentFiltered[currentFsIndex];
-    currentNotesIndex = images.indexOf(img);
+    currentNotesIndex = IMAGES.indexOf(img);
     const key = img.file;
     notesInput.value = notes[key] || "";
     notesModal.classList.add("show");
   });
 
-  fsClose.addEventListener("click", () => {
-    closeFullscreen();
-  });
+  fsClose.addEventListener("click", closeFullscreen);
 
   // Click image in fullscreen - copy url
   fsImg.addEventListener("click", () => {
     if (currentFsIndex < 0) return;
     const img = currentFiltered[currentFsIndex];
-    const url = baseCdn + encodeURIComponent(img.file);
+    const url = BASE_CDN + encodeURIComponent(img.file);
     copyText(url).then(() => {
       addClipboardEntry(img);
       showToast("Copied " + img.label, url);
@@ -1236,31 +1210,24 @@
       notesModal.classList.remove("show");
       return;
     }
-    const img = images[currentNotesIndex];
+    const img = IMAGES[currentNotesIndex];
     const key = img.file;
     const value = notesInput.value.trim();
-    if (value) {
-      notes[key] = value;
-    } else {
-      delete notes[key];
-    }
+    if (value) notes[key] = value;
+    else delete notes[key];
     saveNotes();
     notesModal.classList.remove("show");
     renderGallery(false);
   });
 
-  notesCancel.addEventListener("click", () => {
-    notesModal.classList.remove("show");
-  });
+  notesCancel.addEventListener("click", () => notesModal.classList.remove("show"));
 
   clipboardBtn.addEventListener("click", () => {
     renderClipboard();
     clipboardModal.classList.add("show");
   });
 
-  clipboardClose.addEventListener("click", () => {
-    clipboardModal.classList.remove("show");
-  });
+  clipboardClose.addEventListener("click", () => clipboardModal.classList.remove("show"));
 
   clipboardClear.addEventListener("click", () => {
     clipboardHistory = [];
@@ -1281,17 +1248,14 @@
   multiCopy.addEventListener("click", () => {
     if (!multiSelected.size) return;
     const urls = [];
-    images.forEach(img => {
+    IMAGES.forEach(img => {
       if (multiSelected.has(img.file)) {
-        const url = baseCdn + encodeURIComponent(img.file);
+        const url = BASE_CDN + encodeURIComponent(img.file);
         urls.push(url);
         addClipboardEntry(img);
       }
     });
-    const text = urls.join("\n");
-    copyText(text).then(() => {
-      showToast("Copied " + multiSelected.size + " images", urls[0] || "");
-    });
+    copyText(urls.join("\n")).then(() => showToast("Copied " + multiSelected.size + " images", urls[0] || ""));
   });
 
   multiClear.addEventListener("click", () => {
@@ -1300,23 +1264,11 @@
     updateMultiButtons();
   });
 
-  if (themeSelect) {
-    themeSelect.addEventListener("change", () => {
-      setTheme(themeSelect.value);
-    });
-  }
+  if (themeSelect) themeSelect.addEventListener("change", () => setTheme(themeSelect.value));
 
-  includeInput.addEventListener("input", () => {
-    renderGallery(true);
-  });
-
-  excludeInput.addEventListener("input", () => {
-    renderGallery(true);
-  });
-
-  pinnedCheckbox.addEventListener("change", () => {
-    renderGallery(true);
-  });
+  includeInput.addEventListener("input", () => renderGallery(true));
+  excludeInput.addEventListener("input", () => renderGallery(true));
+  pinnedCheckbox.addEventListener("change", () => renderGallery(true));
 
   resetFiltersBtn.addEventListener("click", () => {
     includeInput.value = "";
@@ -1349,7 +1301,7 @@
         includeInput.value = "";
         excludeInput.value = "";
       } else if (type === "notes") {
-        // notes filter is handled in filterImages using active class
+        // handled in filterImages via active class
       }
       renderGallery(true);
     });
@@ -1359,18 +1311,15 @@
   function openCompareWith(currentImg) {
     if (!currentImg) return;
     const key = currentImg.file;
-    if (!compareSelection.includes(key)) {
-      compareSelection.push(key);
-    }
-    if (compareSelection.length > 2) {
-      compareSelection.shift();
-    }
+    if (!compareSelection.includes(key)) compareSelection.push(key);
+    if (compareSelection.length > 2) compareSelection.shift();
+
     if (compareSelection.length === 2) {
-      const a = images.find(i => i.file === compareSelection[0]);
-      const b = images.find(i => i.file === compareSelection[1]);
+      const a = IMAGES.find(i => i.file === compareSelection[0]);
+      const b = IMAGES.find(i => i.file === compareSelection[1]);
       if (!a || !b) return;
-      compareImg1.src = baseCdn + encodeURIComponent(a.file);
-      compareImg2.src = baseCdn + encodeURIComponent(b.file);
+      compareImg1.src = BASE_CDN + encodeURIComponent(a.file);
+      compareImg2.src = BASE_CDN + encodeURIComponent(b.file);
       compareModal.classList.add("show");
     }
   }
@@ -1381,15 +1330,12 @@
     compareImg2.src = temp;
   });
 
-  compareClose.addEventListener("click", () => {
-    compareModal.classList.remove("show");
-  });
+  compareClose.addEventListener("click", () => compareModal.classList.remove("show"));
 
   // Keyboard shortcuts
   document.addEventListener("keydown", e => {
     if (isTyping()) return;
 
-    // t - cycle theme
     if (e.key === "t" || e.key === "T") {
       e.preventDefault();
       cycleTheme();
@@ -1397,29 +1343,14 @@
     }
 
     if (e.key === "Escape") {
-      if (notesModal.classList.contains("show")) {
-        notesModal.classList.remove("show");
-        return;
-      }
-      if (clipboardModal.classList.contains("show")) {
-        clipboardModal.classList.remove("show");
-        return;
-      }
-      if (compareModal.classList.contains("show")) {
-        compareModal.classList.remove("show");
-        return;
-      }
-      if (fsEl.classList.contains("show")) {
-        closeFullscreen();
-        return;
-      }
+      if (notesModal.classList.contains("show")) { notesModal.classList.remove("show"); return; }
+      if (clipboardModal.classList.contains("show")) { clipboardModal.classList.remove("show"); return; }
+      if (compareModal.classList.contains("show")) { compareModal.classList.remove("show"); return; }
+      if (fsEl.classList.contains("show")) { closeFullscreen(); return; }
     }
 
-    if (!fsEl.classList.contains("show")) {
-      return;
-    }
+    if (!fsEl.classList.contains("show")) return;
 
-    // Fullscreen navigation - arrows and WASD
     if (e.key === "ArrowRight" || e.key === "d" || e.key === "D" || e.key === "s" || e.key === "S") {
       e.preventDefault();
       moveFullscreen(1);
@@ -1430,15 +1361,12 @@
       e.preventDefault();
       if (currentFsIndex >= 0) {
         const img = currentFiltered[currentFsIndex];
-        const url = baseCdn + encodeURIComponent(img.file);
+        const url = BASE_CDN + encodeURIComponent(img.file);
         window.open(url, "_blank");
       }
     } else if (e.key === "c" || e.key === "C") {
       e.preventDefault();
-      if (currentFsIndex >= 0) {
-        const img = currentFiltered[currentFsIndex];
-        openCompareWith(img);
-      }
+      if (currentFsIndex >= 0) openCompareWith(currentFiltered[currentFsIndex]);
     }
   });
 
@@ -1446,5 +1374,6 @@
   buildSuggestions();
   renderGallery(false);
   </script>
+
 </body>
 </html>
