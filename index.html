@@ -754,17 +754,21 @@
 
   <!-- ========================= -->
   <!-- SCRIPTS
-       images-data.js must define: DATE_* and const images = [...]
+       images-data.js provides: window.images and window.baseCdn
      ========================= -->
   <script src="images-data.js"></script>
 
   <script>
+  // Pull data from images-data.js safely
+  const images = Array.isArray(window.images) ? window.images : [];
+  const baseCdn = (typeof window.baseCdn === "string" && window.baseCdn.trim())
+    ? window.baseCdn
+    : "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
+
   // Leave or reload warning
   window.onbeforeunload = function () {
     return "Are you sure you want to leave this image index page?";
   };
-
-  const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
   // State
   let currentTheme = localStorage.getItem("sq_img_theme") || "dark";
@@ -862,7 +866,7 @@
     const setInc = new Set();
     const setExc = new Set();
     images.forEach(img => {
-      img.tags.forEach(t => {
+      (img.tags || []).forEach(t => {
         setInc.add(t);
         setExc.add(t);
       });
@@ -994,7 +998,7 @@
           img.type.toLowerCase(),
           img.date.toLowerCase(),
           (img.alias || "").toLowerCase(),
-          img.tags.join(" ").toLowerCase(),
+          (img.tags || []).join(" ").toLowerCase(),
           (notes[img.file] || "").toLowerCase()
         ].join(" ");
 
@@ -1065,13 +1069,13 @@
         aliasChip.textContent = "alias: " + img.alias;
         tagsEl.appendChild(aliasChip);
       }
-      img.tags.forEach(t => {
+      (img.tags || []).forEach(t => {
         const chip = document.createElement("span");
         chip.className = "tag-chip";
         chip.textContent = t;
         tagsEl.appendChild(chip);
       });
-      const ratio = getAspectBadge(img.file, img.tags);
+      const ratio = getAspectBadge(img.file, img.tags || []);
       if (ratio) {
         const chip = document.createElement("span");
         chip.className = "tag-chip";
@@ -1156,7 +1160,7 @@
     fsTitle.textContent = img.label + " [" + img.date + "]";
     fsEl.classList.add("show");
 
-    const similarTags = img.tags.slice(0, 4);
+    const similarTags = (img.tags || []).slice(0, 4);
     if (similarTags.length > 0) {
       const tagString = similarTags.join(", ");
       fsSimilar.textContent = "Similar tags: " + tagString;
@@ -1442,25 +1446,5 @@
   buildSuggestions();
   renderGallery(false);
   </script>
-
-<!-- 1) load data first -->
-<script src="images-data.js"></script>
-
-<!-- 2) then your main script that uses window.images -->
-<script>
-  // Your existing JS that uses `images` goes here.
-  // IMPORTANT: do NOT redeclare `const images = ...` in index.html anymore.
-  // Use the global `images` from images-data.js.
-
-  // Example: if your code expects `images` as a variable:
-  const images = window.images || [];
-  const baseCdn = window.baseCdn || "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
-
-  // then run your setup:
-  buildSuggestions();
-  renderGallery(false);
-</script>
-
-  
 </body>
 </html>
