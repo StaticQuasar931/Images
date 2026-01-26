@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-01-26T00:56:30.002Z
+// Generated: 2026-01-26T01:10:57.622Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
@@ -24,6 +24,16 @@ const images = [
       "game"
     ],
     "alias": "rocket-goal-2-gotw"
+  },
+  {
+    "file": "Screenshot 2026-01-17 151859.png",
+    "label": "Screenshot 2026 01 17 151859",
+    "type": "game",
+    "date": "2026-01-25",
+    "tags": [
+      "game"
+    ],
+    "alias": "screenshot-2026-01-17-151859"
   },
   {
     "file": "Volley-Random.webp",
