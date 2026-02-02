@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-02-02T00:07:28.954Z
+// Generated: 2026-02-02T00:14:12.358Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
@@ -44,6 +44,16 @@ const images = [
       "game"
     ],
     "alias": "qwop"
+  },
+  {
+    "file": "qwopfloor.webp",
+    "label": "qwopfloor",
+    "type": "game",
+    "date": "2026-02-01",
+    "tags": [
+      "game"
+    ],
+    "alias": "qwopfloor"
   },
   {
     "file": "FootballBros.png",
