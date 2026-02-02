@@ -1,10 +1,50 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-01-26T01:10:57.622Z
+// Generated: 2026-02-02T00:07:28.954Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "BurritoBison.png",
+    "label": "BurritoBison",
+    "type": "game",
+    "date": "2026-02-01",
+    "tags": [
+      "game"
+    ],
+    "alias": "burritobison"
+  },
+  {
+    "file": "police-pursuit-2-screenshot.avif",
+    "label": "police pursuit 2 screenshot",
+    "type": "game",
+    "date": "2026-02-01",
+    "tags": [
+      "game"
+    ],
+    "alias": "police-pursuit-2-screenshot"
+  },
+  {
+    "file": "policepursuit2.jpg",
+    "label": "policepursuit2",
+    "type": "game",
+    "date": "2026-02-01",
+    "tags": [
+      "game"
+    ],
+    "alias": "policepursuit2"
+  },
+  {
+    "file": "qwop.jpeg",
+    "label": "qwop",
+    "type": "game",
+    "date": "2026-02-01",
+    "tags": [
+      "game"
+    ],
+    "alias": "qwop"
+  },
   {
     "file": "FootballBros.png",
     "label": "FootballBros",
