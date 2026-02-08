@@ -1,10 +1,20 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-02-08T00:29:18.497Z
+// Generated: 2026-02-08T20:53:59.770Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "survivor.io.jpg",
+    "label": "survivor.io",
+    "type": "game",
+    "date": "2026-02-08",
+    "tags": [
+      "game"
+    ],
+    "alias": "survivor-io"
+  },
   {
     "file": "Balatro.jpg",
     "label": "Balatro",
