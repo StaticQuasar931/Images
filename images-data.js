@@ -1,10 +1,20 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-02-08T20:53:59.770Z
+// Generated: 2026-02-08T21:09:28.198Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "duck-lifehigherquality.avif",
+    "label": "duck lifehigherquality",
+    "type": "game",
+    "date": "2026-02-08",
+    "tags": [
+      "game"
+    ],
+    "alias": "duck-lifehigherquality"
+  },
   {
     "file": "survivor.io.jpg",
     "label": "survivor.io",
