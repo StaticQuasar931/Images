@@ -1,10 +1,30 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-02-02T00:14:12.358Z
+// Generated: 2026-02-08T00:29:18.497Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "Balatro.jpg",
+    "label": "Balatro",
+    "type": "game",
+    "date": "2026-02-07",
+    "tags": [
+      "game"
+    ],
+    "alias": "balatro"
+  },
+  {
+    "file": "Ducklife1.jpg",
+    "label": "Ducklife1",
+    "type": "game",
+    "date": "2026-02-07",
+    "tags": [
+      "game"
+    ],
+    "alias": "ducklife1"
+  },
   {
     "file": "BurritoBison.png",
     "label": "BurritoBison",
