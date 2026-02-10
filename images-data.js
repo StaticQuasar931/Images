@@ -1,10 +1,20 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-02-08T21:09:28.198Z
+// Generated: 2026-02-10T00:42:07.120Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "five-nights-at-epsteins.png",
+    "label": "five nights at epsteins",
+    "type": "game",
+    "date": "2026-02-09",
+    "tags": [
+      "game"
+    ],
+    "alias": "five-nights-at-epsteins"
+  },
   {
     "file": "duck-lifehigherquality.avif",
     "label": "duck lifehigherquality",
