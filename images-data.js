@@ -1,10 +1,51 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-02-14T07:03:42.826Z
+// Generated: 2026-02-14T20:22:01.074Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "Backrooms.jpg",
+    "label": "Backrooms",
+    "type": "game",
+    "date": "2026-02-14",
+    "tags": [
+      "game"
+    ],
+    "alias": "backrooms"
+  },
+  {
+    "file": "Backroomssmiletimer.jpg",
+    "label": "Backroomssmiletimer",
+    "type": "game",
+    "date": "2026-02-14",
+    "tags": [
+      "game"
+    ],
+    "alias": "backroomssmiletimer"
+  },
+  {
+    "file": "backrooms-game.png",
+    "label": "backrooms game",
+    "type": "game",
+    "date": "2026-02-14",
+    "tags": [
+      "game"
+    ],
+    "alias": "backrooms-game"
+  },
+  {
+    "file": "backroomsbanner.jpg",
+    "label": "backroomsbanner",
+    "type": "art",
+    "date": "2026-02-14",
+    "tags": [
+      "art",
+      "banner"
+    ],
+    "alias": "backroomsbanner"
+  },
   {
     "file": "Kartbros.jpg",
     "label": "Kartbros",
