@@ -1,10 +1,30 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-02-10T00:42:07.120Z
+// Generated: 2026-02-14T07:03:42.826Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "Kartbros.jpg",
+    "label": "Kartbros",
+    "type": "game",
+    "date": "2026-02-13",
+    "tags": [
+      "game"
+    ],
+    "alias": "kartbros"
+  },
+  {
+    "file": "risehigher_300x225.jpg",
+    "label": "risehigher 300x225",
+    "type": "game",
+    "date": "2026-02-13",
+    "tags": [
+      "game"
+    ],
+    "alias": "risehigher-300x225"
+  },
   {
     "file": "five-nights-at-epsteins.png",
     "label": "five nights at epsteins",
