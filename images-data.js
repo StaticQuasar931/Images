@@ -1,10 +1,20 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-02-14T20:22:01.074Z
+// Generated: 2026-02-15T22:43:46.776Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "kartbros.webp",
+    "label": "kartbros",
+    "type": "game",
+    "date": "2026-02-15",
+    "tags": [
+      "game"
+    ],
+    "alias": "kartbros"
+  },
   {
     "file": "Backrooms.jpg",
     "label": "Backrooms",
