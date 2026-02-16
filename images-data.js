@@ -1,10 +1,245 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-02-15T22:43:46.776Z
+// Generated: 2026-02-16T08:34:45.086Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "10 Bullets.png",
+    "label": "10 Bullets",
+    "type": "game",
+    "date": "2026-02-16",
+    "tags": [
+      "game"
+    ],
+    "alias": "10-bullets"
+  },
+  {
+    "file": "AgesofConflict_StaticQuasar931.png",
+    "label": "AgesofConflict StaticQuasar931",
+    "type": "game",
+    "date": "2026-02-16",
+    "tags": [
+      "game"
+    ],
+    "alias": "agesofconflict-staticquasar931"
+  },
+  {
+    "file": "Assessment-Examination.webp",
+    "label": "Assessment Examination",
+    "type": "game",
+    "date": "2026-02-16",
+    "tags": [
+      "game"
+    ],
+    "alias": "assessment-examination"
+  },
+  {
+    "file": "BadParenting.webp",
+    "label": "BadParenting",
+    "type": "game",
+    "date": "2026-02-16",
+    "tags": [
+      "game"
+    ],
+    "alias": "badparenting"
+  },
+  {
+    "file": "BuildnowGG Icon.webp",
+    "label": "BuildnowGG Icon",
+    "type": "icon",
+    "date": "2026-02-16",
+    "tags": [
+      "icon"
+    ],
+    "alias": "buildnowgg-icon"
+  },
+  {
+    "file": "GtaVicecity Banner Loadingscreen.jpg",
+    "label": "GtaVicecity Banner Loadingscreen",
+    "type": "art",
+    "date": "2026-02-16",
+    "tags": [
+      "art",
+      "banner"
+    ],
+    "alias": "gtavicecity-banner-loadingscreen"
+  },
+  {
+    "file": "Screenshot 2026-01-04 at 17-18-21 Images StaticQuasar931 - Google Slides.png",
+    "label": "Screenshot 2026 01 04 at 17 18 21 Images StaticQuasar931 Google Slides",
+    "type": "game",
+    "date": "2026-02-16",
+    "tags": [
+      "game",
+      "google"
+    ],
+    "alias": "screenshot-2026-01-04-at-17-18-21-images-staticquasar931-google-slides"
+  },
+  {
+    "file": "Skibidi Shooter Banner.png",
+    "label": "Skibidi Shooter Banner",
+    "type": "art",
+    "date": "2026-02-16",
+    "tags": [
+      "art",
+      "banner"
+    ],
+    "alias": "skibidi-shooter-banner"
+  },
+  {
+    "file": "Skibidi Shooter fighting upclose.png",
+    "label": "Skibidi Shooter fighting upclose",
+    "type": "game",
+    "date": "2026-02-16",
+    "tags": [
+      "game"
+    ],
+    "alias": "skibidi-shooter-fighting-upclose"
+  },
+  {
+    "file": "Skibidi Shooter fighting.png",
+    "label": "Skibidi Shooter fighting",
+    "type": "game",
+    "date": "2026-02-16",
+    "tags": [
+      "game"
+    ],
+    "alias": "skibidi-shooter-fighting"
+  },
+  {
+    "file": "Vice-city-cover.jpg",
+    "label": "Vice city cover",
+    "type": "art",
+    "date": "2026-02-16",
+    "tags": [
+      "art",
+      "cover"
+    ],
+    "alias": "vice-city-cover"
+  },
+  {
+    "file": "bad-parentingimg.png",
+    "label": "bad parentingimg",
+    "type": "game",
+    "date": "2026-02-16",
+    "tags": [
+      "game"
+    ],
+    "alias": "bad-parentingimg"
+  },
+  {
+    "file": "buildnowgg_staticquasar931.jpg",
+    "label": "buildnowgg staticquasar931",
+    "type": "game",
+    "date": "2026-02-16",
+    "tags": [
+      "game"
+    ],
+    "alias": "buildnowgg-staticquasar931"
+  },
+  {
+    "file": "buildtosurvivebuildnowggbanner_staticquasar931.webp",
+    "label": "buildtosurvivebuildnowggbanner staticquasar931",
+    "type": "art",
+    "date": "2026-02-16",
+    "tags": [
+      "art",
+      "banner"
+    ],
+    "alias": "buildtosurvivebuildnowggbanner-staticquasar931"
+  },
+  {
+    "file": "fridaynightfunkinfnf.webp",
+    "label": "fridaynightfunkinfnf",
+    "type": "game",
+    "date": "2026-02-16",
+    "tags": [
+      "game"
+    ],
+    "alias": "fridaynightfunkinfnf"
+  },
+  {
+    "file": "geodash3d.jpg",
+    "label": "geodash3d",
+    "type": "game",
+    "date": "2026-02-16",
+    "tags": [
+      "game"
+    ],
+    "alias": "geodash3d"
+  },
+  {
+    "file": "loadingscreen1GtaViceCity.png",
+    "label": "loadingscreen1GtaViceCity",
+    "type": "game",
+    "date": "2026-02-16",
+    "tags": [
+      "game"
+    ],
+    "alias": "loadingscreen1gtavicecity"
+  },
+  {
+    "file": "loadingscreen2GtaViceCity.png",
+    "label": "loadingscreen2GtaViceCity",
+    "type": "game",
+    "date": "2026-02-16",
+    "tags": [
+      "game"
+    ],
+    "alias": "loadingscreen2gtavicecity"
+  },
+  {
+    "file": "loadingscreen3GTAVICECITY.png",
+    "label": "loadingscreen3GTAVICECITY",
+    "type": "game",
+    "date": "2026-02-16",
+    "tags": [
+      "game"
+    ],
+    "alias": "loadingscreen3gtavicecity"
+  },
+  {
+    "file": "loadingscreen5GtaViceCity.jpg",
+    "label": "loadingscreen5GtaViceCity",
+    "type": "game",
+    "date": "2026-02-16",
+    "tags": [
+      "game"
+    ],
+    "alias": "loadingscreen5gtavicecity"
+  },
+  {
+    "file": "loadingscreen7GtaViceCity.png",
+    "label": "loadingscreen7GtaViceCity",
+    "type": "game",
+    "date": "2026-02-16",
+    "tags": [
+      "game"
+    ],
+    "alias": "loadingscreen7gtavicecity"
+  },
+  {
+    "file": "n-gon.png",
+    "label": "n gon",
+    "type": "game",
+    "date": "2026-02-16",
+    "tags": [
+      "game"
+    ],
+    "alias": "n-gon"
+  },
+  {
+    "file": "thirdpersonshootertext_buildnowgg_staticquasar931.png",
+    "label": "thirdpersonshootertext buildnowgg staticquasar931",
+    "type": "game",
+    "date": "2026-02-16",
+    "tags": [
+      "game"
+    ],
+    "alias": "thirdpersonshootertext-buildnowgg-staticquasar931"
+  },
   {
     "file": "kartbros.webp",
     "label": "kartbros",
