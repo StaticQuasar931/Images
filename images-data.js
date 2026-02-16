@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-02-16T08:34:45.086Z
+// Generated: 2026-02-16T08:35:16.617Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
@@ -54,6 +54,16 @@ const images = [
       "icon"
     ],
     "alias": "buildnowgg-icon"
+  },
+  {
+    "file": "GeometryDashLite.png",
+    "label": "GeometryDashLite",
+    "type": "game",
+    "date": "2026-02-16",
+    "tags": [
+      "game"
+    ],
+    "alias": "geometrydashlite"
   },
   {
     "file": "GtaVicecity Banner Loadingscreen.jpg",
