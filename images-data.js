@@ -1,10 +1,20 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-02-22T06:10:48.564Z
+// Generated: 2026-02-22T22:11:59.869Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "geometry-vibes.webp",
+    "label": "geometry vibes",
+    "type": "game",
+    "date": "2026-02-22",
+    "tags": [
+      "game"
+    ],
+    "alias": "geometry-vibes"
+  },
   {
     "file": "war-the-knights-two-mountains.jpg",
     "label": "war the knights two mountains",
