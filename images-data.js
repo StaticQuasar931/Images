@@ -1,10 +1,20 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-02-22T22:11:59.869Z
+// Generated: 2026-02-22T22:13:12.588Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "1519427-madotsukiYume Nikk.jpg",
+    "label": "1519427 madotsukiYume Nikk",
+    "type": "game",
+    "date": "2026-02-22",
+    "tags": [
+      "game"
+    ],
+    "alias": "1519427-madotsukiyume-nikk"
+  },
   {
     "file": "geometry-vibes.webp",
     "label": "geometry vibes",
