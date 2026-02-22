@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-02-22T22:13:12.588Z
+// Generated: 2026-02-22T22:41:19.437Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
@@ -24,6 +24,26 @@ const images = [
       "game"
     ],
     "alias": "geometry-vibes"
+  },
+  {
+    "file": "riddleschool.jpg",
+    "label": "riddleschool",
+    "type": "game",
+    "date": "2026-02-22",
+    "tags": [
+      "game"
+    ],
+    "alias": "riddleschool"
+  },
+  {
+    "file": "riddleschoollogo.png",
+    "label": "riddleschoollogo",
+    "type": "logo",
+    "date": "2026-02-22",
+    "tags": [
+      "logo"
+    ],
+    "alias": "riddleschoollogo"
   },
   {
     "file": "war-the-knights-two-mountains.jpg",
