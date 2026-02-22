@@ -1,10 +1,51 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-02-16T08:35:16.617Z
+// Generated: 2026-02-22T06:10:48.564Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "war-the-knights-two-mountains.jpg",
+    "label": "war the knights two mountains",
+    "type": "game",
+    "date": "2026-02-21",
+    "tags": [
+      "game"
+    ],
+    "alias": "war-the-knights-two-mountains"
+  },
+  {
+    "file": "war-the-knights_1x1-cover.png",
+    "label": "war the knights 1x1 cover",
+    "type": "art",
+    "date": "2026-02-21",
+    "tags": [
+      "art",
+      "cover"
+    ],
+    "alias": "war-the-knights-1x1-cover"
+  },
+  {
+    "file": "warthenights.jpg",
+    "label": "warthenights",
+    "type": "game",
+    "date": "2026-02-21",
+    "tags": [
+      "game"
+    ],
+    "alias": "warthenights"
+  },
+  {
+    "file": "warthenightsbattlearena.png",
+    "label": "warthenightsbattlearena",
+    "type": "game",
+    "date": "2026-02-21",
+    "tags": [
+      "game"
+    ],
+    "alias": "warthenightsbattlearena"
+  },
   {
     "file": "10 Bullets.png",
     "label": "10 Bullets",
