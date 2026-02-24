@@ -1,10 +1,51 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-02-22T22:41:19.437Z
+// Generated: 2026-02-24T02:12:17.249Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "StrikeForceKitty.jpg",
+    "label": "StrikeForceKitty",
+    "type": "game",
+    "date": "2026-02-23",
+    "tags": [
+      "game"
+    ],
+    "alias": "strikeforcekitty"
+  },
+  {
+    "file": "SuperCOLD.jpg",
+    "label": "SuperCOLD",
+    "type": "game",
+    "date": "2026-02-23",
+    "tags": [
+      "game"
+    ],
+    "alias": "supercold"
+  },
+  {
+    "file": "Switchblade.png",
+    "label": "Switchblade",
+    "type": "game",
+    "date": "2026-02-23",
+    "tags": [
+      "game"
+    ],
+    "alias": "switchblade"
+  },
+  {
+    "file": "stickman-gta-city-free-xs.jpg",
+    "label": "stickman gta city free xs",
+    "type": "game",
+    "date": "2026-02-23",
+    "tags": [
+      "game",
+      "stickman"
+    ],
+    "alias": "stickman-gta-city-free-xs"
+  },
   {
     "file": "1519427-madotsukiYume Nikk.jpg",
     "label": "1519427 madotsukiYume Nikk",
