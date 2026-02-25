@@ -1,10 +1,20 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-02-24T02:12:17.249Z
+// Generated: 2026-02-25T23:58:06.996Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "MadewithUnity.png",
+    "label": "MadewithUnity",
+    "type": "game",
+    "date": "2026-02-25",
+    "tags": [
+      "game"
+    ],
+    "alias": "madewithunity"
+  },
   {
     "file": "StrikeForceKitty.jpg",
     "label": "StrikeForceKitty",
