@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-02-25T23:58:06.996Z
+// Generated: 2026-02-26T00:00:48.558Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
@@ -14,6 +14,16 @@ const images = [
       "game"
     ],
     "alias": "madewithunity"
+  },
+  {
+    "file": "unity-logo-dark.png",
+    "label": "unity logo dark",
+    "type": "logo",
+    "date": "2026-02-25",
+    "tags": [
+      "logo"
+    ],
+    "alias": "unity-logo-dark"
   },
   {
     "file": "StrikeForceKitty.jpg",
