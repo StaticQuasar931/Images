@@ -1,10 +1,20 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-02-26T00:00:48.558Z
+// Generated: 2026-02-26T01:20:18.814Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "ClimbForBrainrot.png",
+    "label": "ClimbForBrainrot",
+    "type": "game",
+    "date": "2026-02-25",
+    "tags": [
+      "game"
+    ],
+    "alias": "climbforbrainrot"
+  },
   {
     "file": "MadewithUnity.png",
     "label": "MadewithUnity",
@@ -14,6 +24,27 @@ const images = [
       "game"
     ],
     "alias": "madewithunity"
+  },
+  {
+    "file": "TheDeepestSLeep.jpg",
+    "label": "TheDeepestSLeep",
+    "type": "game",
+    "date": "2026-02-25",
+    "tags": [
+      "game"
+    ],
+    "alias": "thedeepestsleep"
+  },
+  {
+    "file": "bouncy-motors_1x1-cover.png",
+    "label": "bouncy motors 1x1 cover",
+    "type": "art",
+    "date": "2026-02-25",
+    "tags": [
+      "art",
+      "cover"
+    ],
+    "alias": "bouncy-motors-1x1-cover"
   },
   {
     "file": "unity-logo-dark.png",
