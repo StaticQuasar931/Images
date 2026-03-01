@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-03-01T18:44:12.067Z
+// Generated: 2026-03-01T20:00:42.773Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
@@ -14,6 +14,16 @@ const images = [
       "game"
     ],
     "alias": "dumbwaystodie"
+  },
+  {
+    "file": "Epstein Clicker.png",
+    "label": "Epstein Clicker",
+    "type": "game",
+    "date": "2026-03-01",
+    "tags": [
+      "game"
+    ],
+    "alias": "epstein-clicker"
   },
   {
     "file": "PowerHover.png",
