@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-03-01T20:00:42.773Z
+// Generated: 2026-03-01T20:28:57.481Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
@@ -34,6 +34,28 @@ const images = [
       "game"
     ],
     "alias": "powerhover"
+  },
+  {
+    "file": "brotatosquare.jpg",
+    "label": "brotatosquare",
+    "type": "game",
+    "date": "2026-03-01",
+    "tags": [
+      "game",
+      "square"
+    ],
+    "alias": "brotatosquare"
+  },
+  {
+    "file": "dumbwaystodieicon.webp",
+    "label": "dumbwaystodieicon",
+    "type": "game",
+    "date": "2026-03-01",
+    "tags": [
+      "game",
+      "icon"
+    ],
+    "alias": "dumbwaystodieicon"
   },
   {
     "file": "Brotato.jpg",
