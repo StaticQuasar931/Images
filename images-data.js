@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-03-01T20:28:57.481Z
+// Generated: 2026-03-01T20:39:46.055Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
@@ -56,6 +56,26 @@ const images = [
       "icon"
     ],
     "alias": "dumbwaystodieicon"
+  },
+  {
+    "file": "hitstunfly.png",
+    "label": "hitstunfly",
+    "type": "game",
+    "date": "2026-03-01",
+    "tags": [
+      "game"
+    ],
+    "alias": "hitstunfly"
+  },
+  {
+    "file": "littlerunmo.jpg",
+    "label": "littlerunmo",
+    "type": "game",
+    "date": "2026-03-01",
+    "tags": [
+      "game"
+    ],
+    "alias": "littlerunmo"
   },
   {
     "file": "Brotato.jpg",
