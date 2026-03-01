@@ -1,10 +1,30 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-03-01T03:48:53.804Z
+// Generated: 2026-03-01T18:44:12.067Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "DumbWaystoDie.jpg",
+    "label": "DumbWaystoDie",
+    "type": "game",
+    "date": "2026-03-01",
+    "tags": [
+      "game"
+    ],
+    "alias": "dumbwaystodie"
+  },
+  {
+    "file": "PowerHover.png",
+    "label": "PowerHover",
+    "type": "game",
+    "date": "2026-03-01",
+    "tags": [
+      "game"
+    ],
+    "alias": "powerhover"
+  },
   {
     "file": "Brotato.jpg",
     "label": "Brotato",
