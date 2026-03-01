@@ -1,10 +1,42 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-02-26T01:20:18.814Z
+// Generated: 2026-03-01T03:48:53.804Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "Brotato.jpg",
+    "label": "Brotato",
+    "type": "game",
+    "date": "2026-02-28",
+    "tags": [
+      "game"
+    ],
+    "alias": "brotato"
+  },
+  {
+    "file": "Brotato_cover_Banner.jpg",
+    "label": "Brotato cover Banner",
+    "type": "art",
+    "date": "2026-02-28",
+    "tags": [
+      "art",
+      "banner",
+      "cover"
+    ],
+    "alias": "brotato-cover-banner"
+  },
+  {
+    "file": "Brotatosmall.jpg",
+    "label": "Brotatosmall",
+    "type": "game",
+    "date": "2026-02-28",
+    "tags": [
+      "game"
+    ],
+    "alias": "brotatosmall"
+  },
   {
     "file": "ClimbForBrainrot.png",
     "label": "ClimbForBrainrot",
