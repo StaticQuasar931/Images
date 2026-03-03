@@ -1,10 +1,20 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-03-01T20:39:46.055Z
+// Generated: 2026-03-03T01:28:27.137Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "Epsteinclickerimage.png",
+    "label": "Epsteinclickerimage",
+    "type": "game",
+    "date": "2026-03-02",
+    "tags": [
+      "game"
+    ],
+    "alias": "epsteinclickerimage"
+  },
   {
     "file": "DumbWaystoDie.jpg",
     "label": "DumbWaystoDie",
