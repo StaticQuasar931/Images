@@ -1,10 +1,20 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-03-03T01:28:27.137Z
+// Generated: 2026-03-03T23:59:53.883Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "just-doki-doki-literature-club-v0-42vj4n3143ic1.webp",
+    "label": "just doki doki literature club v0 42vj4n3143ic1",
+    "type": "game",
+    "date": "2026-03-03",
+    "tags": [
+      "game"
+    ],
+    "alias": "just-doki-doki-literature-club-v0-42vj4n3143ic1"
+  },
   {
     "file": "Epsteinclickerimage.png",
     "label": "Epsteinclickerimage",
