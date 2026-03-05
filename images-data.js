@@ -1,10 +1,20 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-03-03T23:59:53.883Z
+// Generated: 2026-03-05T00:57:23.880Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "Fluidism WebGL Fluid Simulation.png",
+    "label": "Fluidism WebGL Fluid Simulation",
+    "type": "game",
+    "date": "2026-03-04",
+    "tags": [
+      "game"
+    ],
+    "alias": "fluidism-webgl-fluid-simulation"
+  },
   {
     "file": "just-doki-doki-literature-club-v0-42vj4n3143ic1.webp",
     "label": "just doki doki literature club v0 42vj4n3143ic1",
