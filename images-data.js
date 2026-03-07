@@ -1,10 +1,40 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-03-05T00:57:23.880Z
+// Generated: 2026-03-07T23:36:14.242Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "Fisquarium.jpg",
+    "label": "Fisquarium",
+    "type": "game",
+    "date": "2026-03-07",
+    "tags": [
+      "game"
+    ],
+    "alias": "fisquarium"
+  },
+  {
+    "file": "Persona2.jpg",
+    "label": "Persona2",
+    "type": "game",
+    "date": "2026-03-07",
+    "tags": [
+      "game"
+    ],
+    "alias": "persona2"
+  },
+  {
+    "file": "Resident Evil.jpg",
+    "label": "Resident Evil",
+    "type": "game",
+    "date": "2026-03-07",
+    "tags": [
+      "game"
+    ],
+    "alias": "resident-evil"
+  },
   {
     "file": "Fluidism WebGL Fluid Simulation.png",
     "label": "Fluidism WebGL Fluid Simulation",
