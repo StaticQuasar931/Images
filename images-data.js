@@ -1,10 +1,40 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-03-07T23:36:14.242Z
+// Generated: 2026-03-08T22:53:16.909Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "Drive_Mad_+_200_Levels.png",
+    "label": "Drive Mad + 200 Levels",
+    "type": "game",
+    "date": "2026-03-08",
+    "tags": [
+      "game"
+    ],
+    "alias": "drive-mad-200-levels"
+  },
+  {
+    "file": "SolarSmash.webp",
+    "label": "SolarSmash",
+    "type": "game",
+    "date": "2026-03-08",
+    "tags": [
+      "game"
+    ],
+    "alias": "solarsmash"
+  },
+  {
+    "file": "fivenightsatCandys.webp",
+    "label": "fivenightsatCandys",
+    "type": "game",
+    "date": "2026-03-08",
+    "tags": [
+      "game"
+    ],
+    "alias": "fivenightsatcandys"
+  },
   {
     "file": "Fisquarium.jpg",
     "label": "Fisquarium",
