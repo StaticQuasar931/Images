@@ -1,10 +1,20 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-03-08T22:53:16.909Z
+// Generated: 2026-03-13T00:56:12.933Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "escaperoadcity2.png",
+    "label": "escaperoadcity2",
+    "type": "game",
+    "date": "2026-03-12",
+    "tags": [
+      "game"
+    ],
+    "alias": "escaperoadcity2"
+  },
   {
     "file": "Drive_Mad_+_200_Levels.png",
     "label": "Drive Mad + 200 Levels",
