@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-03-14T23:51:41.549Z
+// Generated: 2026-03-14T23:51:56.709Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
@@ -14,6 +14,16 @@ const images = [
       "game"
     ],
     "alias": "jf03w8"
+  },
+  {
+    "file": "ultrapool.png",
+    "label": "ultrapool",
+    "type": "game",
+    "date": "2026-03-14",
+    "tags": [
+      "game"
+    ],
+    "alias": "ultrapool"
   },
   {
     "file": "escaperoadcity2.png",
