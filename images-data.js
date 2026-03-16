@@ -1,10 +1,30 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-03-14T23:51:56.709Z
+// Generated: 2026-03-16T01:23:01.014Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "brawlstars.webp",
+    "label": "brawlstars",
+    "type": "game",
+    "date": "2026-03-15",
+    "tags": [
+      "game"
+    ],
+    "alias": "brawlstars"
+  },
+  {
+    "file": "summerrider3d.webp",
+    "label": "summerrider3d",
+    "type": "game",
+    "date": "2026-03-15",
+    "tags": [
+      "game"
+    ],
+    "alias": "summerrider3d"
+  },
   {
     "file": "Jf03w8.png",
     "label": "Jf03w8",
