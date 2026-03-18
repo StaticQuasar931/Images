@@ -1,10 +1,32 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-03-16T01:23:01.014Z
+// Generated: 2026-03-18T01:36:05.105Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "minecraft1_12_2.avif",
+    "label": "minecraft1 12 2",
+    "type": "game",
+    "date": "2026-03-17",
+    "tags": [
+      "game",
+      "minecraft"
+    ],
+    "alias": "minecraft1-12-2"
+  },
+  {
+    "file": "minecraft_1_8.png",
+    "label": "minecraft 1 8",
+    "type": "game",
+    "date": "2026-03-17",
+    "tags": [
+      "game",
+      "minecraft"
+    ],
+    "alias": "minecraft-1-8"
+  },
   {
     "file": "brawlstars.webp",
     "label": "brawlstars",
