@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-03-18T07:30:00.570Z
+// Generated: 2026-03-18T08:07:11.399Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
@@ -56,6 +56,16 @@ const images = [
       "banner"
     ],
     "alias": "wheresepsteintitlebanner"
+  },
+  {
+    "file": "makemoney96.png",
+    "label": "makemoney96",
+    "type": "game",
+    "date": "2026-03-18",
+    "tags": [
+      "game"
+    ],
+    "alias": "makemoney96"
   },
   {
     "file": "minecraft1_12_2.avif",
