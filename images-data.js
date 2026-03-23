@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-03-23T00:13:42.064Z
+// Generated: 2026-03-23T01:10:58.161Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
@@ -14,6 +14,16 @@ const images = [
       "game"
     ],
     "alias": "epsteinclickerenhanced"
+  },
+  {
+    "file": "Jeffrey Epstein's Basics in Education and Kidnapping.png",
+    "label": "Jeffrey Epstein's Basics in Education and Kidnapping",
+    "type": "game",
+    "date": "2026-03-22",
+    "tags": [
+      "game"
+    ],
+    "alias": "jeffrey-epstein-s-basics-in-education-and-kidnapping"
   },
   {
     "file": "WheresEpstein.png",
