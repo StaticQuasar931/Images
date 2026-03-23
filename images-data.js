@@ -1,10 +1,30 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-03-18T08:07:11.399Z
+// Generated: 2026-03-23T00:13:42.064Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "EpsteinClickerEnhanced.png",
+    "label": "EpsteinClickerEnhanced",
+    "type": "game",
+    "date": "2026-03-22",
+    "tags": [
+      "game"
+    ],
+    "alias": "epsteinclickerenhanced"
+  },
+  {
+    "file": "WheresEpstein.png",
+    "label": "WheresEpstein",
+    "type": "game",
+    "date": "2026-03-22",
+    "tags": [
+      "game"
+    ],
+    "alias": "wheresepstein"
+  },
   {
     "file": "WheresEpsteinbackgroundplain.png",
     "label": "WheresEpsteinbackgroundplain",
