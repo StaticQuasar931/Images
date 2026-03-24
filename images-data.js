@@ -1,10 +1,20 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-03-23T01:10:58.161Z
+// Generated: 2026-03-24T22:25:50.242Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "Koopa's Revenge 2.jpg",
+    "label": "Koopa's Revenge 2",
+    "type": "game",
+    "date": "2026-03-24",
+    "tags": [
+      "game"
+    ],
+    "alias": "koopa-s-revenge-2"
+  },
   {
     "file": "EpsteinClickerEnhanced.png",
     "label": "EpsteinClickerEnhanced",
