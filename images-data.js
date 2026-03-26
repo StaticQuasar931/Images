@@ -1,10 +1,20 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-03-26T22:22:15.913Z
+// Generated: 2026-03-26T22:39:48.074Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "Hollow-Knight-Silksong-Featured-Image-for-Review-1210x642.webp",
+    "label": "Hollow Knight Silksong Featured Image for Review 1210x642",
+    "type": "game",
+    "date": "2026-03-26",
+    "tags": [
+      "game"
+    ],
+    "alias": "hollow-knight-silksong-featured-image-for-review-1210x642"
+  },
   {
     "file": "cloverpit.jpg",
     "label": "cloverpit",
@@ -47,6 +57,16 @@ const images = [
       "square"
     ],
     "alias": "cloverpitsquareish"
+  },
+  {
+    "file": "silksong.jpg",
+    "label": "silksong",
+    "type": "game",
+    "date": "2026-03-26",
+    "tags": [
+      "game"
+    ],
+    "alias": "silksong"
   },
   {
     "file": "Koopa's Revenge 2.jpg",
