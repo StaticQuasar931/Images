@@ -1,10 +1,53 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-03-24T22:25:50.242Z
+// Generated: 2026-03-26T22:22:15.913Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "cloverpit.jpg",
+    "label": "cloverpit",
+    "type": "game",
+    "date": "2026-03-26",
+    "tags": [
+      "game"
+    ],
+    "alias": "cloverpit"
+  },
+  {
+    "file": "cloverpitbanner.jpeg",
+    "label": "cloverpitbanner",
+    "type": "art",
+    "date": "2026-03-26",
+    "tags": [
+      "art",
+      "banner"
+    ],
+    "alias": "cloverpitbanner"
+  },
+  {
+    "file": "cloverpitsquare.jpg",
+    "label": "cloverpitsquare",
+    "type": "game",
+    "date": "2026-03-26",
+    "tags": [
+      "game",
+      "square"
+    ],
+    "alias": "cloverpitsquare"
+  },
+  {
+    "file": "cloverpitsquareish.avif",
+    "label": "cloverpitsquareish",
+    "type": "game",
+    "date": "2026-03-26",
+    "tags": [
+      "game",
+      "square"
+    ],
+    "alias": "cloverpitsquareish"
+  },
   {
     "file": "Koopa's Revenge 2.jpg",
     "label": "Koopa's Revenge 2",
