@@ -1,10 +1,30 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-03-26T22:39:48.074Z
+// Generated: 2026-03-28T22:45:47.053Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "Amazing strange rope police.avif",
+    "label": "Amazing strange rope police",
+    "type": "game",
+    "date": "2026-03-28",
+    "tags": [
+      "game"
+    ],
+    "alias": "amazing-strange-rope-police"
+  },
+  {
+    "file": "amazing-strange-rope-police-vice-spider_1x1.jpg",
+    "label": "amazing strange rope police vice spider 1x1",
+    "type": "game",
+    "date": "2026-03-28",
+    "tags": [
+      "game"
+    ],
+    "alias": "amazing-strange-rope-police-vice-spider-1x1"
+  },
   {
     "file": "Hollow-Knight-Silksong-Featured-Image-for-Review-1210x642.webp",
     "label": "Hollow Knight Silksong Featured Image for Review 1210x642",
