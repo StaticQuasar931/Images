@@ -1,10 +1,20 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-03-28T22:45:47.053Z
+// Generated: 2026-03-29T18:50:09.300Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "dashmetry.jpg",
+    "label": "dashmetry",
+    "type": "game",
+    "date": "2026-03-29",
+    "tags": [
+      "game"
+    ],
+    "alias": "dashmetry"
+  },
   {
     "file": "Amazing strange rope police.avif",
     "label": "Amazing strange rope police",
