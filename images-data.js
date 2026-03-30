@@ -1,10 +1,31 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-03-29T18:50:09.300Z
+// Generated: 2026-03-30T21:44:55.530Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "Cookingmamavertical.png",
+    "label": "Cookingmamavertical",
+    "type": "game",
+    "date": "2026-03-30",
+    "tags": [
+      "game"
+    ],
+    "alias": "cookingmamavertical"
+  },
+  {
+    "file": "cookingmamabanner.jpg",
+    "label": "cookingmamabanner",
+    "type": "art",
+    "date": "2026-03-30",
+    "tags": [
+      "art",
+      "banner"
+    ],
+    "alias": "cookingmamabanner"
+  },
   {
     "file": "dashmetry.jpg",
     "label": "dashmetry",
