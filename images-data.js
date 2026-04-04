@@ -1,10 +1,20 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-03-30T21:44:55.530Z
+// Generated: 2026-04-04T23:11:49.100Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "Tomodachicollection_Title.png",
+    "label": "Tomodachicollection Title",
+    "type": "game",
+    "date": "2026-04-04",
+    "tags": [
+      "game"
+    ],
+    "alias": "tomodachicollection-title"
+  },
   {
     "file": "Cookingmamavertical.png",
     "label": "Cookingmamavertical",
