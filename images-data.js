@@ -1,10 +1,20 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-04-04T23:11:49.100Z
+// Generated: 2026-04-04T23:41:30.106Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "Pokemon Platinum.png",
+    "label": "Pokemon Platinum",
+    "type": "game",
+    "date": "2026-04-04",
+    "tags": [
+      "game"
+    ],
+    "alias": "pokemon-platinum"
+  },
   {
     "file": "Tomodachicollection_Title.png",
     "label": "Tomodachicollection Title",
