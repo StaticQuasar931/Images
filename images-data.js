@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-04-04T23:41:30.106Z
+// Generated: 2026-04-05T00:47:31.555Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
@@ -16,6 +16,36 @@ const images = [
     "alias": "pokemon-platinum"
   },
   {
+    "file": "Suika Watermelon Game.avif",
+    "label": "Suika Watermelon Game",
+    "type": "game",
+    "date": "2026-04-04",
+    "tags": [
+      "game"
+    ],
+    "alias": "suika-watermelon-game"
+  },
+  {
+    "file": "Suika Watermelon Game.webp",
+    "label": "Suika Watermelon Game",
+    "type": "game",
+    "date": "2026-04-04",
+    "tags": [
+      "game"
+    ],
+    "alias": "suika-watermelon-game"
+  },
+  {
+    "file": "Sukia_Game_main_artwork.png",
+    "label": "Sukia Game main artwork",
+    "type": "game",
+    "date": "2026-04-04",
+    "tags": [
+      "game"
+    ],
+    "alias": "sukia-game-main-artwork"
+  },
+  {
     "file": "Tomodachicollection_Title.png",
     "label": "Tomodachicollection Title",
     "type": "game",
@@ -24,6 +54,26 @@ const images = [
       "game"
     ],
     "alias": "tomodachicollection-title"
+  },
+  {
+    "file": "unnamed.webp",
+    "label": "unnamed",
+    "type": "game",
+    "date": "2026-04-04",
+    "tags": [
+      "game"
+    ],
+    "alias": "unnamed"
+  },
+  {
+    "file": "watermelon-game-suika-65330724e06b4.avif",
+    "label": "watermelon game suika 65330724e06b4",
+    "type": "game",
+    "date": "2026-04-04",
+    "tags": [
+      "game"
+    ],
+    "alias": "watermelon-game-suika-65330724e06b4"
   },
   {
     "file": "Cookingmamavertical.png",
