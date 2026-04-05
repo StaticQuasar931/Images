@@ -1,10 +1,21 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-04-05T00:47:31.555Z
+// Generated: 2026-04-05T18:36:19.107Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "ragdoll-drop.png",
+    "label": "ragdoll drop",
+    "type": "game",
+    "date": "2026-04-05",
+    "tags": [
+      "game",
+      "ragdoll"
+    ],
+    "alias": "ragdoll-drop"
+  },
   {
     "file": "Pokemon Platinum.png",
     "label": "Pokemon Platinum",
