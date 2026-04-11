@@ -1,10 +1,20 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-04-05T18:36:19.107Z
+// Generated: 2026-04-11T07:32:03.482Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "escaperoad2.jpg",
+    "label": "escaperoad2",
+    "type": "game",
+    "date": "2026-04-11",
+    "tags": [
+      "game"
+    ],
+    "alias": "escaperoad2"
+  },
   {
     "file": "ragdoll-drop.png",
     "label": "ragdoll drop",
