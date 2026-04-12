@@ -1,10 +1,20 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-04-11T07:32:03.482Z
+// Generated: 2026-04-12T20:27:04.691Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "Stardew_Valley.png",
+    "label": "Stardew Valley",
+    "type": "game",
+    "date": "2026-04-12",
+    "tags": [
+      "game"
+    ],
+    "alias": "stardew-valley"
+  },
   {
     "file": "escaperoad2.jpg",
     "label": "escaperoad2",
