@@ -1,10 +1,21 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-04-12T20:52:50.193Z
+// Generated: 2026-04-12T20:53:25.964Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "Schoolboy_Runaway_-_banner.webp",
+    "label": "Schoolboy Runaway banner",
+    "type": "art",
+    "date": "2026-04-12",
+    "tags": [
+      "art",
+      "banner"
+    ],
+    "alias": "schoolboy-runaway-banner"
+  },
   {
     "file": "Stardew_Valley.png",
     "label": "Stardew Valley",
