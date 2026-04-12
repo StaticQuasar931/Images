@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-04-12T20:27:04.691Z
+// Generated: 2026-04-12T20:52:50.193Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
@@ -14,6 +14,16 @@ const images = [
       "game"
     ],
     "alias": "stardew-valley"
+  },
+  {
+    "file": "schoolboy-runaway.webp",
+    "label": "schoolboy runaway",
+    "type": "game",
+    "date": "2026-04-12",
+    "tags": [
+      "game"
+    ],
+    "alias": "schoolboy-runaway"
   },
   {
     "file": "escaperoad2.jpg",
