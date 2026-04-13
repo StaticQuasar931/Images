@@ -1,10 +1,20 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-04-13T08:41:25.050Z
+// Generated: 2026-04-13T23:19:23.294Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "Geometry_Dash_Icon.svg",
+    "label": "Geometry Dash Icon",
+    "type": "icon",
+    "date": "2026-04-13",
+    "tags": [
+      "icon"
+    ],
+    "alias": "geometry-dash-icon"
+  },
   {
     "file": "azgmsiologo.png",
     "label": "azgmsiologo",
