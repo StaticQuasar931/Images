@@ -1,10 +1,31 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-04-12T20:53:25.964Z
+// Generated: 2026-04-13T08:38:38.701Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "escaperoad3.png",
+    "label": "escaperoad3",
+    "type": "game",
+    "date": "2026-04-13",
+    "tags": [
+      "game"
+    ],
+    "alias": "escaperoad3"
+  },
+  {
+    "file": "escaperoad3background.png",
+    "label": "escaperoad3background",
+    "type": "art",
+    "date": "2026-04-13",
+    "tags": [
+      "art",
+      "background"
+    ],
+    "alias": "escaperoad3background"
+  },
   {
     "file": "Schoolboy_Runaway_-_banner.webp",
     "label": "Schoolboy Runaway banner",
