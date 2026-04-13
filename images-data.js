@@ -1,10 +1,20 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-04-13T08:38:38.701Z
+// Generated: 2026-04-13T08:41:25.050Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "azgmsiologo.png",
+    "label": "azgmsiologo",
+    "type": "logo",
+    "date": "2026-04-13",
+    "tags": [
+      "logo"
+    ],
+    "alias": "azgmsiologo"
+  },
   {
     "file": "escaperoad3.png",
     "label": "escaperoad3",
