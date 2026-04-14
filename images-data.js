@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-04-14T00:07:59.515Z
+// Generated: 2026-04-14T00:11:38.157Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
@@ -66,6 +66,16 @@ const images = [
       "cover"
     ],
     "alias": "halflife-coverart"
+  },
+  {
+    "file": "halflife_iconartimg.jpg",
+    "label": "halflife iconartimg",
+    "type": "icon",
+    "date": "2026-04-13",
+    "tags": [
+      "icon"
+    ],
+    "alias": "halflife-iconartimg"
   },
   {
     "file": "halflifebanner.jpg",
