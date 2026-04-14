@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-04-13T23:19:23.294Z
+// Generated: 2026-04-14T00:07:59.515Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
@@ -45,6 +45,38 @@ const images = [
       "background"
     ],
     "alias": "escaperoad3background"
+  },
+  {
+    "file": "half-life.webp",
+    "label": "half life",
+    "type": "game",
+    "date": "2026-04-13",
+    "tags": [
+      "game"
+    ],
+    "alias": "half-life"
+  },
+  {
+    "file": "halflife_coverart.jpg",
+    "label": "halflife coverart",
+    "type": "art",
+    "date": "2026-04-13",
+    "tags": [
+      "art",
+      "cover"
+    ],
+    "alias": "halflife-coverart"
+  },
+  {
+    "file": "halflifebanner.jpg",
+    "label": "halflifebanner",
+    "type": "art",
+    "date": "2026-04-13",
+    "tags": [
+      "art",
+      "banner"
+    ],
+    "alias": "halflifebanner"
   },
   {
     "file": "Schoolboy_Runaway_-_banner.webp",
