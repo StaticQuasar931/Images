@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-04-14T00:11:38.157Z
+// Generated: 2026-04-14T00:48:52.572Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
@@ -45,6 +45,16 @@ const images = [
       "background"
     ],
     "alias": "escaperoad3background"
+  },
+  {
+    "file": "gnmathlogo.jpg",
+    "label": "gnmathlogo",
+    "type": "logo",
+    "date": "2026-04-13",
+    "tags": [
+      "logo"
+    ],
+    "alias": "gnmathlogo"
   },
   {
     "file": "half-life.webp",
