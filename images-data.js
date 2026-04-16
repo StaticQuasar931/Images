@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-04-16T00:34:25.418Z
+// Generated: 2026-04-16T01:11:55.279Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
@@ -25,6 +25,28 @@ const images = [
       "banner"
     ],
     "alias": "customersupportbanner"
+  },
+  {
+    "file": "bank-robbery-2-cover.avif",
+    "label": "bank robbery 2 cover",
+    "type": "art",
+    "date": "2026-04-15",
+    "tags": [
+      "art",
+      "cover"
+    ],
+    "alias": "bank-robbery-2-cover"
+  },
+  {
+    "file": "bankrobbery2cover.jpg",
+    "label": "bankrobbery2cover",
+    "type": "art",
+    "date": "2026-04-15",
+    "tags": [
+      "art",
+      "cover"
+    ],
+    "alias": "bankrobbery2cover"
   },
   {
     "file": "Geometry_Dash_Icon.svg",
