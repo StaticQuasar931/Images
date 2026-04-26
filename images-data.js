@@ -1,10 +1,21 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-04-26T18:19:48.464Z
+// Generated: 2026-04-26T18:41:51.963Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "DiscordServerQRCODE.png",
+    "label": "DiscordServerQRCODE",
+    "type": "seo",
+    "date": "2026-04-26",
+    "tags": [
+      "seo",
+      "discord"
+    ],
+    "alias": "discordserverqrcode"
+  },
   {
     "file": "Undertale_Yellow.png",
     "label": "Undertale Yellow",
