@@ -1,10 +1,30 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-04-16T01:11:55.279Z
+// Generated: 2026-04-26T18:19:48.464Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "Undertale_Yellow.png",
+    "label": "Undertale Yellow",
+    "type": "game",
+    "date": "2026-04-26",
+    "tags": [
+      "game"
+    ],
+    "alias": "undertale-yellow"
+  },
+  {
+    "file": "slice-master.avif",
+    "label": "slice master",
+    "type": "game",
+    "date": "2026-04-26",
+    "tags": [
+      "game"
+    ],
+    "alias": "slice-master"
+  },
   {
     "file": "CustomerSupport.jpg",
     "label": "CustomerSupport",
