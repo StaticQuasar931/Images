@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-04-26T18:41:51.963Z
+// Generated: 2026-04-26T19:59:42.836Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
@@ -15,6 +15,16 @@ const images = [
       "discord"
     ],
     "alias": "discordserverqrcode"
+  },
+  {
+    "file": "GeometryDashBeta.png",
+    "label": "GeometryDashBeta",
+    "type": "game",
+    "date": "2026-04-26",
+    "tags": [
+      "game"
+    ],
+    "alias": "geometrydashbeta"
   },
   {
     "file": "Undertale_Yellow.png",
