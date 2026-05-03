@@ -1,10 +1,40 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-04-26T19:59:42.836Z
+// Generated: 2026-05-03T17:21:10.798Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "GeometryDashSubZero.png",
+    "label": "GeometryDashSubZero",
+    "type": "game",
+    "date": "2026-05-03",
+    "tags": [
+      "game"
+    ],
+    "alias": "geometrydashsubzero"
+  },
+  {
+    "file": "fivenightsatepsteins2fnae2.png",
+    "label": "fivenightsatepsteins2fnae2",
+    "type": "game",
+    "date": "2026-05-03",
+    "tags": [
+      "game"
+    ],
+    "alias": "fivenightsatepsteins2fnae2"
+  },
+  {
+    "file": "raftgame.png",
+    "label": "raftgame",
+    "type": "game",
+    "date": "2026-05-03",
+    "tags": [
+      "game"
+    ],
+    "alias": "raftgame"
+  },
   {
     "file": "DiscordServerQRCODE.png",
     "label": "DiscordServerQRCODE",
