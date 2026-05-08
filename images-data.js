@@ -1,10 +1,20 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-05-03T17:21:10.798Z
+// Generated: 2026-05-08T02:24:37.308Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "staticcord.png",
+    "label": "staticcord",
+    "type": "game",
+    "date": "2026-05-07",
+    "tags": [
+      "game"
+    ],
+    "alias": "staticcord"
+  },
   {
     "file": "GeometryDashSubZero.png",
     "label": "GeometryDashSubZero",
