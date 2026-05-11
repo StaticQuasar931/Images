@@ -1,10 +1,41 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-05-08T02:24:37.308Z
+// Generated: 2026-05-11T01:10:20.467Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "AnimalCrossing.png",
+    "label": "AnimalCrossing",
+    "type": "game",
+    "date": "2026-05-10",
+    "tags": [
+      "game"
+    ],
+    "alias": "animalcrossing"
+  },
+  {
+    "file": "TABSTotallyAccurateBattleSimulator.png",
+    "label": "TABSTotallyAccurateBattleSimulator",
+    "type": "game",
+    "date": "2026-05-10",
+    "tags": [
+      "game",
+      "tall"
+    ],
+    "alias": "tabstotallyaccuratebattlesimulator"
+  },
+  {
+    "file": "TABScapsule_616x353.jpg",
+    "label": "TABScapsule 616x353",
+    "type": "art",
+    "date": "2026-05-10",
+    "tags": [
+      "art"
+    ],
+    "alias": "tabscapsule-616x353"
+  },
   {
     "file": "staticcord.png",
     "label": "staticcord",
