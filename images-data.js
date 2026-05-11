@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-05-11T01:38:02.657Z
+// Generated: 2026-05-11T01:44:26.265Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
@@ -24,6 +24,16 @@ const images = [
       "game"
     ],
     "alias": "staticchatwide"
+  },
+  {
+    "file": "StaticChatWideView.png",
+    "label": "StaticChatWideView",
+    "type": "game",
+    "date": "2026-05-10",
+    "tags": [
+      "game"
+    ],
+    "alias": "staticchatwideview"
   },
   {
     "file": "TABSTotallyAccurateBattleSimulator.png",
