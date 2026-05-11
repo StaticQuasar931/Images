@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-05-11T01:25:05.069Z
+// Generated: 2026-05-11T01:38:02.657Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
@@ -45,6 +45,17 @@ const images = [
       "art"
     ],
     "alias": "tabscapsule-616x353"
+  },
+  {
+    "file": "staticchatbigsquare.png",
+    "label": "staticchatbigsquare",
+    "type": "game",
+    "date": "2026-05-10",
+    "tags": [
+      "game",
+      "square"
+    ],
+    "alias": "staticchatbigsquare"
   },
   {
     "file": "staticcord.png",
