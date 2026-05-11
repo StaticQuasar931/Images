@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-05-11T01:10:20.467Z
+// Generated: 2026-05-11T01:25:05.069Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
@@ -14,6 +14,16 @@ const images = [
       "game"
     ],
     "alias": "animalcrossing"
+  },
+  {
+    "file": "StaticChatWide.png",
+    "label": "StaticChatWide",
+    "type": "game",
+    "date": "2026-05-10",
+    "tags": [
+      "game"
+    ],
+    "alias": "staticchatwide"
   },
   {
     "file": "TABSTotallyAccurateBattleSimulator.png",
