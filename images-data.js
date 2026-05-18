@@ -1,10 +1,20 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-05-11T01:57:01.035Z
+// Generated: 2026-05-18T03:32:13.283Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "rooftop-run.jpg",
+    "label": "rooftop run",
+    "type": "game",
+    "date": "2026-05-17",
+    "tags": [
+      "game"
+    ],
+    "alias": "rooftop-run"
+  },
   {
     "file": "AnimalCrossing.png",
     "label": "AnimalCrossing",
