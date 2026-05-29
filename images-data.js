@@ -1,10 +1,31 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-05-18T03:32:13.283Z
+// Generated: 2026-05-29T20:02:14.267Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "DigOutofPrison_Screenshot.png",
+    "label": "DigOutofPrison Screenshot",
+    "type": "game",
+    "date": "2026-05-29",
+    "tags": [
+      "game"
+    ],
+    "alias": "digoutofprison-screenshot"
+  },
+  {
+    "file": "dig-out-of-prison_16x9-cover.avif",
+    "label": "dig out of prison 16x9 cover",
+    "type": "art",
+    "date": "2026-05-29",
+    "tags": [
+      "art",
+      "cover"
+    ],
+    "alias": "dig-out-of-prison-16x9-cover"
+  },
   {
     "file": "rooftop-run.jpg",
     "label": "rooftop run",
