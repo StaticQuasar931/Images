@@ -1,10 +1,41 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-05-29T20:02:14.267Z
+// Generated: 2026-08-06T09:59:31.462Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "tungsahurhorror1.png",
+    "label": "tungsahurhorror1",
+    "type": "game",
+    "date": "2026-08-06",
+    "tags": [
+      "game"
+    ],
+    "alias": "tungsahurhorror1"
+  },
+  {
+    "file": "tungsahurhorrorbanner.png",
+    "label": "tungsahurhorrorbanner",
+    "type": "art",
+    "date": "2026-08-06",
+    "tags": [
+      "art",
+      "banner"
+    ],
+    "alias": "tungsahurhorrorbanner"
+  },
+  {
+    "file": "tungsahurhorrortitle.png",
+    "label": "tungsahurhorrortitle",
+    "type": "game",
+    "date": "2026-08-06",
+    "tags": [
+      "game"
+    ],
+    "alias": "tungsahurhorrortitle"
+  },
   {
     "file": "DigOutofPrison_Screenshot.png",
     "label": "DigOutofPrison Screenshot",
