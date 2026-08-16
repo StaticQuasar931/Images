@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-08-16T18:38:16.882Z
+// Generated: 2026-08-16T19:00:23.003Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
@@ -16,6 +16,16 @@ const images = [
     "alias": "adventurecapitalistfull"
   },
   {
+    "file": "AdVentureCapitalistthumb.png",
+    "label": "AdVentureCapitalistthumb",
+    "type": "game",
+    "date": "2026-08-16",
+    "tags": [
+      "game"
+    ],
+    "alias": "adventurecapitalistthumb"
+  },
+  {
     "file": "RobloxKeyboardEscape.png",
     "label": "RobloxKeyboardEscape",
     "type": "game",
@@ -24,6 +34,17 @@ const images = [
       "game"
     ],
     "alias": "robloxkeyboardescape"
+  },
+  {
+    "file": "keyboardescapebackground.webp",
+    "label": "keyboardescapebackground",
+    "type": "art",
+    "date": "2026-08-16",
+    "tags": [
+      "art",
+      "background"
+    ],
+    "alias": "keyboardescapebackground"
   },
   {
     "file": "tungsahurhorror1.png",
