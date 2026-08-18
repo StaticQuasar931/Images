@@ -1,10 +1,20 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-08-16T19:00:23.003Z
+// Generated: 2026-08-18T00:20:26.733Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "MecchaChameleonRemake.png",
+    "label": "MecchaChameleonRemake",
+    "type": "game",
+    "date": "2026-08-17",
+    "tags": [
+      "game"
+    ],
+    "alias": "mecchachameleonremake"
+  },
   {
     "file": "AdVentureCapitalistfull.png",
     "label": "AdVentureCapitalistfull",
