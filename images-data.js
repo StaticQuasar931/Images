@@ -1,10 +1,31 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-08-18T00:20:26.733Z
+// Generated: 2026-08-18T23:53:36.145Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "meccha-chameleon-online-banner.png",
+    "label": "meccha chameleon online banner",
+    "type": "art",
+    "date": "2026-08-18",
+    "tags": [
+      "art",
+      "banner"
+    ],
+    "alias": "meccha-chameleon-online-banner"
+  },
+  {
+    "file": "meccha-chameleon-online-gameplay.png",
+    "label": "meccha chameleon online gameplay",
+    "type": "game",
+    "date": "2026-08-18",
+    "tags": [
+      "game"
+    ],
+    "alias": "meccha-chameleon-online-gameplay"
+  },
   {
     "file": "MecchaChameleonRemake.png",
     "label": "MecchaChameleonRemake",
