@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-08-23T20:23:36.753Z
+// Generated: 2026-08-23T20:38:00.441Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
@@ -24,6 +24,26 @@ const images = [
       "game"
     ],
     "alias": "karatebrosfightingexample"
+  },
+  {
+    "file": "soccerbros.jpg",
+    "label": "soccerbros",
+    "type": "game",
+    "date": "2026-08-23",
+    "tags": [
+      "game"
+    ],
+    "alias": "soccerbros"
+  },
+  {
+    "file": "soccerbrosexample.png",
+    "label": "soccerbrosexample",
+    "type": "game",
+    "date": "2026-08-23",
+    "tags": [
+      "game"
+    ],
+    "alias": "soccerbrosexample"
   },
   {
     "file": "thumbkarate-bros.png",
