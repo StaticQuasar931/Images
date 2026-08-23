@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-08-23T20:19:33.173Z
+// Generated: 2026-08-23T20:23:36.753Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
@@ -14,6 +14,26 @@ const images = [
       "game"
     ],
     "alias": "badparentingmom"
+  },
+  {
+    "file": "KarateBrosfightingexample.png",
+    "label": "KarateBrosfightingexample",
+    "type": "game",
+    "date": "2026-08-23",
+    "tags": [
+      "game"
+    ],
+    "alias": "karatebrosfightingexample"
+  },
+  {
+    "file": "thumbkarate-bros.png",
+    "label": "thumbkarate bros",
+    "type": "game",
+    "date": "2026-08-23",
+    "tags": [
+      "game"
+    ],
+    "alias": "thumbkarate-bros"
   },
   {
     "file": "meccha-chameleon-online-banner.png",
