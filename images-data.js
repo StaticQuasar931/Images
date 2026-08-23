@@ -1,10 +1,20 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-08-18T23:53:36.145Z
+// Generated: 2026-08-23T20:19:33.173Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "BadParentingMom.png",
+    "label": "BadParentingMom",
+    "type": "game",
+    "date": "2026-08-23",
+    "tags": [
+      "game"
+    ],
+    "alias": "badparentingmom"
+  },
   {
     "file": "meccha-chameleon-online-banner.png",
     "label": "meccha chameleon online banner",
