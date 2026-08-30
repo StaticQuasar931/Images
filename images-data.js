@@ -1,10 +1,71 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-08-23T20:38:00.441Z
+// Generated: 2026-08-30T16:22:25.588Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "TheLegendofZeldaOcarinaofTime.avif",
+    "label": "TheLegendofZeldaOcarinaofTime",
+    "type": "game",
+    "date": "2026-08-30",
+    "tags": [
+      "game"
+    ],
+    "alias": "thelegendofzeldaocarinaoftime"
+  },
+  {
+    "file": "escape-road-3-eroad1.png",
+    "label": "escape road 3 eroad1",
+    "type": "game",
+    "date": "2026-08-30",
+    "tags": [
+      "game",
+      "escape road"
+    ],
+    "alias": "escape-road-3-eroad1"
+  },
+  {
+    "file": "escaperoad3action.png",
+    "label": "escaperoad3action",
+    "type": "game",
+    "date": "2026-08-30",
+    "tags": [
+      "game"
+    ],
+    "alias": "escaperoad3action"
+  },
+  {
+    "file": "getyoked.png",
+    "label": "getyoked",
+    "type": "game",
+    "date": "2026-08-30",
+    "tags": [
+      "game"
+    ],
+    "alias": "getyoked"
+  },
+  {
+    "file": "getyokedebpng.png",
+    "label": "getyokedebpng",
+    "type": "game",
+    "date": "2026-08-30",
+    "tags": [
+      "game"
+    ],
+    "alias": "getyokedebpng"
+  },
+  {
+    "file": "the-legend-of-zelda-ocarina-of-time-n64-004.jpg",
+    "label": "the legend of zelda ocarina of time n64 004",
+    "type": "game",
+    "date": "2026-08-30",
+    "tags": [
+      "game"
+    ],
+    "alias": "the-legend-of-zelda-ocarina-of-time-n64-004"
+  },
   {
     "file": "BadParentingMom.png",
     "label": "BadParentingMom",
