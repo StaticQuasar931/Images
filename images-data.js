@@ -1,10 +1,80 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-08-30T16:22:25.588Z
+// Generated: 2026-09-07T03:34:36.051Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "badmondaysimulatorA.png",
+    "label": "badmondaysimulatorA",
+    "type": "game",
+    "date": "2026-09-06",
+    "tags": [
+      "game"
+    ],
+    "alias": "badmondaysimulatora"
+  },
+  {
+    "file": "badmondaysimulatorB.png",
+    "label": "badmondaysimulatorB",
+    "type": "game",
+    "date": "2026-09-06",
+    "tags": [
+      "game"
+    ],
+    "alias": "badmondaysimulatorb"
+  },
+  {
+    "file": "dieinthedungeonB.png",
+    "label": "dieinthedungeonB",
+    "type": "game",
+    "date": "2026-09-06",
+    "tags": [
+      "game"
+    ],
+    "alias": "dieinthedungeonb"
+  },
+  {
+    "file": "dieinthedungeona.gif",
+    "label": "dieinthedungeona",
+    "type": "game",
+    "date": "2026-09-06",
+    "tags": [
+      "game"
+    ],
+    "alias": "dieinthedungeona"
+  },
+  {
+    "file": "streetfighterBa.webp",
+    "label": "streetfighterBa",
+    "type": "game",
+    "date": "2026-09-06",
+    "tags": [
+      "game"
+    ],
+    "alias": "streetfighterba"
+  },
+  {
+    "file": "streetfightera.png",
+    "label": "streetfightera",
+    "type": "game",
+    "date": "2026-09-06",
+    "tags": [
+      "game"
+    ],
+    "alias": "streetfightera"
+  },
+  {
+    "file": "streetfighterb.gif",
+    "label": "streetfighterb",
+    "type": "game",
+    "date": "2026-09-06",
+    "tags": [
+      "game"
+    ],
+    "alias": "streetfighterb"
+  },
   {
     "file": "TheLegendofZeldaOcarinaofTime.avif",
     "label": "TheLegendofZeldaOcarinaofTime",
