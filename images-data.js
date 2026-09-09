@@ -1,10 +1,41 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-09-07T03:34:36.051Z
+// Generated: 2026-09-09T22:44:26.270Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "16103880-fallout-demo-version-windows-main-menu.png",
+    "label": "16103880 fallout demo version windows main menu",
+    "type": "game",
+    "date": "2026-09-09",
+    "tags": [
+      "game"
+    ],
+    "alias": "16103880-fallout-demo-version-windows-main-menu"
+  },
+  {
+    "file": "41359-fallout-windows-front-cover.jpg",
+    "label": "41359 fallout windows front cover",
+    "type": "art",
+    "date": "2026-09-09",
+    "tags": [
+      "art",
+      "cover"
+    ],
+    "alias": "41359-fallout-windows-front-cover"
+  },
+  {
+    "file": "fallout_2_8ec7075695.png",
+    "label": "fallout 2 8ec7075695",
+    "type": "game",
+    "date": "2026-09-09",
+    "tags": [
+      "game"
+    ],
+    "alias": "fallout-2-8ec7075695"
+  },
   {
     "file": "badmondaysimulatorA.png",
     "label": "badmondaysimulatorA",
