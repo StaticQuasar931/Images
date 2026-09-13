@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-09-13T07:43:07.178Z
+// Generated: 2026-09-13T08:18:18.606Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
@@ -54,6 +54,26 @@ const images = [
       "game"
     ],
     "alias": "bounty-of-one-button-1696613856511"
+  },
+  {
+    "file": "eggplay.png",
+    "label": "eggplay",
+    "type": "game",
+    "date": "2026-09-13",
+    "tags": [
+      "game"
+    ],
+    "alias": "eggplay"
+  },
+  {
+    "file": "eggthumb.png",
+    "label": "eggthumb",
+    "type": "game",
+    "date": "2026-09-13",
+    "tags": [
+      "game"
+    ],
+    "alias": "eggthumb"
   },
   {
     "file": "16103880-fallout-demo-version-windows-main-menu.png",
