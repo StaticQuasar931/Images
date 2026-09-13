@@ -1,10 +1,60 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-09-09T22:44:26.270Z
+// Generated: 2026-09-13T07:43:07.178Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "BountyofOneBB.png",
+    "label": "BountyofOneBB",
+    "type": "game",
+    "date": "2026-09-13",
+    "tags": [
+      "game"
+    ],
+    "alias": "bountyofonebb"
+  },
+  {
+    "file": "BountyofoneB.png",
+    "label": "BountyofoneB",
+    "type": "game",
+    "date": "2026-09-13",
+    "tags": [
+      "game"
+    ],
+    "alias": "bountyofoneb"
+  },
+  {
+    "file": "Level67A.png",
+    "label": "Level67A",
+    "type": "game",
+    "date": "2026-09-13",
+    "tags": [
+      "game"
+    ],
+    "alias": "level67a"
+  },
+  {
+    "file": "Level67B.png",
+    "label": "Level67B",
+    "type": "game",
+    "date": "2026-09-13",
+    "tags": [
+      "game"
+    ],
+    "alias": "level67b"
+  },
+  {
+    "file": "bounty-of-one-button-1696613856511.jpg",
+    "label": "bounty of one button 1696613856511",
+    "type": "game",
+    "date": "2026-09-13",
+    "tags": [
+      "game"
+    ],
+    "alias": "bounty-of-one-button-1696613856511"
+  },
   {
     "file": "16103880-fallout-demo-version-windows-main-menu.png",
     "label": "16103880 fallout demo version windows main menu",
