@@ -1,10 +1,32 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-09-13T08:18:18.606Z
+// Generated: 2026-09-15T23:07:37.577Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "26point2eaglercraftminecraft.avif",
+    "label": "26point2eaglercraftminecraft",
+    "type": "game",
+    "date": "2026-09-15",
+    "tags": [
+      "game",
+      "minecraft"
+    ],
+    "alias": "26point2eaglercraftminecraft"
+  },
+  {
+    "file": "minecraft_26_2_chaos_cubed_snapshots_og_d82d002b13.webp",
+    "label": "minecraft 26 2 chaos cubed snapshots og d82d002b13",
+    "type": "game",
+    "date": "2026-09-15",
+    "tags": [
+      "game",
+      "minecraft"
+    ],
+    "alias": "minecraft-26-2-chaos-cubed-snapshots-og-d82d002b13"
+  },
   {
     "file": "BountyofOneBB.png",
     "label": "BountyofOneBB",
