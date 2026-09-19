@@ -1,10 +1,60 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-09-15T23:07:37.577Z
+// Generated: 2026-09-19T22:40:43.862Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "cheese-chompers-3d.png",
+    "label": "cheese chompers 3d",
+    "type": "game",
+    "date": "2026-09-19",
+    "tags": [
+      "game"
+    ],
+    "alias": "cheese-chompers-3d"
+  },
+  {
+    "file": "cheesechompers3d_b.png",
+    "label": "cheesechompers3d b",
+    "type": "game",
+    "date": "2026-09-19",
+    "tags": [
+      "game"
+    ],
+    "alias": "cheesechompers3d-b"
+  },
+  {
+    "file": "crazy-cattle-3d.jpg",
+    "label": "crazy cattle 3d",
+    "type": "game",
+    "date": "2026-09-19",
+    "tags": [
+      "game"
+    ],
+    "alias": "crazy-cattle-3d"
+  },
+  {
+    "file": "crazy-chicken-3d.webp",
+    "label": "crazy chicken 3d",
+    "type": "game",
+    "date": "2026-09-19",
+    "tags": [
+      "game"
+    ],
+    "alias": "crazy-chicken-3d"
+  },
+  {
+    "file": "crazychicken3d_b.png",
+    "label": "crazychicken3d b",
+    "type": "game",
+    "date": "2026-09-19",
+    "tags": [
+      "game"
+    ],
+    "alias": "crazychicken3d-b"
+  },
   {
     "file": "26point2eaglercraftminecraft.avif",
     "label": "26point2eaglercraftminecraft",
