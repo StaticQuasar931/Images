@@ -1,10 +1,20 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-09-19T22:40:43.862Z
+// Generated: 2026-09-20T20:16:27.021Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "crazycattle3da.png",
+    "label": "crazycattle3da",
+    "type": "game",
+    "date": "2026-09-20",
+    "tags": [
+      "game"
+    ],
+    "alias": "crazycattle3da"
+  },
   {
     "file": "cheese-chompers-3d.png",
     "label": "cheese chompers 3d",
