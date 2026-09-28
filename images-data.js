@@ -1,10 +1,30 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-09-20T20:16:27.021Z
+// Generated: 2026-09-28T00:49:36.499Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "twin-shot-logo_a.avif",
+    "label": "twin shot logo a",
+    "type": "logo",
+    "date": "2026-09-27",
+    "tags": [
+      "logo"
+    ],
+    "alias": "twin-shot-logo-a"
+  },
+  {
+    "file": "twinshot_b_menu.jpg",
+    "label": "twinshot b menu",
+    "type": "game",
+    "date": "2026-09-27",
+    "tags": [
+      "game"
+    ],
+    "alias": "twinshot-b-menu"
+  },
   {
     "file": "crazycattle3da.png",
     "label": "crazycattle3da",
