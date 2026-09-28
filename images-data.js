@@ -1,10 +1,70 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-09-28T00:49:36.499Z
+// Generated: 2026-09-28T01:20:13.412Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "DeadEstate_B.png",
+    "label": "DeadEstate B",
+    "type": "game",
+    "date": "2026-09-27",
+    "tags": [
+      "game"
+    ],
+    "alias": "deadestate-b"
+  },
+  {
+    "file": "Dead_Estate_Example.png",
+    "label": "Dead Estate Example",
+    "type": "game",
+    "date": "2026-09-27",
+    "tags": [
+      "game"
+    ],
+    "alias": "dead-estate-example"
+  },
+  {
+    "file": "Twin_Shot_Example.png",
+    "label": "Twin Shot Example",
+    "type": "game",
+    "date": "2026-09-27",
+    "tags": [
+      "game"
+    ],
+    "alias": "twin-shot-example"
+  },
+  {
+    "file": "Twin_Shot_Menu.png",
+    "label": "Twin Shot Menu",
+    "type": "game",
+    "date": "2026-09-27",
+    "tags": [
+      "game"
+    ],
+    "alias": "twin-shot-menu"
+  },
+  {
+    "file": "deadestatea.jpg",
+    "label": "deadestatea",
+    "type": "game",
+    "date": "2026-09-27",
+    "tags": [
+      "game"
+    ],
+    "alias": "deadestatea"
+  },
+  {
+    "file": "deadestateign.webp",
+    "label": "deadestateign",
+    "type": "game",
+    "date": "2026-09-27",
+    "tags": [
+      "game"
+    ],
+    "alias": "deadestateign"
+  },
   {
     "file": "twin-shot-logo_a.avif",
     "label": "twin shot logo a",
