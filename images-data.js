@@ -1,10 +1,64 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-09-28T01:20:13.412Z
+// Generated: 2026-10-04T18:41:04.167Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "madness_project_nexus_b.png",
+    "label": "madness project nexus b",
+    "type": "game",
+    "date": "2026-10-04",
+    "tags": [
+      "game"
+    ],
+    "alias": "madness-project-nexus-b"
+  },
+  {
+    "file": "madness_project_nexus_cover-1629361319148.png",
+    "label": "madness project nexus cover 1629361319148",
+    "type": "art",
+    "date": "2026-10-04",
+    "tags": [
+      "art",
+      "cover"
+    ],
+    "alias": "madness-project-nexus-cover-1629361319148"
+  },
+  {
+    "file": "schoolboyrunawayb.webp",
+    "label": "schoolboyrunawayb",
+    "type": "game",
+    "date": "2026-10-04",
+    "tags": [
+      "game"
+    ],
+    "alias": "schoolboyrunawayb"
+  },
+  {
+    "file": "stickman-clash-b.png",
+    "label": "stickman clash b",
+    "type": "game",
+    "date": "2026-10-04",
+    "tags": [
+      "game",
+      "stickman"
+    ],
+    "alias": "stickman-clash-b"
+  },
+  {
+    "file": "stickman-clash_1x1-cover_a.png",
+    "label": "stickman clash 1x1 cover a",
+    "type": "art",
+    "date": "2026-10-04",
+    "tags": [
+      "art",
+      "cover",
+      "stickman"
+    ],
+    "alias": "stickman-clash-1x1-cover-a"
+  },
   {
     "file": "DeadEstate_B.png",
     "label": "DeadEstate B",
