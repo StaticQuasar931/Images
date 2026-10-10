@@ -1,10 +1,41 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-10-04T18:41:04.167Z
+// Generated: 2026-10-10T23:46:41.711Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "Claude-GTA3.webp",
+    "label": "Claude GTA3",
+    "type": "game",
+    "date": "2026-10-10",
+    "tags": [
+      "game"
+    ],
+    "alias": "claude-gta3"
+  },
+  {
+    "file": "GTA3boxcover.jpg",
+    "label": "GTA3boxcover",
+    "type": "art",
+    "date": "2026-10-10",
+    "tags": [
+      "art",
+      "cover"
+    ],
+    "alias": "gta3boxcover"
+  },
+  {
+    "file": "gta3walking.webp",
+    "label": "gta3walking",
+    "type": "game",
+    "date": "2026-10-10",
+    "tags": [
+      "game"
+    ],
+    "alias": "gta3walking"
+  },
   {
     "file": "madness_project_nexus_b.png",
     "label": "madness project nexus b",
