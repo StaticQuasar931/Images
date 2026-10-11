@@ -1,10 +1,111 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-10-10T23:46:41.711Z
+// Generated: 2026-10-11T21:53:08.002Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "16177849-meat-boy-windows-a-rather-simple-level.png",
+    "label": "16177849 meat boy windows a rather simple level",
+    "type": "game",
+    "date": "2026-10-11",
+    "tags": [
+      "game"
+    ],
+    "alias": "16177849-meat-boy-windows-a-rather-simple-level"
+  },
+  {
+    "file": "Ballionaire_A.jpg",
+    "label": "Ballionaire A",
+    "type": "game",
+    "date": "2026-10-11",
+    "tags": [
+      "game"
+    ],
+    "alias": "ballionaire-a"
+  },
+  {
+    "file": "Ballionaire_AB.jpg",
+    "label": "Ballionaire AB",
+    "type": "game",
+    "date": "2026-10-11",
+    "tags": [
+      "game"
+    ],
+    "alias": "ballionaire-ab"
+  },
+  {
+    "file": "Ballionaireferriswheel.png",
+    "label": "Ballionaireferriswheel",
+    "type": "game",
+    "date": "2026-10-11",
+    "tags": [
+      "game"
+    ],
+    "alias": "ballionaireferriswheel"
+  },
+  {
+    "file": "Meatboy_red.jpg",
+    "label": "Meatboy red",
+    "type": "game",
+    "date": "2026-10-11",
+    "tags": [
+      "game"
+    ],
+    "alias": "meatboy-red"
+  },
+  {
+    "file": "Your Only Move Is HUSTLE.gif",
+    "label": "Your Only Move Is HUSTLE",
+    "type": "game",
+    "date": "2026-10-11",
+    "tags": [
+      "game"
+    ],
+    "alias": "your-only-move-is-hustle"
+  },
+  {
+    "file": "Your Only Move Is HUSTLEheader.jpg",
+    "label": "Your Only Move Is HUSTLEheader",
+    "type": "game",
+    "date": "2026-10-11",
+    "tags": [
+      "game"
+    ],
+    "alias": "your-only-move-is-hustleheader"
+  },
+  {
+    "file": "Your Only Move Is HUSTLEthumbnailsquare.jpg",
+    "label": "Your Only Move Is HUSTLEthumbnailsquare",
+    "type": "game",
+    "date": "2026-10-11",
+    "tags": [
+      "game",
+      "square"
+    ],
+    "alias": "your-only-move-is-hustlethumbnailsquare"
+  },
+  {
+    "file": "meat-boy.jpg",
+    "label": "meat boy",
+    "type": "game",
+    "date": "2026-10-11",
+    "tags": [
+      "game"
+    ],
+    "alias": "meat-boy"
+  },
+  {
+    "file": "meatboy_meet.jpg",
+    "label": "meatboy meet",
+    "type": "game",
+    "date": "2026-10-11",
+    "tags": [
+      "game"
+    ],
+    "alias": "meatboy-meet"
+  },
   {
     "file": "Claude-GTA3.webp",
     "label": "Claude GTA3",
