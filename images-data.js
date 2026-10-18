@@ -1,10 +1,102 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-10-11T21:53:08.002Z
+// Generated: 2026-10-18T22:12:47.228Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "Diablo.png",
+    "label": "Diablo",
+    "type": "game",
+    "date": "2026-10-18",
+    "tags": [
+      "game"
+    ],
+    "alias": "diablo"
+  },
+  {
+    "file": "Diablostartscreen.png",
+    "label": "Diablostartscreen",
+    "type": "game",
+    "date": "2026-10-18",
+    "tags": [
+      "game"
+    ],
+    "alias": "diablostartscreen"
+  },
+  {
+    "file": "Wheely1image.jpg",
+    "label": "Wheely1image",
+    "type": "game",
+    "date": "2026-10-18",
+    "tags": [
+      "game"
+    ],
+    "alias": "wheely1image"
+  },
+  {
+    "file": "diablo1.jpg",
+    "label": "diablo1",
+    "type": "game",
+    "date": "2026-10-18",
+    "tags": [
+      "game"
+    ],
+    "alias": "diablo1"
+  },
+  {
+    "file": "pokerogue1.png",
+    "label": "pokerogue1",
+    "type": "game",
+    "date": "2026-10-18",
+    "tags": [
+      "game"
+    ],
+    "alias": "pokerogue1"
+  },
+  {
+    "file": "pokeroguelogo.png",
+    "label": "pokeroguelogo",
+    "type": "logo",
+    "date": "2026-10-18",
+    "tags": [
+      "logo"
+    ],
+    "alias": "pokeroguelogo"
+  },
+  {
+    "file": "wheely8cover.png",
+    "label": "wheely8cover",
+    "type": "art",
+    "date": "2026-10-18",
+    "tags": [
+      "art",
+      "cover"
+    ],
+    "alias": "wheely8cover"
+  },
+  {
+    "file": "wheelyall8.png",
+    "label": "wheelyall8",
+    "type": "game",
+    "date": "2026-10-18",
+    "tags": [
+      "game"
+    ],
+    "alias": "wheelyall8"
+  },
+  {
+    "file": "wheelycoverimage.jpg",
+    "label": "wheelycoverimage",
+    "type": "art",
+    "date": "2026-10-18",
+    "tags": [
+      "art",
+      "cover"
+    ],
+    "alias": "wheelycoverimage"
+  },
   {
     "file": "16177849-meat-boy-windows-a-rather-simple-level.png",
     "label": "16177849 meat boy windows a rather simple level",
