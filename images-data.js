@@ -1,10 +1,20 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-10-18T22:18:00.969Z
+// Generated: 2026-10-22T21:30:09.733Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "Window_Cleaner_Cat.jpg",
+    "label": "Window Cleaner Cat",
+    "type": "game",
+    "date": "2026-10-22",
+    "tags": [
+      "game"
+    ],
+    "alias": "window-cleaner-cat"
+  },
   {
     "file": "Diablo.png",
     "label": "Diablo",
