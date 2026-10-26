@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-10-26T02:27:46.032Z
+// Generated: 2026-10-26T02:57:29.799Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
@@ -34,6 +34,16 @@ const images = [
       "game"
     ],
     "alias": "fnaf4-halloween"
+  },
+  {
+    "file": "fnaf4halloweenmenu.jpeg",
+    "label": "fnaf4halloweenmenu",
+    "type": "game",
+    "date": "2026-10-25",
+    "tags": [
+      "game"
+    ],
+    "alias": "fnaf4halloweenmenu"
   },
   {
     "file": "Window_Cleaner_Cat.jpg",
