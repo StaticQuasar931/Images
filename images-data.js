@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-10-26T02:57:29.799Z
+// Generated: 2026-10-26T03:56:05.919Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
@@ -14,6 +14,26 @@ const images = [
       "logo"
     ],
     "alias": "blood-logo"
+  },
+  {
+    "file": "PolyTrackRankedA.png",
+    "label": "PolyTrackRankedA",
+    "type": "game",
+    "date": "2026-10-25",
+    "tags": [
+      "game"
+    ],
+    "alias": "polytrackrankeda"
+  },
+  {
+    "file": "PolyTrackRankedB.png",
+    "label": "PolyTrackRankedB",
+    "type": "game",
+    "date": "2026-10-25",
+    "tags": [
+      "game"
+    ],
+    "alias": "polytrackrankedb"
   },
   {
     "file": "bloodimageB.png",
