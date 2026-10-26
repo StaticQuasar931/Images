@@ -1,10 +1,40 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-10-22T21:30:09.733Z
+// Generated: 2026-10-26T02:27:46.032Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "Blood_logo.jpg",
+    "label": "Blood logo",
+    "type": "logo",
+    "date": "2026-10-25",
+    "tags": [
+      "logo"
+    ],
+    "alias": "blood-logo"
+  },
+  {
+    "file": "bloodimageB.png",
+    "label": "bloodimageB",
+    "type": "game",
+    "date": "2026-10-25",
+    "tags": [
+      "game"
+    ],
+    "alias": "bloodimageb"
+  },
+  {
+    "file": "fnaf4_halloween.jpg",
+    "label": "fnaf4 halloween",
+    "type": "game",
+    "date": "2026-10-25",
+    "tags": [
+      "game"
+    ],
+    "alias": "fnaf4-halloween"
+  },
   {
     "file": "Window_Cleaner_Cat.jpg",
     "label": "Window Cleaner Cat",
