@@ -1,10 +1,80 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-10-26T03:56:05.919Z
+// Generated: 2026-11-02T02:38:12.707Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "Handshakes.jpg",
+    "label": "Handshakes",
+    "type": "game",
+    "date": "2026-11-01",
+    "tags": [
+      "game"
+    ],
+    "alias": "handshakes"
+  },
+  {
+    "file": "HandshakesB.jpg",
+    "label": "HandshakesB",
+    "type": "game",
+    "date": "2026-11-01",
+    "tags": [
+      "game"
+    ],
+    "alias": "handshakesb"
+  },
+  {
+    "file": "KlifurAmaxresdefault.jpg",
+    "label": "KlifurAmaxresdefault",
+    "type": "game",
+    "date": "2026-11-01",
+    "tags": [
+      "game"
+    ],
+    "alias": "klifuramaxresdefault"
+  },
+  {
+    "file": "KlifurB.png",
+    "label": "KlifurB",
+    "type": "game",
+    "date": "2026-11-01",
+    "tags": [
+      "game"
+    ],
+    "alias": "klifurb"
+  },
+  {
+    "file": "Leaf Blower Revolution.png",
+    "label": "Leaf Blower Revolution",
+    "type": "game",
+    "date": "2026-11-01",
+    "tags": [
+      "game"
+    ],
+    "alias": "leaf-blower-revolution"
+  },
+  {
+    "file": "Leaf Blower Revolution1607967040_leaf-blower-revolution-idle.jpg",
+    "label": "Leaf Blower Revolution1607967040 leaf blower revolution idle",
+    "type": "game",
+    "date": "2026-11-01",
+    "tags": [
+      "game"
+    ],
+    "alias": "leaf-blower-revolution1607967040-leaf-blower-revolution-idle"
+  },
+  {
+    "file": "handshakesaimages.steamusercontent.jpg",
+    "label": "handshakesaimages.steamusercontent",
+    "type": "game",
+    "date": "2026-11-01",
+    "tags": [
+      "game"
+    ],
+    "alias": "handshakesaimages-steamusercontent"
+  },
   {
     "file": "Blood_logo.jpg",
     "label": "Blood logo",
