@@ -1,10 +1,100 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-11-02T02:38:12.707Z
+// Generated: 2026-11-08T23:41:52.221Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "Bacon May Die.jpg",
+    "label": "Bacon May Die",
+    "type": "game",
+    "date": "2026-11-08",
+    "tags": [
+      "game"
+    ],
+    "alias": "bacon-may-die"
+  },
+  {
+    "file": "Johnny UpgradeJohnnmenuy.jpg",
+    "label": "Johnny UpgradeJohnnmenuy",
+    "type": "game",
+    "date": "2026-11-08",
+    "tags": [
+      "game"
+    ],
+    "alias": "johnny-upgradejohnnmenuy"
+  },
+  {
+    "file": "SoccerRandom.webp",
+    "label": "SoccerRandom",
+    "type": "game",
+    "date": "2026-11-08",
+    "tags": [
+      "game"
+    ],
+    "alias": "soccerrandom"
+  },
+  {
+    "file": "baconmaydie.png",
+    "label": "baconmaydie",
+    "type": "game",
+    "date": "2026-11-08",
+    "tags": [
+      "game"
+    ],
+    "alias": "baconmaydie"
+  },
+  {
+    "file": "images.Johnny Upgradejpg.jpg",
+    "label": "images.Johnny Upgradejpg",
+    "type": "game",
+    "date": "2026-11-08",
+    "tags": [
+      "game"
+    ],
+    "alias": "images-johnny-upgradejpg"
+  },
+  {
+    "file": "johnny-upgrade-game-icon.png",
+    "label": "johnny upgrade game icon",
+    "type": "icon",
+    "date": "2026-11-08",
+    "tags": [
+      "icon"
+    ],
+    "alias": "johnny-upgrade-game-icon"
+  },
+  {
+    "file": "johnny-upgrade.jpg",
+    "label": "johnny upgrade",
+    "type": "game",
+    "date": "2026-11-08",
+    "tags": [
+      "game"
+    ],
+    "alias": "johnny-upgrade"
+  },
+  {
+    "file": "johnny-upgrade_screenshot.gif",
+    "label": "johnny upgrade screenshot",
+    "type": "game",
+    "date": "2026-11-08",
+    "tags": [
+      "game"
+    ],
+    "alias": "johnny-upgrade-screenshot"
+  },
+  {
+    "file": "soccerrandomimages.jpg",
+    "label": "soccerrandomimages",
+    "type": "game",
+    "date": "2026-11-08",
+    "tags": [
+      "game"
+    ],
+    "alias": "soccerrandomimages"
+  },
   {
     "file": "Handshakes.jpg",
     "label": "Handshakes",
