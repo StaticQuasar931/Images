@@ -1,10 +1,70 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-11-08T23:41:52.221Z
+// Generated: 2026-11-15T22:58:52.417Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "basketball-superstars_A.jpg",
+    "label": "basketball superstars A",
+    "type": "game",
+    "date": "2026-11-15",
+    "tags": [
+      "game"
+    ],
+    "alias": "basketball-superstars-a"
+  },
+  {
+    "file": "basketball-superstars_B.jpg",
+    "label": "basketball superstars B",
+    "type": "game",
+    "date": "2026-11-15",
+    "tags": [
+      "game"
+    ],
+    "alias": "basketball-superstars-b"
+  },
+  {
+    "file": "jelly-drift_A.png",
+    "label": "jelly drift A",
+    "type": "game",
+    "date": "2026-11-15",
+    "tags": [
+      "game"
+    ],
+    "alias": "jelly-drift-a"
+  },
+  {
+    "file": "jelly-drift_B.png",
+    "label": "jelly drift B",
+    "type": "game",
+    "date": "2026-11-15",
+    "tags": [
+      "game"
+    ],
+    "alias": "jelly-drift-b"
+  },
+  {
+    "file": "upgrade-complete-2_A.jpg",
+    "label": "upgrade complete 2 A",
+    "type": "game",
+    "date": "2026-11-15",
+    "tags": [
+      "game"
+    ],
+    "alias": "upgrade-complete-2-a"
+  },
+  {
+    "file": "upgrade-complete-2_B.jpg",
+    "label": "upgrade complete 2 B",
+    "type": "game",
+    "date": "2026-11-15",
+    "tags": [
+      "game"
+    ],
+    "alias": "upgrade-complete-2-b"
+  },
   {
     "file": "Bacon May Die.jpg",
     "label": "Bacon May Die",
