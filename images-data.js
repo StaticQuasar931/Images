@@ -1,10 +1,50 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-11-22T21:14:30.951Z
+// Generated: 2026-11-22T21:18:15.880Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "SpeedPerClickObby.jpg",
+    "label": "SpeedPerClickObby",
+    "type": "game",
+    "date": "2026-11-22",
+    "tags": [
+      "game"
+    ],
+    "alias": "speedperclickobby"
+  },
+  {
+    "file": "SpeedPerClickObbyParkour.jpg",
+    "label": "SpeedPerClickObbyParkour",
+    "type": "game",
+    "date": "2026-11-22",
+    "tags": [
+      "game"
+    ],
+    "alias": "speedperclickobbyparkour"
+  },
+  {
+    "file": "SpeedPerClickObbyball_crazymaps.jpg",
+    "label": "SpeedPerClickObbyball crazymaps",
+    "type": "game",
+    "date": "2026-11-22",
+    "tags": [
+      "game"
+    ],
+    "alias": "speedperclickobbyball-crazymaps"
+  },
+  {
+    "file": "SpeedPerClickObbytap.jpg",
+    "label": "SpeedPerClickObbytap",
+    "type": "game",
+    "date": "2026-11-22",
+    "tags": [
+      "game"
+    ],
+    "alias": "speedperclickobbytap"
+  },
   {
     "file": "speedperclickfinger.png",
     "label": "speedperclickfinger",
