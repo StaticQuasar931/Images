@@ -1,10 +1,30 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-11-15T22:58:52.417Z
+// Generated: 2026-11-22T21:14:30.951Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "speedperclickfinger.png",
+    "label": "speedperclickfinger",
+    "type": "game",
+    "date": "2026-11-22",
+    "tags": [
+      "game"
+    ],
+    "alias": "speedperclickfinger"
+  },
+  {
+    "file": "speedperclickpress.png",
+    "label": "speedperclickpress",
+    "type": "game",
+    "date": "2026-11-22",
+    "tags": [
+      "game"
+    ],
+    "alias": "speedperclickpress"
+  },
   {
     "file": "basketball-superstars_A.jpg",
     "label": "basketball superstars A",
