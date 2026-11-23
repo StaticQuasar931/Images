@@ -1,10 +1,50 @@
 // AUTO-GENERATED FILE. DO NOT EDIT BY HAND.
-// Generated: 2026-11-22T21:18:15.880Z
+// Generated: 2026-11-23T01:06:44.956Z
 // Repo: StaticQuasar931/Images@main
 
 const baseCdn = "https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/";
 
 const images = [
+  {
+    "file": "1x1_NSwitch_PokemonFireRed_UK_image380w.jpg",
+    "label": "1x1 NSwitch PokemonFireRed UK image380w",
+    "type": "game",
+    "date": "2026-11-22",
+    "tags": [
+      "game"
+    ],
+    "alias": "1x1-nswitch-pokemonfirered-uk-image380w"
+  },
+  {
+    "file": "SpaceeWavesScreenshotA.png",
+    "label": "SpaceeWavesScreenshotA",
+    "type": "game",
+    "date": "2026-11-22",
+    "tags": [
+      "game"
+    ],
+    "alias": "spaceewavesscreenshota"
+  },
+  {
+    "file": "SpaceeWavesScreenshotB.png",
+    "label": "SpaceeWavesScreenshotB",
+    "type": "game",
+    "date": "2026-11-22",
+    "tags": [
+      "game"
+    ],
+    "alias": "spaceewavesscreenshotb"
+  },
+  {
+    "file": "SpaceeWavesScreenshotC.png",
+    "label": "SpaceeWavesScreenshotC",
+    "type": "game",
+    "date": "2026-11-22",
+    "tags": [
+      "game"
+    ],
+    "alias": "spaceewavesscreenshotc"
+  },
   {
     "file": "SpeedPerClickObby.jpg",
     "label": "SpeedPerClickObby",
@@ -44,6 +84,58 @@ const images = [
       "game"
     ],
     "alias": "speedperclickobbytap"
+  },
+  {
+    "file": "bigshotboxingb.webp",
+    "label": "bigshotboxingb",
+    "type": "game",
+    "date": "2026-11-22",
+    "tags": [
+      "game"
+    ],
+    "alias": "bigshotboxingb"
+  },
+  {
+    "file": "bigshotboxingssquare.avif",
+    "label": "bigshotboxingssquare",
+    "type": "game",
+    "date": "2026-11-22",
+    "tags": [
+      "game",
+      "square"
+    ],
+    "alias": "bigshotboxingssquare"
+  },
+  {
+    "file": "bigshotboxingunnamed.png",
+    "label": "bigshotboxingunnamed",
+    "type": "game",
+    "date": "2026-11-22",
+    "tags": [
+      "game"
+    ],
+    "alias": "bigshotboxingunnamed"
+  },
+  {
+    "file": "pokemonfireredimages.jpg",
+    "label": "pokemonfireredimages",
+    "type": "game",
+    "date": "2026-11-22",
+    "tags": [
+      "game"
+    ],
+    "alias": "pokemonfireredimages"
+  },
+  {
+    "file": "space-waves_16x9-cover.avif",
+    "label": "space waves 16x9 cover",
+    "type": "art",
+    "date": "2026-11-22",
+    "tags": [
+      "art",
+      "cover"
+    ],
+    "alias": "space-waves-16x9-cover"
   },
   {
     "file": "speedperclickfinger.png",
